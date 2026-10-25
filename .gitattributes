@@ -1,1 +1,3 @@
 * text=auto eol=lf
+# Preserve the exact bytes of recorded requests, answers and boundary fixtures.
+artifacts/** -text
