@@ -1,4 +1,5 @@
 import unittest
+from contextlib import closing
 from unittest.mock import patch
 
 from alert_rlvr.config import WINDOW_START, WINDOW_END, make_task, resolve_task, snapshot_id
@@ -109,7 +110,7 @@ class EnvironmentTests(unittest.TestCase):
 
 class GeneratedDatabaseTests(unittest.TestCase):
     def test_database_has_real_controls_and_is_deterministic(self):
-        with build_database(17) as first, build_database(17) as second:
+        with closing(build_database(17)) as first, closing(build_database(17)) as second:
             self.assertEqual([tuple(r) for r in first.execute("SELECT * FROM request_metrics ORDER BY service_id,bucket_start")],
                              [tuple(r) for r in second.execute("SELECT * FROM request_metrics ORDER BY service_id,bucket_start")])
             severities = {r[0] for r in first.execute("SELECT DISTINCT severity FROM alerts")}

@@ -4,6 +4,10 @@
 
 一个单场景、可复现的告警分析任务：Agent 从分散的业务 API 获取告警、事件影响范围、服务资料、请求观测和维护记录，计算各事件的受影响服务和异常失败请求数，给出处置优先级。独立验证器只看最终结果，返回 0～1 奖励，不调用大模型。
 
+本项目交付 Python RLVR 任务模块，通过导入方式接入训练控制器；不是 Harbor 任务包。运行样例、测试和 Docker 均不依赖 Harbor。
+
+当前任务版本为 **v3**：保留 v2 的业务数据和正确答案口径，调整题面提示及奖励定义。每个完整正确的事件分析、每个有正确分析支撑的处置位置各计一个得分单位。
+
 业务数据是合成的固定快照，不连接真实监控平台或企微。容器启动自动生成 SQLite 并运行正确、错误及空答案样例，无需凭据、外部服务、下载数据或手工建库。
 
 ## 快速运行
@@ -54,7 +58,7 @@ task_text = make_task(seed=17)
 
 ```json
 {
-  "snapshot_id": "alert-impact-v2-seed-17",
+  "snapshot_id": "alert-impact-v3-seed-17",
   "incidents": [
     {"incident_id":"INC-AUTH","severity":"P1","service_ids":["svc-auth"],"excess_failed_requests":48},
     {"incident_id":"INC-DB","severity":"P0","service_ids":["svc-checkout","svc-search"],"excess_failed_requests":174},
@@ -70,21 +74,21 @@ task_text = make_task(seed=17)
 
 `AlertEnvironment` 是 Python 类，不需要 HTTP 服务或多容器通信。各接口返回 JSON 兼容的数据；字段完整定义见 [接口文档](docs/API.md) 和 `environment.API_SCHEMAS`。
 
+下面是作者提供的参考执行路径；Harness 给模型的输入只有任务文本和工具 schema，不包括这张路径表。
+
 | 次序 | API | 获取的信息及依赖 |
 | --- | --- | --- |
-| 1 | `list_alerts(start, end, severities, states)` | 窗口相交的候选告警；去重得到事件 ID，并核对结束时状态 |
-| 2 | `get_incident_services(incident_ids)` | 用事件 ID 取得服务 ID 和实际影响区间，不能从告警标题猜关联 |
-| 3 | `get_service_profiles(service_ids)` | 生产/测试环境、常态失败率 |
-| 4 | `get_request_metrics(service_ids, start, end)` | 每个观测桶的实际请求数和失败数，需要结合第 2、3 步计算 |
-| 5 | `get_maintenance_windows(service_ids, start, end)` | 维护批准状态和覆盖时间，决定哪些桶可以计入 |
+| 1 | `list_alerts(start, end, severities, states)` | 窗口相交的候选告警；取得事件 ID，并核对截止时仍活动的告警 |
+| 2 | `get_incident_services(incident_ids)` | 用事件 ID 查询服务及影响区间，取得后续查询的服务 ID |
+| 3 | `get_service_profiles(service_ids)` | 服务环境和常态失败率，决定生产环境筛选与基线计算 |
+| 4 | `get_request_metrics(service_ids, start, end)` | 请求数和失败数，结合关系区间及基线计算异常量 |
+| 5 | `get_maintenance_windows(service_ids, start, end)` | 维护状态和覆盖时间，决定排除哪些观测桶 |
 
-第 3～5 步可以换序；评分器不规定调用顺序、次数或参数写法。任一 API 都不返回最终事件影响总额或优先级。
+第 3～5 步可以换序。评分器不规定调用顺序、次数或参数写法；题面给出完整业务规则，不列解题所需 API 清单或执行步骤。
 
-环境还提供 `get_host_metrics`、`get_notification_history` 两个冗余接口，以及 owner_team、dashboard_url、retry_count、latency_p95_ms 等非必要字段。CPU 高、消息已发送或 P0 标签都不能代替异常失败量计算。
+`get_host_metrics` 返回主机 CPU、内存使用率及采集时间；`get_notification_history` 返回历史通知渠道、送达状态和发送时间。二者不参与本题的异常失败计数，是供工具选择的冗余业务信息；owner_team、dashboard_url、retry_count、latency_p95_ms 也不进入计算。模型可见的工具描述只说明返回内容，不直接标注“冗余”。
 
-**调用必要性有业务依据：**相同告警下，改变关联范围、生产环境/常态失败率、实际失败数或维护覆盖，正确答案都会改变。独立反事实测试覆盖这些情况，不用“强制调用满 3 次”代替任务设计。
-
-业务规则公开，隐藏的不是评分条件。需要推导的是查询条件与数据关系，例如旧告警仍可能相关、事件影响只覆盖部分桶、取消维护不能排除、重复告警不能重复累计，以及严重等级不能直接决定排序。
+改变关联范围、生产环境/常态失败率、实际失败数或维护覆盖会改变正确答案，独立反事实测试覆盖这些依赖。当前 seed 主要改变指标数值，关系与维护等结构仍固定；反复训练可能记住这些结构，因此这些测试不证明训练后的策略每次仍必须查询全部来源。
 
 ## 奖励与验证
 
@@ -101,15 +105,31 @@ details = evaluate(make_task(17), final_answer)       # 分项解释
 对于协议合法答案：
 
 ```text
-reward = 0.25 × 事件覆盖F1
-       + 0.50 × 明细字段正确率
-       + 0.25 × 优先级位置正确率
+reward = (C + R) / (N + K + X)
 ```
 
-- 覆盖 F1 = `2 × 正确事件数 / (期望事件数 + 提交事件数)`，同时惩罚漏报和混入事件。
-- 明细按 severity、service_ids、excess_failed_requests 三项核对，分母为全部期望事件的字段数；缺失事件不能缩小分母。
-- 优先级按正确前 K 项的位置计分；缺项可部分得分。完整正确才能得 1。
-- 快照不匹配、重复 ID、重复 JSON key、非法字段或类型、负数、NaN/Infinity 等协议错误得 0，并提供错误原因。
+`config.py` 中 `INCIDENT_POINTS`、`PRIORITY_POINTS`、`EXTRA_INCIDENT_PENALTY` 当前均为 1，分别对应事件得分单位、优先级得分单位和多报事件的分母增量。
+
+| 符号 | 含义 |
+| --- | --- |
+| N | 应输出的事件数 |
+| K | 应输出的 priority 长度，即 `min(top_k, N)` |
+| C | 完整正确的事件数：severity、service_ids 集合、excess_failed_requests 三项必须全部正确 |
+| R | ID 位置正确且对应事件分析完整正确的 priority 项数 |
+| X | 提交了但不属于期望集合的额外事件数 |
+
+一个完整正确的事件分析计一个单位，一个正确且有完整分析支撑的处置位置再计一个单位。因此，优先事件可以贡献两个单位；只猜中事件、部分字段或排名不单独得分。缺失保留在分母内，额外事件增加分母。全部期望和提交都为空时得 1；其余情况完整正确才得 1。
+
+默认快照有 3 个事件和 2 个优先位置：
+
+| 构造答案 | reward |
+| --- | --- |
+| 全部正确 | `5/5 = 1` |
+| 三个异常失败数量全部错误，其他字段和排名正确 | `0/5 = 0` |
+| 正确答案额外添加一个事件 | `5/6` |
+| 默认错误样例：一个数量错误，并反转两个 priority 位置 | `2/5 = 0.4` |
+
+快照不匹配、重复 ID、重复 JSON key、非法字段或类型、负数、NaN/Infinity 等协议错误得 0。合法答案的 `evaluate` 报告包含 `matched_count`（C）、`priority_matches`（R）、`extra_count`（X）；`components.incidents=C/N`、`components.priority=R/K` 是解释性比例，不是另一次加权评分。对应期望集合为空时，该分项在提交也为空时为 1，否则为 0。协议错误报告给出错误原因及零分，不提供逐事件诊断查询接口。
 
 验证器通过独立 SQL 在可信快照上计算真值；样例解法使用业务 API 和 Python 循环，二者不共享求解函数。评分输入没有工具轨迹。对照测试包含正确答案、漏事件、混入事件、错误数量/排序、重复提交、等价排序，以及错误边界实现应失败的手算数据。
 
@@ -157,9 +177,9 @@ python scripts/validate.py
 
 该命令执行测试、3 个 seed 的调用样例和 Harness 样例，写入新的 `artifacts/validation-*` 目录，不覆盖既有结果。实际执行结果见 [验收记录](docs/VALIDATION.md)。
 
-- 种子变化用于同一业务场景的数据变化，不代表多业务场景覆盖。
+- 种子变化用于同一固定业务结构下的数值变化；未实现关系、维护和告警结构随机化，不能据此证明跨结构泛化。
 - 合成数据已内置，SQLite 写入发生在初始化阶段；没有模拟真实告警采集延迟、丢包或最终一致性。
-- 已做的程序性测试不能证明对某个模型的难度或训练收益；尚未进行真实模型盲测及 RL 训练。
+- v2 已完成两个模型、三个 seed 各一次的 [真实模型小样本记录](artifacts/model-pilot-v2/README.md)，并保留 [独立上下文设计审阅](artifacts/design-review/independent-review.md)。这些是旧题面、旧奖励的证据；v3 尚待模型评测，未开展 RL 训练。
 - 当前为小数据快照、单次分析任务；没有建设实时流平台、通知发送链路或线上权限系统。
 - 模型或训练基础设施异常应由 Harness 单独记录，不等同于模型提交错误业务结果。
 

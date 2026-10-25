@@ -24,7 +24,7 @@ API_SCHEMAS = [
     _schema("get_service_profiles", "Get service environment, baseline request failure rate, and ownership.", {"service_ids": _ID_LIST}, ["service_ids"]),
     _schema("get_request_metrics", "Get request and failed-request counts for complete observation buckets within the supplied window.", {"service_ids": _ID_LIST, "start": _TIME, "end": _TIME}, ["service_ids", "start", "end"]),
     _schema("get_maintenance_windows", "Get overlapping maintenance records, including cancelled and partial coverage.", {"service_ids": _ID_LIST, "start": _TIME, "end": _TIME}, ["service_ids", "start", "end"]),
-    _schema("get_host_metrics", "Get host utilization diagnostics; these do not measure failed-request counts.", {"resource_ids": _ID_LIST}, ["resource_ids"]),
+    _schema("get_host_metrics", "Get host CPU and memory utilization with collection timestamps.", {"resource_ids": _ID_LIST}, ["resource_ids"]),
     _schema("get_notification_history", "Get synthetic message delivery records for incidents.", {"incident_ids": _ID_LIST}, ["incident_ids"]),
 ]
 _ALLOWED_NAMES = frozenset(schema["name"] for schema in API_SCHEMAS)

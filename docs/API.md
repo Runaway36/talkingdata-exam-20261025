@@ -7,6 +7,8 @@
 
 每次环境实例对应一个不可变快照；新实例使用相同 seed 时重建同样的数据。没有 SQL 查询入口或文件路径参数。所有查询使用参数绑定，未知 ID 返回空列表。
 
+当前快照标识为 `alert-impact-v3-seed-{seed}`。v3 的业务表、字段和响应中的 data 内容与 v2 相同，快照标识、任务文本与评分规则已更新。
+
 ## 通用参数
 
 - 时间：严格 UTC `YYYY-MM-DDTHH:MM:SSZ`，须在报告窗口内且 start < end。查询区间右端不包含；指标只返回完整落入区间的观测桶。
@@ -21,8 +23,8 @@
 | get_service_profiles | service_ids | service_id, name, environment, baseline_failure_bps, owner_team, dashboard_url | 生产环境筛选、常态失败率参数 |
 | get_request_metrics | service_ids, start, end | service_id, bucket_start, bucket_end, request_count, failed_requests, retry_count, latency_p95_ms | 实际计数；单独不能算有效异常失败量 |
 | get_maintenance_windows | service_ids, start, end | maintenance_id, service_id, starts_at, ends_at, status, reason | 返回所有相交维护，不替调用者过滤取消或部分覆盖 |
-| get_host_metrics | resource_ids | resource_id, cpu_percent, memory_percent, collected_at | 冗余诊断数据 |
-| get_notification_history | incident_ids | notification_id, incident_id, channel, delivered, sent_at | 冗余历史通知数据，不发生发送副作用 |
+| get_host_metrics | resource_ids | resource_id, cpu_percent, memory_percent, collected_at | 主机 CPU、内存使用率及采集时间 |
+| get_notification_history | incident_ids | notification_id, incident_id, channel, delivered, sent_at | 历史通知渠道、送达状态和发送时间，不发生发送副作用 |
 
 参数 JSON Schema 通过 `API_SCHEMAS` 导入或 `python -m alert_rlvr.tools --catalog` 获取。字段单位及业务计算以 `make_task(seed)` 与 [任务契约](CONTRACT.md) 为准。
 

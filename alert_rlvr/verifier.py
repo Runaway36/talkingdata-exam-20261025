@@ -15,7 +15,7 @@ _TOP_LEVEL_KEYS = {"snapshot_id", "incidents", "priority"}
 _INCIDENT_KEYS = {
     "incident_id", "severity", "service_ids", "excess_failed_requests"
 }
-_SCORED_FIELDS = (
+_REQUIRED_EVENT_FIELDS = (
     "severity", "service_ids", "excess_failed_requests"
 )
 
@@ -24,7 +24,7 @@ def _zero_report(error, expected_count=0):
     return {
         "reward": 0.0,
         "valid": False,
-        "components": {"coverage": 0.0, "fields": 0.0, "priority": 0.0},
+        "components": {"incidents": 0.0, "priority": 0.0},
         "errors": [error],
         "expected_count": expected_count,
     }
@@ -214,9 +214,9 @@ def expected_answer(task):
 def evaluate(task, answer):
     """Validate and score a final dict/JSON answer; never inspect a tool trace.
 
-    A valid but wrong/partial answer receives fractional credit. Protocol errors
-    and unknown task text receive zero. Components are raw scores in [0, 1];
-    the final reward applies config.REWARD_WEIGHTS to those components.
+    Credit is awarded for complete incident analyses and supported priority
+    positions. A correct ID or severity alone earns no credit. Extra incidents
+    enlarge the denominator. Protocol errors and unknown task text receive zero.
     """
     try:
         seed = config.resolve_task(task)
@@ -237,36 +237,49 @@ def evaluate(task, answer):
         return _zero_report(detail, expected_count)
 
     actual_rows = {row["incident_id"]: row for row in submitted["incidents"]}
-    matched_ids = expected_rows.keys() & actual_rows.keys()
-    denominator = len(expected_rows) + len(actual_rows)
-    coverage = 2 * len(matched_ids) / denominator if denominator else 1.0
-    matched_fields = 0
-    for incident_id in matched_ids:
-        for field in _SCORED_FIELDS:
+    complete_ids = set()
+    for incident_id in expected_rows.keys() & actual_rows.keys():
+        complete = True
+        for field in _REQUIRED_EVENT_FIELDS:
             actual = actual_rows[incident_id][field]
             wanted = expected_rows[incident_id][field]
             if field == "service_ids":
                 actual, wanted = set(actual), set(wanted)
-            matched_fields += int(actual == wanted)
-    fields = matched_fields / (expected_count * len(_SCORED_FIELDS)) if expected_count else 1.0
+            if actual != wanted:
+                complete = False
+                break
+        if complete:
+            complete_ids.add(incident_id)
     priority_matches = sum(
-        index < len(submitted["priority"]) and submitted["priority"][index] == incident_id
+        index < len(submitted["priority"])
+        and submitted["priority"][index] == incident_id
+        and incident_id in complete_ids
         for index, incident_id in enumerate(expected["priority"])
     )
-    priority = priority_matches / len(expected["priority"]) if expected["priority"] else (
+    priority_count = len(expected["priority"])
+    priority = priority_matches / priority_count if priority_count else (
         1.0 if not submitted["priority"] else 0.0
     )
-    components = {"coverage": coverage, "fields": fields, "priority": priority}
-    reward = sum(config.REWARD_WEIGHTS[name] * value for name, value in components.items())
+    incidents = len(complete_ids) / expected_count if expected_count else (
+        1.0 if not actual_rows else 0.0
+    )
+    extra_count = len(actual_rows.keys() - expected_rows.keys())
+    possible = (expected_count * config.INCIDENT_POINTS
+                + priority_count * config.PRIORITY_POINTS
+                + extra_count * config.EXTRA_INCIDENT_PENALTY)
+    earned = (len(complete_ids) * config.INCIDENT_POINTS
+              + priority_matches * config.PRIORITY_POINTS)
+    reward = earned / possible if possible else 1.0
     reward = max(0.0, min(1.0, reward))
     return {
         "reward": reward,
         "valid": True,
-        "components": components,
+        "components": {"incidents": incidents, "priority": priority},
         "errors": [],
         "expected_count": expected_count,
-        "matched_count": len(matched_ids),
-        "matched_fields": matched_fields,
+        "matched_count": len(complete_ids),
+        "priority_matches": priority_matches,
+        "extra_count": extra_count,
     }
 
 

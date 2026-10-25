@@ -1,6 +1,8 @@
-# 冻结实现约定 v2
+# 冻结实现约定 v3
 
 这是本次考试内形成的告警业务分析任务。业务数据为确定性模拟快照，不连接真实监控平台或企微。
+
+v3 保持 v2 数据结构、业务数值和 Oracle 计算口径，变更任务文本及奖励定义。任务文本保留所有业务规则，不列举解题所需 API 或操作步骤。
 
 ## 任务
 
@@ -16,9 +18,9 @@
 
 包名 `alert_rlvr`。
 
-- `config.make_task(seed=17) -> str`：规范自然语言任务，首行 `任务编号：alert-impact-v2-seed-{seed}`。
+- `config.make_task(seed=17) -> str`：规范自然语言任务，首行 `任务编号：alert-impact-v3-seed-{seed}`。
 - `config.resolve_task(task: str) -> int`：只接受此版本生成的规范任务文本，支持 CRLF/首尾空白；未知或被篡改任务抛 ValueError；不声称理解任意自然语言。
-- `config.snapshot_id(seed) -> str`：`alert-impact-v2-seed-{seed}`，seed 必须为 int（非 bool），0..9999。
+- `config.snapshot_id(seed) -> str`：`alert-impact-v3-seed-{seed}`，seed 必须为 int（非 bool），0..9999。
 - `data.build_database(seed=17) -> sqlite3.Connection`：可信环境内部建库，row_factory=sqlite3.Row。
 - `environment.AlertEnvironment(seed=17)`：只读业务 API；`.task`、`.snapshot_id`；上下文管理和 `.close()`。
 - 每个 API 返回 `{ok: true, snapshot_id: str, data: list[dict]}`；错误返回 `{ok: false, snapshot_id: str, error: {code: str, message: str}}`，不向 agent 泄露 SQL、数据库路径或异常堆栈。
@@ -28,7 +30,8 @@
 - `.get_service_profiles(service_ids)`：环境、基线失败率等。
 - `.get_request_metrics(service_ids, start, end)`：完整落入查询窗口的观测桶。
 - `.get_maintenance_windows(service_ids, start, end)`：与查询窗口相交的维护记录，包括 cancelled。
-- 冗余 API：`.get_host_metrics(resource_ids)`、`.get_notification_history(incident_ids)`。
+- `.get_host_metrics(resource_ids)`：主机 CPU、内存使用率及采集时间。
+- `.get_notification_history(incident_ids)`：历史通知渠道、送达状态及发送时间。
 - `API_SCHEMAS`：环境模块提供 API 名称/描述/参数 JSON schema，供 tool-calling harness 注册。
 - 所有 ID 列表最多 50 项；必须为非空字符串列表，拒绝 bool/错误类型；时间使用严格 UTC ISO 格式且 start < end，限制在快照窗口内。
 
@@ -49,11 +52,26 @@
 答案为 dict 或 JSON 字符串：
 `{snapshot_id, incidents: [{incident_id, severity, service_ids, excess_failed_requests}], priority: [incident_id, ...]}`。
 
-`verifier.evaluate(task, answer) -> dict` 返回 reward、valid、components、errors、expected_count；`verifier.compute_reward(task, answer) -> float` 为统一训练入口。不接收也不检查调用轨迹。验证器独立从可信快照计算预期结果（SQL 实现），不调用样例解法、不调用 LLM。
+`verifier.evaluate(task, answer) -> dict` 返回 reward、valid、components（incidents、priority）、errors、expected_count；合法答案报告另含 matched_count、priority_matches、extra_count。`verifier.compute_reward(task, answer) -> float` 为统一训练入口。不接收也不检查调用轨迹。验证器独立从可信快照计算预期结果（SQL 实现），不调用样例解法、不调用 LLM。
 
-合法答案奖励：0.25 × 事件覆盖 F1 + 0.50 × 字段正确率 + 0.25 × priority 位置正确率。字段为 severity/service_ids/excess_failed_requests，按全部期望事件的 3 个字段计，缺失记 0。priority 最多 top_k 项，重复或不在提交明细中的 ID 为协议错误；缺项可部分得分。未知事件会降低覆盖分。完整正确才可得 1。快照不匹配、重复事件/服务 ID、非法类型、负数、非有限数、重复 JSON key、未知字段等协议错误 reward=0。不强制提交事件明细顺序或服务列表顺序。
+合法答案奖励为 `(C + R) / (N + K + X)`：
 
-评分配置常量放 config.py。未知任务/非法输入返回有效错误报告和 0 分，不崩溃。评分报告不能作为给 agent 的查询 API；参考答案只在可信评分侧使用。
+- N：应输出事件数；K：应输出 priority 长度，即 `min(top_k, N)`。
+- C：完整正确事件数，severity、service_ids 集合、excess_failed_requests 三项必须全部正确。
+- R：处于正确 priority 位置、且对应事件计入 C 的项数。事件分析有错时，即使排名碰巧正确也不得该位置分。
+- X：提交集合中不属于期望集合的额外事件数。
+
+上述公式使用当前配置：`INCIDENT_POINTS=1`、`PRIORITY_POINTS=1`、`EXTRA_INCIDENT_PENALTY=1`。实现分别用这些常量计事件单位、优先级单位与额外事件分母增量。`matched_count=C`、`priority_matches=R`、`extra_count=X`；`components.incidents=C/N`、`components.priority=R/K` 仅解释各类正确比例，对应期望集合为空时提交也为空记 1，否则记 0。
+
+一个完整事件分析与一个正确处置位置各计一个单位，优先事件因此可以贡献两个单位。缺失事件/位置不缩小分母，额外事件扩大分母；没有字段层部分得分。全部期望和提交都为空时 reward=1。默认 N=3、K=2：全对得 1，三个数量全错得 0，正确加一个额外事件得 5/6，默认“一个数量错＋反序 priority”样例得 2/5。
+
+priority 最多 top_k 项，重复或不在提交明细中的 ID 为协议错误；缺项可按上述规则部分得分。快照不匹配、重复事件/服务 ID、非法类型、负数、非有限数、重复 JSON key、未知字段等协议错误 reward=0。不强制明细行或服务列表顺序。
+
+业务配置常量放 config.py。未知任务/非法输入返回错误报告和 0 分，不崩溃。评分报告只供可信控制器使用，不增加逐事件诊断工具；参考答案只在可信评分侧使用。
+
+## 版本与训练范围
+
+seed 目前改变观测数值，事件服务关系、维护等结构仍固定。该分布不保证反复训练后仍需查询全部业务来源，也未覆盖跨结构泛化。v2 的 [模型小样本](../artifacts/model-pilot-v2/README.md) 与 [静态设计审阅](../artifacts/design-review/independent-review.md) 保留原样；其分数不能视为 v3 模型结果。v3 模型评测待开展。
 
 ## 模块职责
 

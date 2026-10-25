@@ -63,15 +63,19 @@ class ProtocolAndPartialCreditTests(unittest.TestCase):
         self.assertTrue(report["errors"], report)
 
     def test_manual_gold_is_perfect_without_reference_solver(self):
-        self.assertEqual(verifier.compute_reward(self.task, self.answer), 1.0)
+        report = verifier.evaluate(self.task, self.answer)
+        self.assertEqual(report["reward"], 1.0, report)
+        self.assertEqual(report["matched_count"], 3)
+        self.assertEqual(report["priority_matches"], 2)
+        self.assertEqual(report["extra_count"], 0)
+        self.assertEqual(report["components"], {"incidents": 1.0, "priority": 1.0})
 
     def test_missing_nonpriority_event_has_partial_credit(self):
         self.answer["incidents"] = [r for r in self.answer["incidents"]
                                     if r["incident_id"] != "INC-C"]
         report = verifier.evaluate(self.task, self.answer)
         self.assertTrue(report["valid"], report)
-        self.assertGreater(report["reward"], 0.0)
-        self.assertLess(report["reward"], 1.0)
+        self.assertAlmostEqual(report["reward"], 4 / 5)
 
     def test_extra_event_cannot_receive_perfect_reward(self):
         extra = copy.deepcopy(self.answer["incidents"][0])
@@ -79,25 +83,83 @@ class ProtocolAndPartialCreditTests(unittest.TestCase):
         self.answer["incidents"].append(extra)
         report = verifier.evaluate(self.task, self.answer)
         self.assertTrue(report["valid"], report)
-        self.assertLess(report["reward"], 1.0)
+        self.assertAlmostEqual(report["reward"], 5 / 6)
+        self.assertEqual(report["extra_count"], 1)
 
-    def test_wrong_request_count_loses_field_credit(self):
+    def test_wrong_priority_event_count_loses_incident_and_position_credit(self):
+        # INC-A is the second priority item: its wrong count invalidates both
+        # the incident and that priority claim even though the ID is in place.
         self.answer["incidents"][0]["excess_failed_requests"] += 1
         report = verifier.evaluate(self.task, self.answer)
         self.assertTrue(report["valid"], report)
-        self.assertAlmostEqual(report["reward"], 1.0 - 0.5 / 9)
+        self.assertAlmostEqual(report["reward"], 3 / 5)
+        self.assertEqual(report["matched_count"], 2)
+        self.assertEqual(report["priority_matches"], 1)
+
+    def test_wrong_nonpriority_event_count_loses_one_incident(self):
+        self.answer["incidents"][2]["excess_failed_requests"] += 1
+        report = verifier.evaluate(self.task, self.answer)
+        self.assertTrue(report["valid"], report)
+        self.assertAlmostEqual(report["reward"], 4 / 5)
+        self.assertEqual(report["matched_count"], 2)
+        self.assertEqual(report["priority_matches"], 2)
+
+    def test_all_counts_zero_gets_zero_even_with_correct_priority(self):
+        for row in self.answer["incidents"]:
+            row["excess_failed_requests"] = 0
+        report = verifier.evaluate(self.task, self.answer)
+        self.assertTrue(report["valid"], report)
+        self.assertEqual(report["reward"], 0.0)
+        self.assertEqual(report["matched_count"], 0)
+        self.assertEqual(report["priority_matches"], 0)
+
+    def test_guessing_only_incident_ids_and_severities_gets_zero(self):
+        for row in self.answer["incidents"]:
+            row["service_ids"] = []
+            row["excess_failed_requests"] = 0
+        self.answer["priority"] = []
+        report = verifier.evaluate(self.task, self.answer)
+        self.assertTrue(report["valid"], report)
+        self.assertEqual(report["reward"], 0.0)
+
+    def test_complete_incident_requires_correct_severity_and_services(self):
+        for field, wrong in (("severity", "P1"), ("service_ids", ["svc-a"])):
+            with self.subTest(field=field):
+                answer = copy.deepcopy(self.answer)
+                answer["incidents"][2][field] = wrong
+                report = verifier.evaluate(self.task, answer)
+                self.assertTrue(report["valid"], report)
+                self.assertAlmostEqual(report["reward"], 4 / 5)
+                self.assertEqual(report["matched_count"], 2)
+
+    def test_correcting_wrong_counts_cannot_reduce_reward(self):
+        answer = copy.deepcopy(self.answer)
+        for row in answer["incidents"]:
+            row["excess_failed_requests"] = 0
+        previous = verifier.compute_reward(self.task, answer)
+        self.assertEqual(previous, 0.0)
+        # Repair the nonpriority event first, then each priority event, while
+        # holding every other submitted field and the ranking unchanged.
+        for index in (2, 0, 1):
+            with self.subTest(repaired_incident=answer["incidents"][index]["incident_id"]):
+                answer["incidents"][index]["excess_failed_requests"] = (
+                    self.answer["incidents"][index]["excess_failed_requests"])
+                repaired = verifier.compute_reward(self.task, answer)
+                self.assertGreaterEqual(repaired, previous)
+                previous = repaired
+        self.assertEqual(previous, 1.0)
 
     def test_wrong_priority_order_loses_position_credit(self):
         self.answer["priority"].reverse()
         report = verifier.evaluate(self.task, self.answer)
         self.assertTrue(report["valid"], report)
-        self.assertAlmostEqual(report["reward"], 0.75)
+        self.assertAlmostEqual(report["reward"], 3 / 5)
 
     def test_missing_priority_can_receive_partial_credit(self):
         self.answer["priority"] = self.answer["priority"][:1]
         report = verifier.evaluate(self.task, self.answer)
         self.assertTrue(report["valid"], report)
-        self.assertAlmostEqual(report["reward"], 0.875)
+        self.assertAlmostEqual(report["reward"], 4 / 5)
 
     def test_empty_submission_not_perfect(self):
         report = verifier.evaluate(self.task, {
@@ -172,6 +234,14 @@ class ProtocolAndPartialCreditTests(unittest.TestCase):
         equivalent = "\r\n " + self.task.replace("\n", "\r\n") + " \r\n"
         self.assertEqual(verifier.compute_reward(equivalent, self.answer), 1.0)
 
+    def test_v2_task_is_not_accepted_by_v3_scorer(self):
+        previous_version = self.task.replace("alert-impact-v3-seed-", "alert-impact-v2-seed-", 1)
+        self.assertNotEqual(previous_version, self.task)
+        report = verifier.evaluate(previous_version, self.answer)
+        self.assertFalse(report["valid"], report)
+        self.assertEqual(report["reward"], 0.0)
+        self.assertTrue(report["errors"])
+
 
 class BusinessBoundaryTests(unittest.TestCase):
     def score_control(self, mutation=None, answer=None):
@@ -205,6 +275,18 @@ class BusinessBoundaryTests(unittest.TestCase):
         report = self.score_control(lambda db: db.execute("DELETE FROM alerts"), answer)
         self.assertEqual(report["expected_count"], 0)
         self.assertEqual(report["reward"], 1.0, report)
+        self.assertEqual(report["components"], {"incidents": 1.0, "priority": 1.0})
+
+    def test_no_qualifying_events_rejects_extra_event_with_zero_reward(self):
+        answer = {"snapshot_id": snapshot_id(),
+                  "incidents": [copy.deepcopy(manual_answer()["incidents"][0])],
+                  "priority": []}
+        report = self.score_control(lambda db: db.execute("DELETE FROM alerts"), answer)
+        self.assertTrue(report["valid"], report)
+        self.assertEqual(report["expected_count"], 0)
+        self.assertEqual(report["extra_count"], 1)
+        self.assertEqual(report["reward"], 0.0)
+        self.assertEqual(report["components"], {"incidents": 0.0, "priority": 1.0})
 
     def test_ended_alert_cannot_raise_incident_severity_at_window_end(self):
         # The P0 alerts ended during the window; only the P1 remains active.
