@@ -1,0 +1,70 @@
+{
+  "name": "get_request_metrics",
+  "arguments": {
+    "service_ids": [
+      "svc-pay-stage"
+    ],
+    "start": "2026-10-25T08:00:00Z",
+    "end": "2026-10-25T08:30:00Z"
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v2-seed-99",
+    "data": [
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1133,
+        "failed_requests": 451,
+        "retry_count": 205,
+        "latency_p95_ms": 3706
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1014,
+        "failed_requests": 481,
+        "retry_count": 216,
+        "latency_p95_ms": 1834
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1065,
+        "failed_requests": 469,
+        "retry_count": 413,
+        "latency_p95_ms": 3399
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1195,
+        "failed_requests": 416,
+        "retry_count": 362,
+        "latency_p95_ms": 3875
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1177,
+        "failed_requests": 460,
+        "retry_count": 57,
+        "latency_p95_ms": 556
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1189,
+        "failed_requests": 491,
+        "retry_count": 614,
+        "latency_p95_ms": 3210
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"list_alerts\",\"arguments\":{\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\",\"severities\":[\"P0\",\"P1\"],\"states\":[\"firing\"]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 1973,
+    "completion_tokens": 72,
+    "total_tokens": 2045,
+    "prompt_tokens_details": {
+      "cached_tokens": 1792
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8
+    },
+    "prompt_cache_hit_tokens": 1792,
+    "prompt_cache_miss_tokens": 181
+  },
+  "seconds": 0.9567324000017834,
+  "raw_response": {
+    "id": "c4c15c89-dc8c-448a-8a69-ae9e6224c52a",
+    "object": "chat.completion",
+    "created": 1792928300,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"list_alerts\",\"arguments\":{\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\",\"severities\":[\"P0\",\"P1\"],\"states\":[\"firing\"]}}",
+          "reasoning_content": "Need to call tool with proper format."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1973,
+      "completion_tokens": 72,
+      "total_tokens": 2045,
+      "prompt_tokens_details": {
+        "cached_tokens": 1792
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 8
+      },
+      "prompt_cache_hit_tokens": 1792,
+      "prompt_cache_miss_tokens": 181
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": null,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

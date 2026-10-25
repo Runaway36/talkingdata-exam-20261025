@@ -1,0 +1,60 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"svc-auth\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:05:00Z\"}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 10309,
+    "completion_tokens": 311,
+    "total_tokens": 10620,
+    "prompt_tokens_details": {
+      "cached_tokens": 6272
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 254
+    },
+    "prompt_cache_hit_tokens": 6272,
+    "prompt_cache_miss_tokens": 4037
+  },
+  "seconds": 2.3848915999988094,
+  "raw_response": {
+    "id": "294d1e87-cd7e-4cee-93a9-04be31068780",
+    "object": "chat.completion",
+    "created": 1792928360,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"svc-auth\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:05:00Z\"}}",
+          "reasoning_content": "Need continue tool calls. We have computed much. Need auth, frontend metrics. Need query each bucket. Auth impact all report buckets 08:00-08:30. Maintenance approved 08:05-08:10 exempts bucket. Need buckets:\n08:00-08:05\n08:05-08:10 exempt (approved)\n08:10-08:15\n08:15-08:20\n08:20-08:25\n08:25-08:30\nBaseline 70 bps. Need request and failed.\n\nFrontend impact 08:10-08:30 => buckets 08:10-08:15, 08:15-08:20, 08:20-08:25, 08:25-08:30. Maintenance approved 08:15-08:25 exempts [08:15,08:20) and [08:20,08:25). Effective non-exempt: 08:10-08:15 and 08:25-08:30. Baseline 90 bps.\n\nNeed query. Could call per bucket, maybe multiple services separately. Let's call auth for [08:00,08:05) maybe."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 10309,
+      "completion_tokens": 311,
+      "total_tokens": 10620,
+      "prompt_tokens_details": {
+        "cached_tokens": 6272
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 254
+      },
+      "prompt_cache_hit_tokens": 6272,
+      "prompt_cache_miss_tokens": 4037
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": null,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

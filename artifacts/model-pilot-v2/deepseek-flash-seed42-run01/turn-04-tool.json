@@ -1,0 +1,400 @@
+{
+  "name": "get_request_metrics",
+  "arguments": {
+    "service_ids": [
+      "svc-auth",
+      "svc-baseline",
+      "svc-cart",
+      "svc-checkout",
+      "svc-search",
+      "svc-log",
+      "svc-pay"
+    ],
+    "start": "2026-10-25T08:00:00Z",
+    "end": "2026-10-25T08:30:00Z"
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v2-seed-42",
+    "data": [
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1008,
+        "failed_requests": 19,
+        "retry_count": 410,
+        "latency_p95_ms": 1116
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1016,
+        "failed_requests": 18,
+        "retry_count": 580,
+        "latency_p95_ms": 3609
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1183,
+        "failed_requests": 20,
+        "retry_count": 217,
+        "latency_p95_ms": 2704
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1127,
+        "failed_requests": 21,
+        "retry_count": 658,
+        "latency_p95_ms": 1899
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1036,
+        "failed_requests": 19,
+        "retry_count": 142,
+        "latency_p95_ms": 1030
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1190,
+        "failed_requests": 22,
+        "retry_count": 551,
+        "latency_p95_ms": 1096
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1098,
+        "failed_requests": 106,
+        "retry_count": 610,
+        "latency_p95_ms": 1937
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1135,
+        "failed_requests": 111,
+        "retry_count": 566,
+        "latency_p95_ms": 3545
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1002,
+        "failed_requests": 100,
+        "retry_count": 698,
+        "latency_p95_ms": 3644
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1137,
+        "failed_requests": 111,
+        "retry_count": 787,
+        "latency_p95_ms": 2645
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1087,
+        "failed_requests": 108,
+        "retry_count": 300,
+        "latency_p95_ms": 1800
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1040,
+        "failed_requests": 101,
+        "retry_count": 3,
+        "latency_p95_ms": 3926
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1087,
+        "failed_requests": 19,
+        "retry_count": 159,
+        "latency_p95_ms": 901
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1195,
+        "failed_requests": 21,
+        "retry_count": 104,
+        "latency_p95_ms": 399
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1097,
+        "failed_requests": 21,
+        "retry_count": 367,
+        "latency_p95_ms": 3491
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1088,
+        "failed_requests": 19,
+        "retry_count": 826,
+        "latency_p95_ms": 197
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1186,
+        "failed_requests": 20,
+        "retry_count": 549,
+        "latency_p95_ms": 531
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1096,
+        "failed_requests": 21,
+        "retry_count": 565,
+        "latency_p95_ms": 1220
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1163,
+        "failed_requests": 611,
+        "retry_count": 114,
+        "latency_p95_ms": 122
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1189,
+        "failed_requests": 49,
+        "retry_count": 250,
+        "latency_p95_ms": 934
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1035,
+        "failed_requests": 45,
+        "retry_count": 692,
+        "latency_p95_ms": 3053
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1139,
+        "failed_requests": 46,
+        "retry_count": 604,
+        "latency_p95_ms": 1748
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1008,
+        "failed_requests": 44,
+        "retry_count": 95,
+        "latency_p95_ms": 915
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1059,
+        "failed_requests": 610,
+        "retry_count": 517,
+        "latency_p95_ms": 2485
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1191,
+        "failed_requests": 474,
+        "retry_count": 438,
+        "latency_p95_ms": 3697
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1149,
+        "failed_requests": 451,
+        "retry_count": 370,
+        "latency_p95_ms": 918
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1035,
+        "failed_requests": 465,
+        "retry_count": 505,
+        "latency_p95_ms": 392
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1193,
+        "failed_requests": 406,
+        "retry_count": 881,
+        "latency_p95_ms": 469
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1039,
+        "failed_requests": 480,
+        "retry_count": 163,
+        "latency_p95_ms": 3264
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1174,
+        "failed_requests": 454,
+        "retry_count": 610,
+        "latency_p95_ms": 280
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1160,
+        "failed_requests": 36,
+        "retry_count": 591,
+        "latency_p95_ms": 807
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1180,
+        "failed_requests": 32,
+        "retry_count": 46,
+        "latency_p95_ms": 2728
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1058,
+        "failed_requests": 35,
+        "retry_count": 81,
+        "latency_p95_ms": 3523
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1059,
+        "failed_requests": 32,
+        "retry_count": 389,
+        "latency_p95_ms": 1158
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1116,
+        "failed_requests": 36,
+        "retry_count": 166,
+        "latency_p95_ms": 1536
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1090,
+        "failed_requests": 34,
+        "retry_count": 686,
+        "latency_p95_ms": 1113
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1006,
+        "failed_requests": 530,
+        "retry_count": 574,
+        "latency_p95_ms": 834
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1183,
+        "failed_requests": 535,
+        "retry_count": 665,
+        "latency_p95_ms": 2892
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1139,
+        "failed_requests": 49,
+        "retry_count": 225,
+        "latency_p95_ms": 1859
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1150,
+        "failed_requests": 48,
+        "retry_count": 828,
+        "latency_p95_ms": 3580
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1001,
+        "failed_requests": 530,
+        "retry_count": 777,
+        "latency_p95_ms": 3320
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1040,
+        "failed_requests": 531,
+        "retry_count": 714,
+        "latency_p95_ms": 1751
+      }
+    ]
+  }
+}

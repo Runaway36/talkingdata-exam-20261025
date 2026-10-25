@@ -1,0 +1,384 @@
+{
+  "batch_complete": true,
+  "planned_attempts": 12,
+  "actual_attempts": 12,
+  "status_counts": {
+    "invalid_final_answer": 6,
+    "completed": 5,
+    "budget_exhausted_without_final_answer": 1
+  },
+  "submitted_final_answers": 11,
+  "valid_final_answers": 5,
+  "execution_errors": 0,
+  "pass_at_1": 0.0,
+  "pass_at_4": 0.0,
+  "reported_mean_reward": 0.0,
+  "numeric_reward_count": 11,
+  "numeric_reward_mean": 0.0,
+  "null_reward_count": 1,
+  "tool_calls": 15,
+  "tool_error_responses": 1,
+  "protocol_errors": 13,
+  "truncated_responses": 0,
+  "sum_episode_seconds": 372.45,
+  "frozen_core_verified": true,
+  "all_144_planned_turn_seeds_unique": true,
+  "checked_response_count": 39,
+  "run_checks": [
+    {
+      "folder": "seed17-attempt01",
+      "core_unchanged": true,
+      "sampling_base": 20431125,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "invalid_final_answer"
+    },
+    {
+      "folder": "seed17-attempt02",
+      "core_unchanged": true,
+      "sampling_base": 20431225,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "invalid_final_answer"
+    },
+    {
+      "folder": "seed17-attempt03",
+      "core_unchanged": true,
+      "sampling_base": 20431325,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "completed"
+    },
+    {
+      "folder": "seed17-attempt04",
+      "core_unchanged": true,
+      "sampling_base": 20431425,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "completed"
+    },
+    {
+      "folder": "seed42-attempt01",
+      "core_unchanged": true,
+      "sampling_base": 20681125,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "budget_exhausted_without_final_answer"
+    },
+    {
+      "folder": "seed42-attempt02",
+      "core_unchanged": true,
+      "sampling_base": 20681225,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "invalid_final_answer"
+    },
+    {
+      "folder": "seed42-attempt03",
+      "core_unchanged": true,
+      "sampling_base": 20681325,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "completed"
+    },
+    {
+      "folder": "seed42-attempt04",
+      "core_unchanged": true,
+      "sampling_base": 20681425,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "completed"
+    },
+    {
+      "folder": "seed99-attempt01",
+      "core_unchanged": true,
+      "sampling_base": 21251125,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "invalid_final_answer"
+    },
+    {
+      "folder": "seed99-attempt02",
+      "core_unchanged": true,
+      "sampling_base": 21251225,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "completed"
+    },
+    {
+      "folder": "seed99-attempt03",
+      "core_unchanged": true,
+      "sampling_base": 21251325,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "invalid_final_answer"
+    },
+    {
+      "folder": "seed99-attempt04",
+      "core_unchanged": true,
+      "sampling_base": 21251425,
+      "device": "cuda:0",
+      "dtype": "torch.bfloat16",
+      "status": "invalid_final_answer"
+    }
+  ],
+  "by_event": [
+    {
+      "seed": 17,
+      "incident_id": "INC-AUTH",
+      "expected": {
+        "incident_id": "INC-AUTH",
+        "severity": "P1",
+        "service_ids": [
+          "svc-auth"
+        ],
+        "excess_failed_requests": 48
+      },
+      "valid_final_comparisons": 2,
+      "missing": 1,
+      "severity_correct": 1,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 3,
+          "actual": null
+        },
+        {
+          "attempt": 4,
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "host-auth"
+            ],
+            "excess_failed_requests": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "incident_id": "INC-DB",
+      "expected": {
+        "incident_id": "INC-DB",
+        "severity": "P0",
+        "service_ids": [
+          "svc-checkout",
+          "svc-search"
+        ],
+        "excess_failed_requests": 174
+      },
+      "valid_final_comparisons": 2,
+      "missing": 1,
+      "severity_correct": 1,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 3,
+          "actual": null
+        },
+        {
+          "attempt": 4,
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "host-db"
+            ],
+            "excess_failed_requests": 200
+          }
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "incident_id": "INC-PAY",
+      "expected": {
+        "incident_id": "INC-PAY",
+        "severity": "P1",
+        "service_ids": [
+          "svc-pay"
+        ],
+        "excess_failed_requests": 120
+      },
+      "valid_final_comparisons": 2,
+      "missing": 2,
+      "severity_correct": 0,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 3,
+          "actual": null
+        },
+        {
+          "attempt": 4,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "incident_id": "INC-AUTH",
+      "expected": {
+        "incident_id": "INC-AUTH",
+        "severity": "P1",
+        "service_ids": [
+          "svc-auth"
+        ],
+        "excess_failed_requests": 48
+      },
+      "valid_final_comparisons": 2,
+      "missing": 2,
+      "severity_correct": 0,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 3,
+          "actual": null
+        },
+        {
+          "attempt": 4,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "incident_id": "INC-DB",
+      "expected": {
+        "incident_id": "INC-DB",
+        "severity": "P0",
+        "service_ids": [
+          "svc-checkout",
+          "svc-search"
+        ],
+        "excess_failed_requests": 171
+      },
+      "valid_final_comparisons": 2,
+      "missing": 2,
+      "severity_correct": 0,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 3,
+          "actual": null
+        },
+        {
+          "attempt": 4,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "incident_id": "INC-PAY",
+      "expected": {
+        "incident_id": "INC-PAY",
+        "severity": "P1",
+        "service_ids": [
+          "svc-pay"
+        ],
+        "excess_failed_requests": 175
+      },
+      "valid_final_comparisons": 2,
+      "missing": 2,
+      "severity_correct": 0,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 3,
+          "actual": null
+        },
+        {
+          "attempt": 4,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "seed": 99,
+      "incident_id": "INC-AUTH",
+      "expected": {
+        "incident_id": "INC-AUTH",
+        "severity": "P1",
+        "service_ids": [
+          "svc-auth"
+        ],
+        "excess_failed_requests": 53
+      },
+      "valid_final_comparisons": 1,
+      "missing": 1,
+      "severity_correct": 0,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 2,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "seed": 99,
+      "incident_id": "INC-DB",
+      "expected": {
+        "incident_id": "INC-DB",
+        "severity": "P0",
+        "service_ids": [
+          "svc-checkout",
+          "svc-search"
+        ],
+        "excess_failed_requests": 140
+      },
+      "valid_final_comparisons": 1,
+      "missing": 1,
+      "severity_correct": 0,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 2,
+          "actual": null
+        }
+      ]
+    },
+    {
+      "seed": 99,
+      "incident_id": "INC-PAY",
+      "expected": {
+        "incident_id": "INC-PAY",
+        "severity": "P1",
+        "service_ids": [
+          "svc-pay"
+        ],
+        "excess_failed_requests": 212
+      },
+      "valid_final_comparisons": 1,
+      "missing": 1,
+      "severity_correct": 0,
+      "services_correct": 0,
+      "count_correct": 0,
+      "complete_correct": 0,
+      "actual_by_attempt": [
+        {
+          "attempt": 2,
+          "actual": null
+        }
+      ]
+    }
+  ]
+}

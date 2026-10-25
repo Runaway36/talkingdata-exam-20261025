@@ -52,6 +52,10 @@ v3 保持 v2 数据结构、业务数值和 Oracle 计算口径，变更任务�
 答案为 dict 或 JSON 字符串：
 `{snapshot_id, incidents: [{incident_id, severity, service_ids, excess_failed_requests}], priority: [incident_id, ...]}`。
 
+输入资源上限为 `config.MAX_ANSWER_BYTES`，默认 UTF-8 JSON 编码 1,000,000 字节，包含空白字符；超过时返回输入超限错误和 0 分。该限制同时写入模型实际收到的题面，不作为隐藏业务规则。
+
+异常失败量按非负整数值验证：`48`、`48.0`、`48e0` 等价，非零小数部分、bool、字符串数值、NaN/Infinity 不接受。JSON 小数采用精确十进制解析，避免把极小的小数部分舍入成整数。
+
 `verifier.evaluate(task, answer) -> dict` 返回 reward、valid、components（incidents、priority）、errors、expected_count；合法答案报告另含 matched_count、priority_matches、extra_count。`verifier.compute_reward(task, answer) -> float` 为统一训练入口。不接收也不检查调用轨迹。验证器独立从可信快照计算预期结果（SQL 实现），不调用样例解法、不调用 LLM。
 
 合法答案奖励为 `(C + R) / (N + K + X)`：
@@ -71,7 +75,9 @@ priority 最多 top_k 项，重复或不在提交明细中的 ID 为协议错误
 
 ## 版本与训练范围
 
-seed 目前改变观测数值，事件服务关系、维护等结构仍固定。该分布不保证反复训练后仍需查询全部业务来源，也未覆盖跨结构泛化。v2 的 [模型小样本](../artifacts/model-pilot-v2/README.md) 与 [静态设计审阅](../artifacts/design-review/independent-review.md) 保留原样；其分数不能视为 v3 模型结果。v3 模型评测待开展。
+seed 目前改变观测数值，事件服务关系、维护等结构仍固定。该分布不保证反复训练后仍需查询全部业务来源，也未覆盖跨结构泛化。v2 的 [模型小样本](../artifacts/model-pilot-v2/README.md) 与 [静态设计审阅](../artifacts/design-review/independent-review.md) 保留原样；其分数不能视为 v3 模型结果。
+
+v3 已在冻结题目与评分器后完成 DeepSeek 非思考模式和 Qwen2.5-1.5B-Instruct 各3实例×4次，严格 pass@4 均为0；两个新上下文 GPT/Codex sub-agent 各独立5次API解对seed17。另有单独列条件的 DeepSeek 思考模式4096 token补充诊断，seed17四次成功一次。原始证据和比较边界见[最终模型评测](../artifacts/model-eval-final/report.md)。真实模型结果没有自然中间分，主要指标采用 `valid and reward == 1` 的严格0/1成功判据；本契约公式保持冻结，不把构造的部分分样例当作连续奖励排序效度证据。没有开展 RL 训练。
 
 ## 模块职责
 

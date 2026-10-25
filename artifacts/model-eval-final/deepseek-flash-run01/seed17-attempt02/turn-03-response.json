@@ -1,0 +1,53 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"get_service_profiles\",\"arguments\":{\"service_ids\":[\"svc-auth\",\"svc-baseline\",\"svc-cart\",\"svc-checkout\",\"svc-search\",\"svc-log\",\"svc-pay\",\"svc-pay-stage\"]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3200,
+    "completion_tokens": 58,
+    "total_tokens": 3258,
+    "prompt_tokens_details": {
+      "cached_tokens": 2944
+    },
+    "prompt_cache_hit_tokens": 2944,
+    "prompt_cache_miss_tokens": 256
+  },
+  "seconds": 1.2959432000061497,
+  "raw_response": {
+    "id": "18bbfcfd-b30d-4335-81a9-75f7537440e8",
+    "object": "chat.completion",
+    "created": 1792927825,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"get_service_profiles\",\"arguments\":{\"service_ids\":[\"svc-auth\",\"svc-baseline\",\"svc-cart\",\"svc-checkout\",\"svc-search\",\"svc-log\",\"svc-pay\",\"svc-pay-stage\"]}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3200,
+      "completion_tokens": 58,
+      "total_tokens": 3258,
+      "prompt_tokens_details": {
+        "cached_tokens": 2944
+      },
+      "prompt_cache_hit_tokens": 2944,
+      "prompt_cache_miss_tokens": 256
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": 20431227,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

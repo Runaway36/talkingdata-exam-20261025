@@ -38,13 +38,18 @@ def save(path, data):
     path.write_text(json.dumps(data, ensure_ascii=True, indent=2, allow_nan=False), encoding="utf-8")
 
 
-def parse_object(content):
+def _object_text(content):
     text = content.strip()
     # Accept only a whole fenced object, not arbitrary substring salvage.
     if text.startswith("```json\n") and text.endswith("\n```"):
         text = text[8:-4]
     elif text.startswith("```\n") and text.endswith("\n```"):
         text = text[4:-4]
+    return text.strip()
+
+
+def parse_object(content):
+    text = _object_text(content)
     def pairs(items):
         result = {}
         for key, value in items:
@@ -56,6 +61,36 @@ def parse_object(content):
     if type(result) is not dict:
         raise ValueError("action must be a JSON object")
     return result
+
+
+def raw_answer_json(content):
+    """Return the original answer value after validating the complete envelope.
+
+    Standard decoding is used only to validate syntax/unique keys and locate
+    spans. The extracted text, never a decoded float, reaches the verifier.
+    """
+    action = parse_object(content)
+    if action.get("action") != "final" or set(action) != {"action", "answer"}:
+        raise ValueError("expected a final action envelope")
+    text = _object_text(content)
+    decoder = json.JSONDecoder()
+    position = 1  # parse_object established that the outer value is an object.
+    while True:
+        while text[position].isspace():
+            position += 1
+        key, position = decoder.raw_decode(text, position)
+        while text[position].isspace():
+            position += 1
+        position += 1  # colon, already validated by parse_object
+        while text[position].isspace():
+            position += 1
+        value_start = position
+        _, position = decoder.raw_decode(text, position)
+        if key == "answer":
+            return text[value_start:position]
+        while text[position].isspace():
+            position += 1
+        position += 1  # comma; the required answer key is still to come
 
 
 class DeepSeek:
@@ -217,9 +252,9 @@ def main():
                 try:
                     action = parse_object(content)
                     if action.get("action") == "final" and set(action) == {"action", "answer"}:
-                        answer = action["answer"]
-                        evaluation = evaluate(env.task, answer)
-                        save(args.output / "final_answer.json", answer)
+                        answer_json = raw_answer_json(content)
+                        evaluation = evaluate(env.task, answer_json)
+                        (args.output / "final_answer.json").write_text(answer_json, encoding="utf-8")
                         save(args.output / "evaluation.json", evaluation)
                         result.update(status="completed" if evaluation["valid"] else "invalid_final_answer",
                                       reward=evaluation["reward"], evaluation=evaluation)

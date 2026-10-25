@@ -16,13 +16,23 @@
 
 v3 的部分奖励衡量完整业务结果的完成情况：优先事件完整正确且位置正确可以获得两个单位。数值只差 1 和差很多都属于该事件未完成；它不衡量数值误差大小。
 
-- 本地 `python scripts/validate.py`：退出码 0，**48/48 测试通过**。seed 17、42、99 的参考解均得 1；错误样例均得 0.4；空答案均得 0；Harness 样例得 1。
-- Docker `python scripts/validate_container.py`：构建、默认启动、48 项测试、只读挂载脚本调用全部通过。镜像 `talkingdata-alert-rlvr:exam-v3`；运行使用禁网、1 CPU、256 MiB 内存及只读文件系统。
+- 本地 `python scripts/validate.py`：退出码 0，**51/51 测试通过**。seed 17、42、99 的参考解均得 1；错误样例均得 0.4；空答案均得 0；Harness 样例得 1。
+- Docker `python scripts/validate_container.py`：构建、默认启动、51 项测试、只读挂载脚本调用全部通过。镜像 `talkingdata-alert-rlvr:exam-v3`；运行使用禁网、1 CPU、256 MiB 内存及只读文件系统。
 - 独立静态复核确认新公式的满分条件、空真值、误报和排名依赖边界；补充题面的格式约束后重新完成上述验证。
 
-机器证据：[v3 本地汇总](../artifacts/validation-20261025T110031864886Z/summary.json)、[v3 测试原始输出](../artifacts/validation-20261025T110031864886Z/unit-tests.stderr.txt)、[v3 默认样例](../artifacts/validation-20261025T110031864886Z/demo-17.json)、[v3 Docker 汇总](../artifacts/container-validation-20261025T110031844077Z/summary.json)。
+机器证据：[v3 本地汇总](../artifacts/validation-20261025T111622025933Z/summary.json)、[v3 测试原始输出](../artifacts/validation-20261025T111622025933Z/unit-tests.stderr.txt)、[v3 默认样例](../artifacts/validation-20261025T111622025933Z/demo-17.json)、[v3 Docker 汇总](../artifacts/container-validation-20261025T111622006031Z/summary.json)。
 
-以上验证了实现与既定规则，不是 v3 模型难度评测。v2 真实模型试跑见[历史评测记录](../artifacts/model-pilot-v2/README.md)，不能直接当成 v3 模型结果。
+双路红队随后发现输入大小限制未公开及整数值 JSON 表示歧义，现已公开限制并采用精确十进制解析。新增回归覆盖大小边界、等价表示和极小非零小数。原始审计与修复后复核见[红队记录](../artifacts/redteam-v3/README.md)。
+
+以上程序性验收验证实现与既定规则，单独不构成模型难度证据。随后已完成冻结 v3 的真实模型评测，见[最终评测报告](../artifacts/model-eval-final/report.md)：
+
+- DeepSeek 非思考模式和 Qwen2.5-1.5B-Instruct 各3实例×4次，合计24次全部正常执行，无基础设施错误，严格 pass@1/pass@4 均为0。
+- Qwen 11次交final：5次合法错答、6次格式违规；另1次预算内未交final，原始reward=null保留。完整率与逐事件差异见[Qwen运行记录](../artifacts/model-eval-final/qwen25-15b-run01/run-notes.md)。
+- 两个独立新上下文 GPT/Codex sub-agent 分别通过5次业务API取得数据，均独立解对seed17并得1，构成该实例可解证据，不代表与其他Harness公平对齐的排名。
+- DeepSeek 思考模式、4096 token/轮的补充诊断仅对seed17独立4次，reward为0、1、0、0；三条失败分别有1、2、3次截断。该条件单列，不并入原1024 token批次。
+- 真实模型答案没有非零非满分奖励；主要评测按严格0/1成功报告，未验证连续奖励的表现排序效度。程序构造的部分分用例只验证公式。
+
+红队及最终独立核查另覆盖全部10,000个内置seed核算、2,535个答案变异和协议边界，范围与限制见[最终独立核查](../artifacts/model-eval-final/independent-audit-final.md)。原始网络和Qwen运行异常未在本轮复现；Qwen旧错误缺失真实诊断，不能声称已确认根因。v2 真实模型试跑见[历史评测记录](../artifacts/model-pilot-v2/README.md)，不混入 v3 分母；尚未实施RL训练。
 
 ## v2 历史记录
 

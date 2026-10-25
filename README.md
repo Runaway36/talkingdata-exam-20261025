@@ -1,6 +1,8 @@
-# 告警业务影响分析 RLVR
+# 题目一：告警业务影响分析 RLVR
 
 **所选题目：题目一——复杂业务分析 RLVR 任务构建。**
+
+**任务已有独立可解证据：两个新上下文的 GPT/Codex sub-agent 分别只用题面与业务工具，各调用 5 次 API，独立解对 seed17 并得满分。** 两次均有逐桶计算和原始工具返回，见[第一次](artifacts/model-eval-final/gpt-subagent-run01/reasoning.md)、[第二次](artifacts/model-eval-final/gpt-subagent-run02/reasoning.md)。这证明该实例可解；GPT 的 Harness、token 预算和部署标识未与其他模型对齐，不能据此制作通用模型排行榜。
 
 一个单场景、可复现的告警分析任务：Agent 从分散的业务 API 获取告警、事件影响范围、服务资料、请求观测和维护记录，计算各事件的受影响服务和异常失败请求数，给出处置优先级。独立验证器只看最终结果，返回 0～1 奖励，不调用大模型。
 
@@ -9,6 +11,21 @@
 当前任务版本为 **v3**：保留 v2 的业务数据和正确答案口径，调整题面提示及奖励定义。每个完整正确的事件分析、每个有正确分析支撑的处置位置各计一个得分单位。
 
 业务数据是合成的固定快照，不连接真实监控平台或企微。容器启动自动生成 SQLite 并运行正确、错误及空答案样例，无需凭据、外部服务、下载数据或手工建库。
+
+## 已执行的模型评测
+
+题面、业务代码和评分器在最终批次前冻结，未因模型表现修改。主要成功判据为 `valid and reward == 1`；下列条件分别报告，不合并分母。
+
+| 条件 | 实例与次数 | 严格成功 | pass@1 观测值 | pass@4 观测值 |
+|---|---|---:|---:|---:|
+| DeepSeek `deepseek-flash`，非思考，1024 输出 token/轮 | seed17/42/99，各4次 | 0/12 | 0 | 0 |
+| Qwen2.5-1.5B-Instruct，CUDA BF16，1024 输出 token/轮 | seed17/42/99，各4次 | 0/12 | 0 | 0 |
+| DeepSeek `deepseek-flash`，思考模式补充诊断，4096 token/轮 | 仅 seed17，4次 | 1/4 | 0.25 | 1 |
+| GPT/Codex sub-agent，两个独立新上下文 | 仅 seed17，各1次 | 2/2 | 不作总体估计 | 未测 |
+
+原定两模型均最多12轮，temperature=0.7、top_p=1，Qwen top_k=0；每次为新 conversation。DeepSeek 服务端采样 seed 不可控。两批均无基础设施错误；Qwen 有5次合法错答、6次非法 final、1次预算内未交 final，后者原始 reward 保持 null。DeepSeek 补充思考模式的三条失败轨迹分别有1、2、3次输出截断，且温度参数被服务端忽略，不能将其与原批直接比较。详细条件、分项和证据见[最终模型评测](artifacts/model-eval-final/report.md)。
+
+**全部自然产生的真实模型分数均为0或1，没有中间分。** 因此本次主要评测报告严格成功率，不声称已验证连续奖励可以排序 Agent 能力；下文冻结公式和作者构造的部分分样例保留，仅用于解释评分规则。没有开展 RL 训练或证明训练收益。
 
 ## 快速运行
 
@@ -22,6 +39,8 @@ python -m examples.harness_integration
 ```
 
 Windows 上已安装多个版本时，可将 `python` 换成 `py -3.13`，或使用自己虚拟环境中的解释器。
+
+已实际完成本地 **51/51 测试**，Docker 构建、默认启动、51项测试和外部脚本只读挂载均通过；完整命令与原始日志见[验收记录](docs/VALIDATION.md)。
 
 Docker：
 
@@ -86,6 +105,8 @@ task_text = make_task(seed=17)
 
 第 3～5 步可以换序。评分器不规定调用顺序、次数或参数写法；题面给出完整业务规则，不列解题所需 API 清单或执行步骤。
 
+这条路径需要从业务约束推导查询依赖，不能只按题面关键词调用工具。例如：先从告警取得 `incident_id`，再查询关系表得到真实 `service_id` 和影响区间；告警里的 `resource_id=host-db` 不能直接当作服务 ID。`firing` 标签也不足以证明截止时仍活动，必须联合检查 `started_at < cutoff`、`ended_at is null or ended_at > cutoff` 以及严重等级。一个桶是否计入，还要联合比较报告窗口、`impact_start/impact_end`、桶起止时间；维护排除要求同一服务、`status=approved`、维护起止完整覆盖该桶三个条件同时成立。只看到“维护”或“P0”不能直接推出排除或优先处理。
+
 `get_host_metrics` 返回主机 CPU、内存使用率及采集时间；`get_notification_history` 返回历史通知渠道、送达状态和发送时间。二者不参与本题的异常失败计数，是供工具选择的冗余业务信息；owner_team、dashboard_url、retry_count、latency_p95_ms 也不进入计算。模型可见的工具描述只说明返回内容，不直接标注“冗余”。
 
 改变关联范围、生产环境/常态失败率、实际失败数或维护覆盖会改变正确答案，独立反事实测试覆盖这些依赖。当前 seed 主要改变指标数值，关系与维护等结构仍固定；反复训练可能记住这些结构，因此这些测试不证明训练后的策略每次仍必须查询全部来源。
@@ -135,18 +156,25 @@ reward = (C + R) / (N + K + X)
 
 ## 训练 Harness 接入
 
+适用于具有可信训练控制器的工具使用 RLVR：每次 rollout 创建固定快照，模型在业务工具约束下完成多源关联与聚合，结束后获得可程序验证的终局 reward。它测量给定规则下的工具选择、实体关联、时间例外处理、精确计算与排序；事件归属已由输入给定，不测发现真实故障根因，也不代表全部 agentic 能力。
+
 调用模式见 [harness_integration.py](examples/harness_integration.py)：训练控制器创建环境，把 `task`、工具 schema 和 `env.call` 提供给模型；模型返回最终结果后，由控制器调用验证器。
 
 ```python
 from alert_rlvr.environment import AlertEnvironment, API_SCHEMAS
-from alert_rlvr.verifier import compute_reward
+from alert_rlvr.verifier import evaluate
 
-with AlertEnvironment(seed=42) as env:
-    # 模型收到 env.task 和 API_SCHEMAS，只允许调用 env.call(name, arguments)。
-    # final_answer = your_model_tool_loop(env.task, API_SCHEMAS, env.call)
-    # reward = compute_reward(env.task, final_answer)
-    pass
+def run_training_rollout(model_tool_loop, seed=42):
+    with AlertEnvironment(seed=seed) as env:
+        final_answer = model_tool_loop(env.task, API_SCHEMAS, env.call)
+        report = evaluate(env.task, final_answer)
+        return {
+            "reward": report["reward"],
+            "success": report["valid"] and report["reward"] == 1.0,
+        }
 ```
+
+`model_tool_loop` 由训练方实现；本项目交付环境与终局评分接口，不包含优化器或已经执行的 RL 训练。运行异常由外层控制器单列，不能冒充模型业务错答；原始 JSON 答案应直接交评分器，避免先转 float 丢失小数精度。
 
 另提供可运行的 JSONL 业务工具进程：
 
@@ -169,7 +197,24 @@ docker run --rm --network none \
 
 **边界：**Python 类的私有连接是接口约定，不是防恶意同进程 Python 代码的沙箱。可信 Harness 持有数据库和验证器，只把业务工具暴露给模型；有任意文件/代码执行权限的模型不能与可信评分器共享文件权限。JSONL 进程是可选接入方式，不宣称单容器能抵御任意攻击。
 
-## 复现、验收与限制
+## 验收与红队范围
+
+双路红队分别检查“正确答案被扣分”和“错误答案得满分”，原始反例、检查范围与处理记录见[红队记录](artifacts/redteam-v3/README.md)。
+
+对齐检查公开了输入大小上限，接受整数值等价的 `48/48.0/48e0` 并精确拒绝非零小数。已有全部10,000个内置 seed 的独立核算、2,535个答案变异和协议检查；这些证据限于当前生成器及已测反例，不是穷尽证明。生成器范围外的 SQLite 大整数风险、固定关系结构的记忆捷径和恶意同进程代码隔离均仍有边界，见[最终独立核查](artifacts/model-eval-final/independent-audit-final.md)。
+
+## Badcase：证据与归因边界
+
+| 原始证据 | 观察 | 支持归因到哪一步 | 不能据此断言 |
+|---|---|---|---|
+| [DeepSeek原批](artifacts/model-eval-final/deepseek-flash-run01/summary.json) | 65次工具调用均成功，12次合法 final；36个期望事件中等级正确29项、服务集合正确19项，异常量正确0项 | 查询链能执行，部分信息提取成功，最终数量计算/筛选仍有错 | 不能仅从最终错数确定模型内部在哪一步算错，也不能归因于接口不可用 |
+| [Qwen seed17 attempt04](artifacts/model-eval-final/qwen25-15b-run01/seed17-attempt04/final_answer.json) | 仅查告警，拿host ID作service ID；AUTH=0、DB=200、PAY缺失 | 实体层级混淆，缺少关系/指标等必要证据便作答 | 不能把它简化为纯算术能力不足 |
+| [Qwen seed42 attempt01](artifacts/model-eval-final/qwen25-15b-run01/seed42-attempt01/result.json) | 连续10次用虚构事件ID查询关系，返回空列表，最终无final | 未利用空结果修正查询，固定轮次内未完成 | 工具正常返回空结果，不是环境崩溃 |
+| [DeepSeek补充思考诊断](artifacts/model-eval-final/score-order-diagnostic-run01/summary.json) | 4次中1次完整正确，三条失败有输出截断 | 该模型在此实例可成功；失败受当前输出预算影响 | 不能把截断失败直接解释为业务理解不可能，也不能与1024预算原批混评 |
+
+此前网络异常和 Qwen RuntimeError 原样保留；本轮未复现。Qwen 旧日志丢失底层错误，只修复了 traceback 记录，根因仍未确认；运行恢复不等于确认硬件、SDPA或精度根因已修复。
+
+## 复现与限制
 
 ```bash
 python scripts/validate.py
@@ -177,9 +222,25 @@ python scripts/validate.py
 
 该命令执行测试、3 个 seed 的调用样例和 Harness 样例，写入新的 `artifacts/validation-*` 目录，不覆盖既有结果。实际执行结果见 [验收记录](docs/VALIDATION.md)。
 
+题目一各项要求与文件、实际证据的对应关系见[交付要求映射](docs/REQUIREMENTS.md)。容器验收也可直接执行 `python scripts/validate_container.py`。
+
+模型评测是可选实验，不是默认运行或评分器的依赖。复跑 DeepSeek 原定条件前配置环境变量 `DEEPSEEK_API_KEY`，然后使用新的输出目录：
+
+```bash
+python experiments/run_repeated_evaluation.py --backend deepseek --output artifacts/my-deepseek-run
+```
+
+本地 Qwen 需另备 Qwen2.5-1.5B-Instruct 权重与 CUDA 推理环境；可选依赖见 [requirements-qwen.txt](experiments/requirements-qwen.txt)。脚本不会下载权重或失败后自动切换 CPU：
+
+```bash
+python experiments/run_repeated_evaluation.py --backend qwen --output artifacts/my-qwen-run --local-python /path/to/python --model-path /path/to/Qwen2.5-1.5B-Instruct
+```
+
+以上各运行3个固定实例、每个4次独立作答。任意真实模型复跑不保证产生相同答案；业务快照与评分确定性、模型输出随机性须区分。已有原始轨迹可由 `python artifacts/model-eval-final/independent-audit-check.py` 离线核对，无需再次调用模型。
+
 - 种子变化用于同一固定业务结构下的数值变化；未实现关系、维护和告警结构随机化，不能据此证明跨结构泛化。
 - 合成数据已内置，SQLite 写入发生在初始化阶段；没有模拟真实告警采集延迟、丢包或最终一致性。
-- v2 已完成两个模型、三个 seed 各一次的 [真实模型小样本记录](artifacts/model-pilot-v2/README.md)，并保留 [独立上下文设计审阅](artifacts/design-review/independent-review.md)。这些是旧题面、旧奖励的证据；v3 尚待模型评测，未开展 RL 训练。
+- v2 的 [真实模型小样本记录](artifacts/model-pilot-v2/README.md) 与 [独立上下文设计审阅](artifacts/design-review/independent-review.md) 原样保留。v3 已完成上列独立模型评测；新旧题面、奖励、温度及预算不相同，不能将分差只归因于任务修改。未开展 RL 训练。
 - 当前为小数据快照、单次分析任务；没有建设实时流平台、通知发送链路或线上权限系统。
 - 模型或训练基础设施异常应由 Harness 单独记录，不等同于模型提交错误业务结果。
 
@@ -190,6 +251,7 @@ alert_rlvr/   config、SQLite 数据、业务 API、独立验证器、可选工�
 examples/     API 参考解、正确/错误样例、训练控制器与挂载调用示例
 tests/        独立手算边界、反事实、协议及集成验收
 scripts/      可复现验收入口
+experiments/  可选真实模型评测、独立作答桥接及本地推理驱动
 docs/         任务契约、接口定义、实际验收记录
 artifacts/    本次运行的机器可读证据
 Dockerfile    单容器入口（自动运行样例）

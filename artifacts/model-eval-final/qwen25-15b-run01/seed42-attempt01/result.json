@@ -1,0 +1,11 @@
+{
+  "status": "budget_exhausted_without_final_answer",
+  "reward": null,
+  "tool_calls": 10,
+  "protocol_errors": 2,
+  "turns": 12,
+  "truncated_responses": 0,
+  "reported_model": "Qwen2.5-1.5B-Instruct",
+  "elapsed_seconds": 89.529,
+  "finished_at": "2026-10-25T11:34:10.718180+00:00"
+}

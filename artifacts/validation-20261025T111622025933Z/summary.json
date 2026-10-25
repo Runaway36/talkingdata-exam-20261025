@@ -1,0 +1,48 @@
+{
+  "started_at_utc": "20261025T111622025933Z",
+  "python": "3.13.5",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "results": [
+    {
+      "name": "unit-tests",
+      "exit_code": 0
+    },
+    {
+      "name": "demo-17",
+      "exit_code": 0,
+      "rewards": {
+        "correct": 1.0,
+        "wrong_count_and_priority": 0.4,
+        "empty": 0.0
+      },
+      "api_call_count": 5
+    },
+    {
+      "name": "demo-42",
+      "exit_code": 0,
+      "rewards": {
+        "correct": 1.0,
+        "wrong_count_and_priority": 0.4,
+        "empty": 0.0
+      },
+      "api_call_count": 5
+    },
+    {
+      "name": "demo-99",
+      "exit_code": 0,
+      "rewards": {
+        "correct": 1.0,
+        "wrong_count_and_priority": 0.4,
+        "empty": 0.0
+      },
+      "api_call_count": 5
+    },
+    {
+      "name": "harness",
+      "exit_code": 0,
+      "reward": 1.0
+    }
+  ],
+  "all_passed": true,
+  "scope": "Programmatic acceptance only; no real-model difficulty/training measurement."
+}

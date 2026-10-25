@@ -1,0 +1,71 @@
+[
+  {
+    "case": "product_precision",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-EXACT",
+          "severity": "P1",
+          "service_ids": [
+            "svc-exact"
+          ],
+          "excess_failed_requests": 1
+        }
+      ],
+      "priority": [
+        "INC-EXACT"
+      ]
+    },
+    "manual_reason": "4503599627370498 - (9007199254740995 * 5000 // 10000) = 1",
+    "report": {
+      "reward": 0.0,
+      "valid": true,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 1
+    },
+    "compute_reward": 0.0
+  },
+  {
+    "case": "sum_overflow",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-EXACT",
+          "severity": "P1",
+          "service_ids": [
+            "svc-exact"
+          ],
+          "excess_failed_requests": 9223372036854775808
+        }
+      ],
+      "priority": [
+        "INC-EXACT"
+      ]
+    },
+    "manual_reason": "2**62 + 2**62 = 2**63",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "trusted snapshot could not be evaluated"
+      ],
+      "expected_count": 0
+    },
+    "compute_reward": 0.0
+  }
+]

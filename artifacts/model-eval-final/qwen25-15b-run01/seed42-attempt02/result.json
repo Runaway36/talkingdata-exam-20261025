@@ -1,0 +1,23 @@
+{
+  "status": "invalid_final_answer",
+  "reward": 0.0,
+  "tool_calls": 1,
+  "protocol_errors": 1,
+  "turns": 3,
+  "truncated_responses": 0,
+  "reported_model": "Qwen2.5-1.5B-Instruct",
+  "evaluation": {
+    "reward": 0.0,
+    "valid": false,
+    "components": {
+      "incidents": 0.0,
+      "priority": 0.0
+    },
+    "errors": [
+      "excess_failed_requests must be a nonnegative integer"
+    ],
+    "expected_count": 3
+  },
+  "elapsed_seconds": 32.304,
+  "finished_at": "2026-10-25T11:34:43.291682+00:00"
+}

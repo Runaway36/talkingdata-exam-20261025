@@ -1,0 +1,5 @@
+# Optional local model experiment only; NOT required by the RLVR runtime/Docker.
+# The recorded environment used Python 3.12 and the CUDA 12.8 PyTorch wheel.
+# Install a wheel matching the host CUDA/driver environment; model files are separate.
+torch==2.11.0
+transformers==5.6.2

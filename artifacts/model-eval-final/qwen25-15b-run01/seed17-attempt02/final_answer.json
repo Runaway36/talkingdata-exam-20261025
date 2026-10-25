@@ -1,0 +1,24 @@
+{
+    "snapshot_id": "alert-impact-v3-seed-17",
+    "incidents": [
+      {
+        "incident_id": "123abc",
+        "severity": "P1",
+        "service_ids": ["production-service-a-1"],
+        "excess_failed_requests": 0
+      },
+      {
+        "incident_id": "exclude-event-id",
+        "severity": "P1",
+        "service_ids": ["production-service-a-2", "production-service-b-1"],
+        "excess_failed_requests": -1
+      },
+      {
+        "incident_id": "event-with-zero-excess",
+        "severity": "P0",
+        "service_ids": ["production-service-c-1", "production-service-d-1"],
+        "excess_failed_requests": 0
+      }
+    ],
+    "priority": ["event-with-zero-excess"]
+  }

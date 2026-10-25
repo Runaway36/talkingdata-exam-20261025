@@ -1,0 +1,46 @@
+{
+  "scope": "numeric parsing follow-up only; not a rerun of the 10000-seed audit",
+  "source_sha256": {
+    "alert_rlvr/config.py": "338f3430885f18d93710129619035ee066767c70754939baa3ff50c80214dabb",
+    "alert_rlvr/verifier.py": "6d8f9bfd88d81acbb816dbe88d5ab4c732773135eec0480ad9e8b96465eb68b7",
+    "alert_rlvr/data.py": "81b3fb8b4aa3197505e8b3141f1d9486fbb067ce330b9d640e38b1d0afe3a157",
+    "docs/CONTRACT.md": "33e80169c318dfb80d7c03ab5bc04a7efff2121179871a6900f275df201360f8"
+  },
+  "independent_gold": {
+    "snapshot_id": "alert-impact-v3-seed-17",
+    "incidents": [
+      {
+        "incident_id": "INC-AUTH",
+        "severity": "P1",
+        "service_ids": [
+          "svc-auth"
+        ],
+        "excess_failed_requests": 48
+      },
+      {
+        "incident_id": "INC-DB",
+        "severity": "P0",
+        "service_ids": [
+          "svc-checkout",
+          "svc-search"
+        ],
+        "excess_failed_requests": 174
+      },
+      {
+        "incident_id": "INC-PAY",
+        "severity": "P1",
+        "service_ids": [
+          "svc-pay"
+        ],
+        "excess_failed_requests": 120
+      }
+    ],
+    "priority": [
+      "INC-DB",
+      "INC-PAY"
+    ]
+  },
+  "cases": 125,
+  "passes": 125,
+  "failures": []
+}

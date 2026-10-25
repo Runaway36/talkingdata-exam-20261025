@@ -1,0 +1,636 @@
+{
+  "task_version": 3,
+  "backend": "qwen",
+  "instances": [
+    17,
+    42,
+    99
+  ],
+  "attempts_per_instance": 4,
+  "temperature": 0.7,
+  "thinking": "not_applicable",
+  "max_turns": 12,
+  "max_output_tokens_per_turn": 1024,
+  "started_at": "2026-10-25T11:30:56.780620+00:00",
+  "scope": "Three fixed instances, four independent attempts each; not population performance.",
+  "complete": true,
+  "runs": [
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed17-attempt01",
+      "instance_seed": 17,
+      "status": "invalid_final_answer",
+      "reward": 0.0,
+      "sampling_seed": 20431125,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 29.449,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-DB",
+        "INC-PAY"
+      ],
+      "priority_actual": null,
+      "format_errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "attempt": 1
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed17-attempt02",
+      "instance_seed": 17,
+      "status": "invalid_final_answer",
+      "reward": 0.0,
+      "sampling_seed": 20431225,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 0,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 23.298,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-DB",
+        "INC-PAY"
+      ],
+      "priority_actual": null,
+      "format_errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "attempt": 2
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed17-attempt03",
+      "instance_seed": 17,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20431325,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 0,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 22.426,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 174
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 120
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "incident_1",
+        "incident_2"
+      ],
+      "priority_expected": [
+        "INC-DB",
+        "INC-PAY"
+      ],
+      "priority_actual": [
+        "incident_1",
+        "incident_2"
+      ],
+      "decimal_display": "Exact decimal strings in diagnostics; original JSON retained in final_answer.json",
+      "attempt": 3
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed17-attempt04",
+      "instance_seed": 17,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20431425,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 28.098,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "host-auth"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 174
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "host-db"
+            ],
+            "excess_failed_requests": 200
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 120
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-DB",
+        "INC-PAY"
+      ],
+      "priority_actual": [
+        "INC-DB",
+        "INC-AUTH"
+      ],
+      "decimal_display": "Exact decimal strings in diagnostics; original JSON retained in final_answer.json",
+      "attempt": 4
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed42-attempt01",
+      "instance_seed": 42,
+      "status": "budget_exhausted_without_final_answer",
+      "reward": null,
+      "sampling_seed": 20681125,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 10,
+      "protocol_errors": 2,
+      "truncated_responses": 0,
+      "elapsed_seconds": 89.529,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": null,
+      "attempt": 1
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed42-attempt02",
+      "instance_seed": 42,
+      "status": "invalid_final_answer",
+      "reward": 0.0,
+      "sampling_seed": 20681225,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 32.304,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": null,
+      "format_errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "attempt": 2
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed42-attempt03",
+      "instance_seed": 42,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20681325,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 0,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 28.591,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 171
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 175
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "7c69bfae-cbaa-407a-80db-0beedfd0fc1f",
+        "ec94ef1d-bca5-422c-aeb7-77effbf2c1df"
+      ],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [
+        "7c69bfae-cbaa-407a-80db-0beedfd0fc1f"
+      ],
+      "decimal_display": "Exact decimal strings in diagnostics; original JSON retained in final_answer.json",
+      "attempt": 3
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed42-attempt04",
+      "instance_seed": 42,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20681425,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 0,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 21.858,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 171
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 175
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "event1",
+        "event2"
+      ],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [
+        "event1"
+      ],
+      "decimal_display": "Exact decimal strings in diagnostics; original JSON retained in final_answer.json",
+      "attempt": 4
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed99-attempt01",
+      "instance_seed": 99,
+      "status": "invalid_final_answer",
+      "reward": 0.0,
+      "sampling_seed": 21251125,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 0,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 23.022,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": null,
+      "format_errors": [
+        "snapshot_id does not match task"
+      ],
+      "attempt": 1
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed99-attempt02",
+      "instance_seed": 99,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 21251225,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 23.034,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 53
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 140
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 212
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [],
+      "decimal_display": "Exact decimal strings in diagnostics; original JSON retained in final_answer.json",
+      "attempt": 2
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed99-attempt03",
+      "instance_seed": 99,
+      "status": "invalid_final_answer",
+      "reward": 0.0,
+      "sampling_seed": 21251325,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 26.957,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": null,
+      "format_errors": [
+        "duplicate incident_id"
+      ],
+      "attempt": 3
+    },
+    {
+      "folder": "artifacts\\model-eval-final\\qwen25-15b-run01\\seed99-attempt04",
+      "instance_seed": 99,
+      "status": "invalid_final_answer",
+      "reward": 0.0,
+      "sampling_seed": 21251425,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 0,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 23.884,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": null,
+      "format_errors": [
+        "snapshot_id does not match task"
+      ],
+      "attempt": 4
+    }
+  ],
+  "task_code_sha256": {
+    "alert_rlvr\\__init__.py": "735b93f033d1b3e5edd6a56502c7507fef98a2fcad37a50aec21cb59b1ec19f2",
+    "alert_rlvr\\__main__.py": "0f1be967b7d0b6c3573adc9860ed0f59cb03d6621065397567d3f5bebfe09568",
+    "alert_rlvr\\config.py": "338f3430885f18d93710129619035ee066767c70754939baa3ff50c80214dabb",
+    "alert_rlvr\\data.py": "81b3fb8b4aa3197505e8b3141f1d9486fbb067ce330b9d640e38b1d0afe3a157",
+    "alert_rlvr\\environment.py": "fb64c24f5e6b95c0e391f77344b685b7aeb8bb2cc48e436505fd56a0143af13a",
+    "alert_rlvr\\tools.py": "f4e41d3c9ffa4919c3d74df6e046fd3f8ece26dadf7a00bac07e36c5951002c0",
+    "alert_rlvr\\verifier.py": "6d8f9bfd88d81acbb816dbe88d5ab4c732773135eec0480ad9e8b96465eb68b7"
+  },
+  "evaluation_code_sha256": {
+    "run_model_pilot.py": "7454cb270b71635ca511af5ecb91b08ae31df12bd56b5bb713c927d7602d096a",
+    "local_qwen_driver.py": "5c465daa0e951869069753ed9ba43b27c2768b28a4a04501790166bc7f848c41",
+    "run_repeated_evaluation.py": "114094cc16338c3384c6f7671dba4e10f6d71a805aa7c176c61450cf84e0c23b"
+  },
+  "by_instance": [
+    {
+      "instance_seed": 17,
+      "attempts": 4,
+      "correct": 0,
+      "pass_at_1": 0.0,
+      "pass_at_4": 0
+    },
+    {
+      "instance_seed": 42,
+      "attempts": 4,
+      "correct": 0,
+      "pass_at_1": 0.0,
+      "pass_at_4": 0
+    },
+    {
+      "instance_seed": 99,
+      "attempts": 4,
+      "correct": 0,
+      "pass_at_1": 0.0,
+      "pass_at_4": 0
+    }
+  ],
+  "pass_at_1": 0.0,
+  "pass_at_4": 0.0,
+  "mean_reward": 0.0,
+  "finished_at": "2026-10-25T11:37:12.102066+00:00"
+}

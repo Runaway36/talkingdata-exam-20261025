@@ -1,0 +1,6 @@
+{"turn": 1, "action": "protocol_error"}
+{"turn": 2, "action": "call", "name": "get_request_metrics", "ok": true}
+{"turn": 3, "action": "protocol_error"}
+{"turn": 4, "action": "protocol_error"}
+{"turn": 5, "action": "final", "reward": 0.0}
+{"status": "completed", "reward": 0.0, "tool_calls": 1, "protocol_errors": 3, "turns": 5, "truncated_responses": 2, "reported_model": "deepseek-flash", "evaluation": {"reward": 0.0, "valid": true, "components": {"incidents": 0.0, "priority": 0.0}, "errors": [], "expected_count": 3, "matched_count": 0, "priority_matches": 0, "extra_count": 1}, "elapsed_seconds": 54.902, "finished_at": "2026-10-25T11:39:35.914266+00:00"}

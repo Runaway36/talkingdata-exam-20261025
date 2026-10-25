@@ -1,0 +1,107 @@
+{
+  "at": "2026-10-25T11:39:15.200055+00:00",
+  "request": {
+    "name": "list_alerts",
+    "arguments": {
+      "start": "2026-10-25T08:00:00Z",
+      "end": "2026-10-25T08:30:00Z",
+      "severities": [
+        "P0",
+        "P1"
+      ],
+      "states": [
+        "firing"
+      ]
+    }
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v3-seed-17",
+    "data": [
+      {
+        "alert_id": "A-AUTH-1",
+        "incident_id": "INC-AUTH",
+        "resource_id": "host-auth",
+        "severity": "P1",
+        "state": "firing",
+        "started_at": "2026-10-25T08:00:00Z",
+        "ended_at": null,
+        "title": "Authentication errors",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-BASE-1",
+        "incident_id": "INC-BASE",
+        "resource_id": "host-returns",
+        "severity": "P1",
+        "state": "firing",
+        "started_at": "2026-10-25T08:00:00Z",
+        "ended_at": null,
+        "title": "Failure counter threshold",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-DB-1",
+        "incident_id": "INC-DB",
+        "resource_id": "host-db",
+        "severity": "P0",
+        "state": "firing",
+        "started_at": "2026-10-25T08:05:00Z",
+        "ended_at": null,
+        "title": "Database connection pressure",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-DB-2",
+        "incident_id": "INC-DB",
+        "resource_id": "host-db",
+        "severity": "P1",
+        "state": "firing",
+        "started_at": "2026-10-25T08:06:00Z",
+        "ended_at": null,
+        "title": "Repeated database notification",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-DB-3",
+        "incident_id": "INC-DB",
+        "resource_id": "host-db",
+        "severity": "P0",
+        "state": "firing",
+        "started_at": "2026-10-25T08:07:00Z",
+        "ended_at": null,
+        "title": "Duplicate exporter alert",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-LOG-1",
+        "incident_id": "INC-LOG",
+        "resource_id": "host-log",
+        "severity": "P0",
+        "state": "firing",
+        "started_at": "2026-10-25T08:00:00Z",
+        "ended_at": null,
+        "title": "Audit writer unavailable",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-PAY-1",
+        "incident_id": "INC-PAY",
+        "resource_id": "host-pay",
+        "severity": "P1",
+        "state": "firing",
+        "started_at": "2026-10-25T07:50:00Z",
+        "ended_at": null,
+        "title": "Payment dependency errors",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      }
+    ]
+  }
+}

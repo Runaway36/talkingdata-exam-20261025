@@ -1,0 +1,42 @@
+{
+  "kind": "diagnostic_fixed_requests_replayed_in_one_process_not_formal_episode",
+  "started_at": "2026-10-25T11:24:07.377083+00:00",
+  "device": "cuda",
+  "precision_policy": "unchanged_bfloat16_if_supported",
+  "requests": [
+    {
+      "turn": 1,
+      "source": "artifacts\\model-eval-v3\\qwen25-15b-run01\\seed17-attempt01\\turn-01-request.json",
+      "sha256": "922aaf833e1bcd913d8ba2e39430d7d6dcac20b3c83c6b976af89238840cdbb6",
+      "max_tokens": 1024,
+      "temperature": 0.7,
+      "sampling_seed": 20262726
+    },
+    {
+      "turn": 2,
+      "source": "artifacts\\model-eval-v3\\qwen25-15b-run01\\seed17-attempt01\\turn-02-request.json",
+      "sha256": "c91a5313b7c98d89bd4bcbf820cfd5b61369f96a936b330f574c0570e396f076",
+      "max_tokens": 1024,
+      "temperature": 0.7,
+      "sampling_seed": 20262727
+    },
+    {
+      "turn": 3,
+      "source": "artifacts\\model-eval-v3\\qwen25-15b-run01\\seed17-attempt01\\turn-03-request.json",
+      "sha256": "33638cae2b3cc75b41ed795efaaa5c3689647b7d9c7180b0c0ef41e5533775c7",
+      "max_tokens": 1024,
+      "temperature": 0.7,
+      "sampling_seed": 20262728
+    }
+  ],
+  "core_sha256": {
+    "alert_rlvr\\__init__.py": "735b93f033d1b3e5edd6a56502c7507fef98a2fcad37a50aec21cb59b1ec19f2",
+    "alert_rlvr\\__main__.py": "0f1be967b7d0b6c3573adc9860ed0f59cb03d6621065397567d3f5bebfe09568",
+    "alert_rlvr\\config.py": "338f3430885f18d93710129619035ee066767c70754939baa3ff50c80214dabb",
+    "alert_rlvr\\data.py": "81b3fb8b4aa3197505e8b3141f1d9486fbb067ce330b9d640e38b1d0afe3a157",
+    "alert_rlvr\\environment.py": "fb64c24f5e6b95c0e391f77344b685b7aeb8bb2cc48e436505fd56a0143af13a",
+    "alert_rlvr\\tools.py": "f4e41d3c9ffa4919c3d74df6e046fd3f8ece26dadf7a00bac07e36c5951002c0",
+    "alert_rlvr\\verifier.py": "6d8f9bfd88d81acbb816dbe88d5ab4c732773135eec0480ad9e8b96465eb68b7"
+  },
+  "driver_sha256": "5c465daa0e951869069753ed9ba43b27c2768b28a4a04501790166bc7f848c41"
+}

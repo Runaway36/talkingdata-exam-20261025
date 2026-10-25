@@ -1,0 +1,14 @@
+{
+  "name": "get_incident_services",
+  "arguments": {
+    "incident_ids": [
+      "incident_1",
+      "incident_2"
+    ]
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v3-seed-42",
+    "data": []
+  }
+}

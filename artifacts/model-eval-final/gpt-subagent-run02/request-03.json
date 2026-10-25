@@ -1,0 +1,1 @@
+{"name":"get_service_profiles","arguments":{"service_ids":["svc-auth","svc-baseline","svc-cart","svc-checkout","svc-search","svc-log","svc-pay","svc-pay-stage"]}}

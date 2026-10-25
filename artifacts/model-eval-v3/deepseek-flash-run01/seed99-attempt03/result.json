@@ -1,0 +1,15 @@
+{
+  "status": "execution_error",
+  "reward": null,
+  "tool_calls": 1,
+  "protocol_errors": 0,
+  "turns": 1,
+  "truncated_responses": 0,
+  "reported_model": "deepseek-flash",
+  "error": {
+    "type": "RuntimeError",
+    "message": "DeepSeek transport failed after two attempts: URLError"
+  },
+  "elapsed_seconds": 43.71,
+  "finished_at": "2026-10-25T11:05:32.295387+00:00"
+}

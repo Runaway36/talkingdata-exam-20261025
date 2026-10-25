@@ -1,0 +1,2 @@
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 10588.20it/s]
+{"event": "model_loaded", "model": "Qwen2.5-1.5B-Instruct", "device": "cuda:0", "dtype": "torch.bfloat16", "context_limit": 32768, "load_seconds": 2.5660291999956826, "torch": "2.11.0+cu128", "cuda_runtime": "12.8"}

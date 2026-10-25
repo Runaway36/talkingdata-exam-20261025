@@ -1,0 +1,8 @@
+{
+  "content": "```json\n{\n  \"action\": \"call\",\n  \"name\": \"list_alerts\",\n  \"arguments\": {\n    \"start\": \"2026-10-25T08:00:00Z\",\n    \"end\": \"2026-10-25T08:30:00Z\",\n    \"severities\": [\"P0\", \"P1\"],\n    \"states\": [\"firing\"]\n  }\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 1866,
+  "output_tokens": 104,
+  "finish_reason": "stop",
+  "seconds": 3.6679407999981777
+}

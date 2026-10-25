@@ -1,0 +1,45 @@
+{
+  "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v2-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-BASE\",\"severity\":\"P1\",\"service_ids\":[],\"excess_failed_requests\":0},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-LOG\",\"severity\":\"P0\",\"service_ids\":[],\"excess_failed_requests\":0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":0}],\"priority\":[]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 8346,
+    "completion_tokens": 187,
+    "total_tokens": 8533,
+    "prompt_tokens_details": {
+      "cached_tokens": 7808
+    },
+    "prompt_cache_hit_tokens": 7808,
+    "prompt_cache_miss_tokens": 538
+  },
+  "seconds": 1.045600600002217,
+  "raw_response": {
+    "id": "a16815f8-91a6-45e6-be64-a95ba77a69dc",
+    "object": "chat.completion",
+    "created": 1792924842,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v2-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-BASE\",\"severity\":\"P1\",\"service_ids\":[],\"excess_failed_requests\":0},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-LOG\",\"severity\":\"P0\",\"service_ids\":[],\"excess_failed_requests\":0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":0}],\"priority\":[]}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 8346,
+      "completion_tokens": 187,
+      "total_tokens": 8533,
+      "prompt_tokens_details": {
+        "cached_tokens": 7808
+      },
+      "prompt_cache_hit_tokens": 7808,
+      "prompt_cache_miss_tokens": 538
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1
+}

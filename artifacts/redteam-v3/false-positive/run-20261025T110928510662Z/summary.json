@@ -1,0 +1,35 @@
+{
+  "python": "3.14.3",
+  "source_sha256": {
+    "alert_rlvr/config.py": "5503e707baf7b1266be3239f166e13c180114901e0322dc8d2f2c699fba8b5cb",
+    "alert_rlvr/data.py": "81b3fb8b4aa3197505e8b3141f1d9486fbb067ce330b9d640e38b1d0afe3a157",
+    "alert_rlvr/environment.py": "fb64c24f5e6b95c0e391f77344b685b7aeb8bb2cc48e436505fd56a0143af13a",
+    "alert_rlvr/verifier.py": "e3c3d1032bd204e0384792bbd13c6e8188bdc9422b8d31a1a3d5749429474e3d",
+    "docs/CONTRACT.md": "2f495a0f50b893667353823735a2c3c96739e84114563d3469ad49de81846339"
+  },
+  "generated_seeds_checked": 10000,
+  "independent_oracle_mismatches": [],
+  "wrong_full_reward_answers": [],
+  "matrix_cases": 2535,
+  "matrix_correct_full_rewards": 1,
+  "protocol_cases": 85,
+  "protocol_failures": [],
+  "all_independent_answers_sha256": "4ddd73d50360c00b4b313c5ef6c753fef4beac67237739a5999503a45ce871dc",
+  "equivalent_reordering": {
+    "reward": 1.0,
+    "valid": true,
+    "components": {
+      "incidents": 1.0,
+      "priority": 1.0
+    },
+    "errors": [],
+    "expected_count": 3,
+    "matched_count": 3,
+    "priority_matches": 2,
+    "extra_count": 0
+  },
+  "api_return_copy_isolated": true,
+  "controlled_overflow_wrong_reward": 1.0,
+  "controlled_overflow_true_excess": 100,
+  "controlled_overflow_accepted_excess": 96
+}

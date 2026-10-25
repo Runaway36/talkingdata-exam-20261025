@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import patch
 
 from alert_rlvr import verifier
-from alert_rlvr.config import make_task, snapshot_id
+from alert_rlvr.config import MAX_ANSWER_BYTES, make_task, snapshot_id
 from alert_rlvr.environment import AlertEnvironment
 from examples.reference_agent import solve
 from tests.fixtures import fixture_database, manual_answer
@@ -187,6 +187,28 @@ class ProtocolAndPartialCreditTests(unittest.TestCase):
                 answer = copy.deepcopy(self.answer)
                 answer["incidents"][0]["excess_failed_requests"] = bad
                 self.assert_protocol_rejected(answer)
+
+    def test_equivalent_integer_json_number_forms_receive_full_reward(self):
+        raw = json.dumps(self.answer)
+        for token in ("40.0", "4e1", "400e-1"):
+            with self.subTest(token=token):
+                equivalent = raw.replace('"excess_failed_requests": 40',
+                                         '"excess_failed_requests": ' + token, 1)
+                self.assertEqual(verifier.compute_reward(self.task, equivalent), 1.0)
+        self.answer["incidents"][0]["excess_failed_requests"] = 40.0
+        self.assertEqual(verifier.compute_reward(self.task, self.answer), 1.0)
+
+    def test_tiny_fraction_is_not_rounded_into_a_correct_integer(self):
+        raw = json.dumps(self.answer).replace('"excess_failed_requests": 40',
+                                              '"excess_failed_requests": 40.000000000000000001', 1)
+        self.assert_protocol_rejected(raw)
+
+    def test_public_answer_size_boundary(self):
+        self.assertIn(str(MAX_ANSWER_BYTES), self.task)
+        raw = json.dumps(self.answer)
+        at_limit = raw + " " * (MAX_ANSWER_BYTES - len(raw.encode("utf-8")))
+        self.assertEqual(verifier.compute_reward(self.task, at_limit), 1.0)
+        self.assert_protocol_rejected(at_limit + " ")
 
     def test_json_nonfinite_numbers_and_duplicate_keys_are_rejected(self):
         for token in ("NaN", "Infinity", "-Infinity"):

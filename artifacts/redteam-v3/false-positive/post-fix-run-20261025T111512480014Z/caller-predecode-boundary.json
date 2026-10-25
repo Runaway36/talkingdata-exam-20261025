@@ -1,0 +1,30 @@
+{
+  "raw_text": "{\"snapshot_id\": \"alert-impact-v3-seed-17\", \"incidents\": [{\"incident_id\": \"INC-AUTH\", \"severity\": \"P1\", \"service_ids\": [\"svc-auth\"], \"excess_failed_requests\": 48.000000000000000001}, {\"incident_id\": \"INC-DB\", \"severity\": \"P0\", \"service_ids\": [\"svc-checkout\", \"svc-search\"], \"excess_failed_requests\": 174}, {\"incident_id\": \"INC-PAY\", \"severity\": \"P1\", \"service_ids\": [\"svc-pay\"], \"excess_failed_requests\": 120}], \"priority\": [\"INC-DB\", \"INC-PAY\"]}",
+  "raw_text_report": {
+    "reward": 0.0,
+    "valid": false,
+    "components": {
+      "incidents": 0.0,
+      "priority": 0.0
+    },
+    "errors": [
+      "excess_failed_requests must be a nonnegative integer"
+    ],
+    "expected_count": 3
+  },
+  "standard_json_loads_value_repr": "48.0",
+  "predecoded_dict_report": {
+    "reward": 1.0,
+    "valid": true,
+    "components": {
+      "incidents": 1.0,
+      "priority": 1.0
+    },
+    "errors": [],
+    "expected_count": 3,
+    "matched_count": 3,
+    "priority_matches": 2,
+    "extra_count": 0
+  },
+  "interpretation": "Caller already rounded original text before evaluate; preserve raw model JSON to retain lexical precision. This is not a raw JSON verifier bypass."
+}

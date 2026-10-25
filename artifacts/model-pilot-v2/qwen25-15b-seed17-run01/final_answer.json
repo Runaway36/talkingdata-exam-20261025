@@ -1,0 +1,44 @@
+{
+  "snapshot_id": "alert-impact-v2-seed-17",
+  "incidents": [
+    {
+      "incident_id": "INC-AUTH",
+      "severity": "P1",
+      "service_ids": [],
+      "excess_failed_requests": 0
+    },
+    {
+      "incident_id": "INC-BASE",
+      "severity": "P1",
+      "service_ids": [],
+      "excess_failed_requests": 0
+    },
+    {
+      "incident_id": "INC-DB",
+      "severity": "P0",
+      "service_ids": [
+        "host-db"
+      ],
+      "excess_failed_requests": 10
+    },
+    {
+      "incident_id": "INC-LOG",
+      "severity": "P0",
+      "service_ids": [
+        "host-log"
+      ],
+      "excess_failed_requests": 0
+    },
+    {
+      "incident_id": "INC-PAY",
+      "severity": "P1",
+      "service_ids": [
+        "host-pay"
+      ],
+      "excess_failed_requests": 0
+    }
+  ],
+  "priority": [
+    "INC-DB"
+  ]
+}

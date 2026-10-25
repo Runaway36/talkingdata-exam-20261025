@@ -1,0 +1,482 @@
+[
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-DB",
+      "INC-PAY"
+    ],
+    "reverse_services": false,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-DB",
+      "INC-PAY"
+    ],
+    "reverse_services": false,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-DB",
+      "INC-PAY"
+    ],
+    "reverse_services": false,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-DB",
+      "INC-PAY"
+    ],
+    "reverse_services": false,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-DB",
+      "INC-PAY"
+    ],
+    "reverse_services": true,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-DB",
+      "INC-PAY"
+    ],
+    "reverse_services": true,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-DB",
+      "INC-PAY"
+    ],
+    "reverse_services": true,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-DB",
+      "INC-PAY"
+    ],
+    "reverse_services": true,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-PAY",
+      "INC-DB"
+    ],
+    "reverse_services": false,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-PAY",
+      "INC-DB"
+    ],
+    "reverse_services": false,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-PAY",
+      "INC-DB"
+    ],
+    "reverse_services": false,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-PAY",
+      "INC-DB"
+    ],
+    "reverse_services": false,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-PAY",
+      "INC-DB"
+    ],
+    "reverse_services": true,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-PAY",
+      "INC-DB"
+    ],
+    "reverse_services": true,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-PAY",
+      "INC-DB"
+    ],
+    "reverse_services": true,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-AUTH",
+      "INC-PAY",
+      "INC-DB"
+    ],
+    "reverse_services": true,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-AUTH",
+      "INC-PAY"
+    ],
+    "reverse_services": false,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-AUTH",
+      "INC-PAY"
+    ],
+    "reverse_services": false,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-AUTH",
+      "INC-PAY"
+    ],
+    "reverse_services": false,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-AUTH",
+      "INC-PAY"
+    ],
+    "reverse_services": false,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-AUTH",
+      "INC-PAY"
+    ],
+    "reverse_services": true,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-AUTH",
+      "INC-PAY"
+    ],
+    "reverse_services": true,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-AUTH",
+      "INC-PAY"
+    ],
+    "reverse_services": true,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-AUTH",
+      "INC-PAY"
+    ],
+    "reverse_services": true,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-PAY",
+      "INC-AUTH"
+    ],
+    "reverse_services": false,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-PAY",
+      "INC-AUTH"
+    ],
+    "reverse_services": false,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-PAY",
+      "INC-AUTH"
+    ],
+    "reverse_services": false,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-PAY",
+      "INC-AUTH"
+    ],
+    "reverse_services": false,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-PAY",
+      "INC-AUTH"
+    ],
+    "reverse_services": true,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-PAY",
+      "INC-AUTH"
+    ],
+    "reverse_services": true,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-PAY",
+      "INC-AUTH"
+    ],
+    "reverse_services": true,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-DB",
+      "INC-PAY",
+      "INC-AUTH"
+    ],
+    "reverse_services": true,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-AUTH",
+      "INC-DB"
+    ],
+    "reverse_services": false,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-AUTH",
+      "INC-DB"
+    ],
+    "reverse_services": false,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-AUTH",
+      "INC-DB"
+    ],
+    "reverse_services": false,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-AUTH",
+      "INC-DB"
+    ],
+    "reverse_services": false,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-AUTH",
+      "INC-DB"
+    ],
+    "reverse_services": true,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-AUTH",
+      "INC-DB"
+    ],
+    "reverse_services": true,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-AUTH",
+      "INC-DB"
+    ],
+    "reverse_services": true,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-AUTH",
+      "INC-DB"
+    ],
+    "reverse_services": true,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-DB",
+      "INC-AUTH"
+    ],
+    "reverse_services": false,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-DB",
+      "INC-AUTH"
+    ],
+    "reverse_services": false,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-DB",
+      "INC-AUTH"
+    ],
+    "reverse_services": false,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-DB",
+      "INC-AUTH"
+    ],
+    "reverse_services": false,
+    "representation": "escaped_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-DB",
+      "INC-AUTH"
+    ],
+    "reverse_services": true,
+    "representation": "dict",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-DB",
+      "INC-AUTH"
+    ],
+    "reverse_services": true,
+    "representation": "compact_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-DB",
+      "INC-AUTH"
+    ],
+    "reverse_services": true,
+    "representation": "pretty_json",
+    "reward": 1.0
+  },
+  {
+    "row_order": [
+      "INC-PAY",
+      "INC-DB",
+      "INC-AUTH"
+    ],
+    "reverse_services": true,
+    "representation": "escaped_json",
+    "reward": 1.0
+  }
+]

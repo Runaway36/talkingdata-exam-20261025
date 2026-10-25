@@ -1,0 +1,1 @@
+{"snapshot_id":"alert-impact-v3-seed-17","incidents":[{"incident_id":"INC-3822","severity":"P1","service_ids":["SVC-4507"],"excess_failed_requests":160},{"incident_id":"INC-3818","severity":"P1","service_ids":["SVC-4383"],"excess_failed_requests":33}],"priority":["INC-3822","INC-3818"]}

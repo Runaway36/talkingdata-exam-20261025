@@ -1,0 +1,404 @@
+{
+  "disclosure": {
+    "task_discloses_limit": true,
+    "task_discloses_zero_reward": true,
+    "task_discloses_numeric_equivalence": true,
+    "contract_discloses_limit": true,
+    "contract_discloses_exact_decimal": true
+  },
+  "cases": [
+    {
+      "name": "correct_integer_json",
+      "description": "Independent seed 17 business answer",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 396,
+      "expected_reward": 1.0,
+      "expected_valid": true,
+      "report": {
+        "reward": 1.0,
+        "valid": true,
+        "components": {
+          "incidents": 1.0,
+          "priority": 1.0
+        },
+        "errors": [],
+        "expected_count": 3,
+        "matched_count": 3,
+        "priority_matches": 2,
+        "extra_count": 0
+      },
+      "compute_reward": 1.0,
+      "pass": true
+    },
+    {
+      "name": "integer_value_suffix_.0",
+      "description": "All three counts preserve exact integer value",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48.0},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174.0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120.0}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 402,
+      "expected_reward": 1.0,
+      "expected_valid": true,
+      "report": {
+        "reward": 1.0,
+        "valid": true,
+        "components": {
+          "incidents": 1.0,
+          "priority": 1.0
+        },
+        "errors": [],
+        "expected_count": 3,
+        "matched_count": 3,
+        "priority_matches": 2,
+        "extra_count": 0
+      },
+      "compute_reward": 1.0,
+      "pass": true
+    },
+    {
+      "name": "integer_value_suffix_e0",
+      "description": "All three counts preserve exact integer value",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48e0},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174e0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120e0}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 402,
+      "expected_reward": 1.0,
+      "expected_valid": true,
+      "report": {
+        "reward": 1.0,
+        "valid": true,
+        "components": {
+          "incidents": 1.0,
+          "priority": 1.0
+        },
+        "errors": [],
+        "expected_count": 3,
+        "matched_count": 3,
+        "priority_matches": 2,
+        "extra_count": 0
+      },
+      "compute_reward": 1.0,
+      "pass": true
+    },
+    {
+      "name": "integer_value_suffix_.00000000000000000000000000000000000000",
+      "description": "All three counts preserve exact integer value",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48.00000000000000000000000000000000000000},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174.00000000000000000000000000000000000000},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120.00000000000000000000000000000000000000}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 513,
+      "expected_reward": 1.0,
+      "expected_valid": true,
+      "report": {
+        "reward": 1.0,
+        "valid": true,
+        "components": {
+          "incidents": 1.0,
+          "priority": 1.0
+        },
+        "errors": [],
+        "expected_count": 3,
+        "matched_count": 3,
+        "priority_matches": 2,
+        "extra_count": 0
+      },
+      "compute_reward": 1.0,
+      "pass": true
+    },
+    {
+      "name": "integer_value_shifted_exponent",
+      "description": "480e-1, 1740e-1, 1200e-1 preserve exact values",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":480e-1},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":1740e-1},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":1200e-1}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 408,
+      "expected_reward": 1.0,
+      "expected_valid": true,
+      "report": {
+        "reward": 1.0,
+        "valid": true,
+        "components": {
+          "incidents": 1.0,
+          "priority": 1.0
+        },
+        "errors": [],
+        "expected_count": 3,
+        "matched_count": 3,
+        "priority_matches": 2,
+        "extra_count": 0
+      },
+      "compute_reward": 1.0,
+      "pass": true
+    },
+    {
+      "name": "integer_valued_float_dict",
+      "description": "Finite integer-valued Python floats round-trip through JSON",
+      "answer": {
+        "snapshot_id": "alert-impact-v3-seed-17",
+        "incidents": [
+          {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48.0
+          },
+          {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 174.0
+          },
+          {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 120.0
+          }
+        ],
+        "priority": [
+          "INC-DB",
+          "INC-PAY"
+        ]
+      },
+      "json_bytes": null,
+      "expected_reward": 1.0,
+      "expected_valid": true,
+      "report": {
+        "reward": 1.0,
+        "valid": true,
+        "components": {
+          "incidents": 1.0,
+          "priority": 1.0
+        },
+        "errors": [],
+        "expected_count": 3,
+        "matched_count": 3,
+        "priority_matches": 2,
+        "extra_count": 0
+      },
+      "compute_reward": 1.0,
+      "pass": true
+    },
+    {
+      "name": "reject_48.00000000000000000000000000000000000001",
+      "description": "First count is a noninteger or explicitly unsupported type/constant",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48.00000000000000000000000000000000000001},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 435,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "excess_failed_requests must be a nonnegative integer"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    },
+    {
+      "name": "reject_47.99999999999999999999999999999999999999",
+      "description": "First count is a noninteger or explicitly unsupported type/constant",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":47.99999999999999999999999999999999999999},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 435,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "excess_failed_requests must be a nonnegative integer"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    },
+    {
+      "name": "reject_1e-10000",
+      "description": "First count is a noninteger or explicitly unsupported type/constant",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":1e-10000},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 402,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "excess_failed_requests must be a nonnegative integer"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    },
+    {
+      "name": "reject_48.5",
+      "description": "First count is a noninteger or explicitly unsupported type/constant",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48.5},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 398,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "excess_failed_requests must be a nonnegative integer"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    },
+    {
+      "name": "reject_true",
+      "description": "First count is a noninteger or explicitly unsupported type/constant",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":true},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 398,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "excess_failed_requests must be a nonnegative integer"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    },
+    {
+      "name": "reject_\"48\"",
+      "description": "First count is a noninteger or explicitly unsupported type/constant",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":\"48\"},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 398,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "excess_failed_requests must be a nonnegative integer"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    },
+    {
+      "name": "reject_NaN",
+      "description": "First count is a noninteger or explicitly unsupported type/constant",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":NaN},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 397,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "non-finite JSON number: NaN"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    },
+    {
+      "name": "reject_Infinity",
+      "description": "First count is a noninteger or explicitly unsupported type/constant",
+      "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":Infinity},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+      "json_bytes": 402,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "non-finite JSON number: Infinity"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    },
+    {
+      "name": "byte_limit_exact",
+      "description": "Exactly 1,000,000 UTF-8 bytes including trailing spaces",
+      "answer": "See construction in post_fix_probe.py; exact byte length recorded below.",
+      "json_bytes": 1000000,
+      "expected_reward": 1.0,
+      "expected_valid": true,
+      "report": {
+        "reward": 1.0,
+        "valid": true,
+        "components": {
+          "incidents": 1.0,
+          "priority": 1.0
+        },
+        "errors": [],
+        "expected_count": 3,
+        "matched_count": 3,
+        "priority_matches": 2,
+        "extra_count": 0
+      },
+      "compute_reward": 1.0,
+      "pass": true
+    },
+    {
+      "name": "byte_limit_plus_one",
+      "description": "1,000,001 UTF-8 bytes; now explicitly prohibited in task",
+      "answer": "See construction in post_fix_probe.py; exact byte length recorded below.",
+      "json_bytes": 1000001,
+      "expected_reward": 0.0,
+      "expected_valid": false,
+      "report": {
+        "reward": 0.0,
+        "valid": false,
+        "components": {
+          "incidents": 0.0,
+          "priority": 0.0
+        },
+        "errors": [
+          "answer exceeds byte limit"
+        ],
+        "expected_count": 3
+      },
+      "compute_reward": 0.0,
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

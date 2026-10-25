@@ -1,0 +1,344 @@
+[
+  {
+    "case": "floor_then_subtract",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-EXACT",
+          "severity": "P1",
+          "service_ids": [
+            "svc-exact"
+          ],
+          "excess_failed_requests": 1
+        }
+      ],
+      "priority": [
+        "INC-EXACT"
+      ]
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 1,
+      "priority_matches": 1,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "equal_baseline_excludes_service",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [],
+      "priority": []
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "below_baseline_clamps_to_zero",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [],
+      "priority": []
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "one_second_partial_impact_excludes_bucket",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [],
+      "priority": []
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "exact_impact_end_includes_bucket",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-EXACT",
+          "severity": "P1",
+          "service_ids": [
+            "svc-exact"
+          ],
+          "excess_failed_requests": 1
+        }
+      ],
+      "priority": [
+        "INC-EXACT"
+      ]
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 1,
+      "priority_matches": 1,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "full_maintenance_excludes_bucket",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [],
+      "priority": []
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "partial_maintenance_keeps_bucket",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-EXACT",
+          "severity": "P1",
+          "service_ids": [
+            "svc-exact"
+          ],
+          "excess_failed_requests": 1
+        }
+      ],
+      "priority": [
+        "INC-EXACT"
+      ]
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 1,
+      "priority_matches": 1,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "cancelled_maintenance_keeps_bucket",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-EXACT",
+          "severity": "P1",
+          "service_ids": [
+            "svc-exact"
+          ],
+          "excess_failed_requests": 1
+        }
+      ],
+      "priority": [
+        "INC-EXACT"
+      ]
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 1,
+      "priority_matches": 1,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "ended_at_report_end_is_not_active",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [],
+      "priority": []
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "ends_after_report_end_is_active",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-EXACT",
+          "severity": "P1",
+          "service_ids": [
+            "svc-exact"
+          ],
+          "excess_failed_requests": 1
+        }
+      ],
+      "priority": [
+        "INC-EXACT"
+      ]
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 1,
+      "priority_matches": 1,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "duplicate_eligible_alert_does_not_multiply",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-EXACT",
+          "severity": "P1",
+          "service_ids": [
+            "svc-exact"
+          ],
+          "excess_failed_requests": 1
+        }
+      ],
+      "priority": [
+        "INC-EXACT"
+      ]
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 1,
+      "priority_matches": 1,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "case": "staging_excludes_service",
+    "public_generator_reachable": false,
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [],
+      "priority": []
+    },
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  }
+]

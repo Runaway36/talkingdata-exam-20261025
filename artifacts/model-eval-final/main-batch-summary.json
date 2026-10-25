@@ -1,0 +1,81 @@
+{
+  "scope": "Frozen primary condition only; no GPT or supplementary thinking-mode samples pooled",
+  "batches": [
+    {
+      "batch": "deepseek-flash-run01",
+      "episodes": 12,
+      "status_counts": {
+        "completed": 12
+      },
+      "pass_at_1": 0.0,
+      "pass_at_4": 0.0,
+      "mean_attempt_reward": 0.0,
+      "mean_note": "budget exhausted without answer counts as zero; raw verifier score stays null",
+      "by_instance": [
+        {
+          "instance_seed": 17,
+          "attempts": 4,
+          "correct": 0,
+          "pass_at_1": 0.0,
+          "pass_at_4": 0
+        },
+        {
+          "instance_seed": 42,
+          "attempts": 4,
+          "correct": 0,
+          "pass_at_1": 0.0,
+          "pass_at_4": 0
+        },
+        {
+          "instance_seed": 99,
+          "attempts": 4,
+          "correct": 0,
+          "pass_at_1": 0.0,
+          "pass_at_4": 0
+        }
+      ],
+      "protocol_errors": 0,
+      "truncations": 0,
+      "tool_calls": 65
+    },
+    {
+      "batch": "qwen25-15b-run01",
+      "episodes": 12,
+      "status_counts": {
+        "invalid_final_answer": 6,
+        "completed": 5,
+        "budget_exhausted_without_final_answer": 1
+      },
+      "pass_at_1": 0.0,
+      "pass_at_4": 0.0,
+      "mean_attempt_reward": 0.0,
+      "mean_note": "budget exhausted without answer counts as zero; raw verifier score stays null",
+      "by_instance": [
+        {
+          "instance_seed": 17,
+          "attempts": 4,
+          "correct": 0,
+          "pass_at_1": 0.0,
+          "pass_at_4": 0
+        },
+        {
+          "instance_seed": 42,
+          "attempts": 4,
+          "correct": 0,
+          "pass_at_1": 0.0,
+          "pass_at_4": 0
+        },
+        {
+          "instance_seed": 99,
+          "attempts": 4,
+          "correct": 0,
+          "pass_at_1": 0.0,
+          "pass_at_4": 0
+        }
+      ],
+      "protocol_errors": 13,
+      "truncations": 0,
+      "tool_calls": 15
+    }
+  ]
+}

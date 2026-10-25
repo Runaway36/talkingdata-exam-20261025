@@ -1,0 +1,13 @@
+{
+  "kind": "diagnostic_replay_only_not_formal_episode",
+  "source_request": "artifacts\\model-eval-v3\\qwen25-15b-run01\\seed17-attempt01\\turn-03-request.json",
+  "request_sha256": "33638cae2b3cc75b41ed795efaaa5c3689647b7d9c7180b0c0ef41e5533775c7",
+  "driver_sha256": "5c465daa0e951869069753ed9ba43b27c2768b28a4a04501790166bc7f848c41",
+  "device_requested": "cuda",
+  "precision_policy": "unchanged; bf16 when supported",
+  "max_tokens": 1024,
+  "temperature": 0.7,
+  "sampling_seed": 20262728,
+  "timeout_seconds": 180,
+  "started_at": "2026-10-25T11:05:30.928889+00:00"
+}

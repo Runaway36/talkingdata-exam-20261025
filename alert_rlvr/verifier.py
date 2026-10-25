@@ -6,6 +6,7 @@ tool: ``expected_answer`` is provided only for trusted tests and evaluation.
 """
 
 import json
+from decimal import Decimal
 
 from . import config
 from .data import build_database
@@ -51,15 +52,17 @@ def _parse_answer(answer):
             answer,
             object_pairs_hook=_reject_duplicate_keys,
             parse_constant=_reject_constant,
+            parse_float=Decimal,
         )
     if type(answer) is not dict:
         raise ValueError("answer must be a dict or JSON object string")
     # This also rejects cyclic objects, non-JSON objects and NaN/Infinity in a
-    # dict submission. Schema validation below retains strict Python types.
+    # dict submission. Decode numeric JSON exactly, without float rounding.
     encoded = json.dumps(answer, ensure_ascii=False, allow_nan=False)
     if len(encoded.encode("utf-8")) > config.MAX_ANSWER_BYTES:
         raise ValueError("answer exceeds byte limit")
-    return answer
+    return json.loads(encoded, object_pairs_hook=_reject_duplicate_keys,
+                      parse_constant=_reject_constant, parse_float=Decimal)
 
 
 def _valid_id(value):
@@ -98,8 +101,14 @@ def _validate_answer(answer, seed):
         if len(service_ids) != len(set(service_ids)):
             raise ValueError("duplicate service_id")
         for field in ("excess_failed_requests",):
-            # bool is an int subclass, hence intentionally use exact type.
-            if type(row[field]) is not int or row[field] < 0:
+            # JSON 48, 48.0 and 48e0 denote the same integer. Decimal preserves
+            # a genuine fractional value instead of silently rounding it away.
+            value = row[field]
+            integer_value = type(value) is int or (
+                type(value) is Decimal and value.is_finite()
+                and value == value.to_integral_value()
+            )
+            if not integer_value or value < 0:
                 raise ValueError(field + " must be a nonnegative integer")
 
     priority = answer["priority"]

@@ -1,0 +1,3 @@
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 8138.72it/s]
+{"event": "model_loaded", "model": "Qwen2.5-1.5B-Instruct", "device": "cuda:0", "dtype": "torch.bfloat16", "context_limit": 32768, "load_seconds": 2.67500740000105, "torch": "2.11.0+cu128", "cuda_runtime": "12.8"}
+[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.

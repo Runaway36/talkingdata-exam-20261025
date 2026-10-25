@@ -1,0 +1,52 @@
+{
+  "name": "get_request_metrics",
+  "arguments": {
+    "service_ids": [
+      "svc-checkout"
+    ],
+    "start": "2026-10-25T08:00:00Z",
+    "end": "2026-10-25T08:20:00Z"
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v3-seed-17",
+    "data": [
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1133,
+        "failed_requests": 611,
+        "retry_count": 424,
+        "latency_p95_ms": 3324
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1077,
+        "failed_requests": 46,
+        "retry_count": 296,
+        "latency_p95_ms": 735
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1196,
+        "failed_requests": 50,
+        "retry_count": 677,
+        "latency_p95_ms": 1159
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1028,
+        "failed_requests": 41,
+        "retry_count": 254,
+        "latency_p95_ms": 1593
+      }
+    ]
+  }
+}

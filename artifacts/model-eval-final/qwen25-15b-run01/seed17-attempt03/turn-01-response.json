@@ -1,0 +1,16 @@
+{
+  "content": "```json\n{\n  \"snapshot_id\": \"alert-impact-v3-seed-17\",\n  \"incidents\": [\n    {\n      \"incident_id\": \"incident_1\",\n      \"severity\": \"P1\",\n      \"service_ids\": [\"prod-service-1\"],\n      \"excess_failed_requests\": 3000\n    },\n    {\n      \"incident_id\": \"incident_2\",\n      \"severity\": \"P0\",\n      \"service_ids\": [\"prod-service-2\", \"prod-service-3\"],\n      \"excess_failed_requests\": 2000\n    }\n  ],\n  \"priority\": [\"incident_1\", \"incident_2\"]\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 1894,
+  "output_tokens": 144,
+  "finish_reason": "stop",
+  "seconds": 5.383774900001299,
+  "sampling": {
+    "temperature": 0.7,
+    "do_sample": true,
+    "top_p": 1.0,
+    "top_k": 0,
+    "sampling_seed": 20431325,
+    "seed_control": "torch_manual_seed_and_cuda_manual_seed_all"
+  }
+}

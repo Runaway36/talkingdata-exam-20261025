@@ -1,0 +1,72 @@
+[
+  {
+    "name": "integer_json",
+    "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+    "value_equality_after_json_parsing": true,
+    "numeric_types_after_json_parsing": [
+      "int",
+      "int",
+      "int"
+    ],
+    "report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "compute_reward": 1.0
+  },
+  {
+    "name": "integer_valued_decimal_json",
+    "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48.0},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174.0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120.0}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+    "value_equality_after_json_parsing": true,
+    "numeric_types_after_json_parsing": [
+      "float",
+      "float",
+      "float"
+    ],
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "compute_reward": 0.0
+  },
+  {
+    "name": "integer_valued_exponent_json",
+    "answer": "{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":48e0},{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":174e0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":120e0}],\"priority\":[\"INC-DB\",\"INC-PAY\"]}",
+    "value_equality_after_json_parsing": true,
+    "numeric_types_after_json_parsing": [
+      "float",
+      "float",
+      "float"
+    ],
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "compute_reward": 0.0
+  }
+]

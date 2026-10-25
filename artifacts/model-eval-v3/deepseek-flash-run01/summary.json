@@ -1,0 +1,1057 @@
+{
+  "task_version": 3,
+  "backend": "deepseek",
+  "instances": [
+    17,
+    42,
+    99
+  ],
+  "attempts_per_instance": 4,
+  "temperature": 0.7,
+  "thinking": "disabled",
+  "max_turns": 12,
+  "max_output_tokens_per_turn": 1024,
+  "started_at": "2026-10-25T11:03:14.720611+00:00",
+  "scope": "Three fixed instances, four independent attempts each; not population performance.",
+  "complete": false,
+  "runs": [
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed17-attempt01",
+      "instance_seed": 17,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20262726,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 6.744,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 174
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1029
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 120
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-DB",
+        "INC-PAY"
+      ],
+      "priority_actual": [
+        "INC-LOG",
+        "INC-DB"
+      ],
+      "attempt": 1
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed17-attempt02",
+      "instance_seed": 17,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20262727,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 5,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 7.128,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 174
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1308
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 120
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-DB",
+        "INC-PAY"
+      ],
+      "priority_actual": [
+        "INC-DB"
+      ],
+      "attempt": 2
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed17-attempt03",
+      "instance_seed": 17,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20262728,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 28.9,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 174
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1037
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": true,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 120
+          },
+          "actual": null,
+          "severity_correct": false,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-DB",
+        "INC-PAY"
+      ],
+      "priority_actual": [
+        "INC-DB"
+      ],
+      "attempt": 3
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed17-attempt04",
+      "instance_seed": 17,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20262729,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 6.687,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 71
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 174
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1130
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 120
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 21
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [],
+      "priority_expected": [
+        "INC-DB",
+        "INC-PAY"
+      ],
+      "priority_actual": [
+        "INC-DB",
+        "INC-AUTH"
+      ],
+      "attempt": 4
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed42-attempt01",
+      "instance_seed": 42,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20265226,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 5,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 7.758,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 171
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1023
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 175
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE"
+      ],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [
+        "INC-DB"
+      ],
+      "attempt": 1
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed42-attempt02",
+      "instance_seed": 42,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20265227,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 5,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 6.278,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 171
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1684
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 175
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [
+        "INC-DB"
+      ],
+      "attempt": 2
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed42-attempt03",
+      "instance_seed": 42,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20265228,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 5,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 6.096,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 171
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1448
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 175
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [
+        "INC-DB"
+      ],
+      "attempt": 3
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed42-attempt04",
+      "instance_seed": 42,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20265229,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 6.661,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 171
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1718
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 175
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [
+        "INC-DB"
+      ],
+      "attempt": 4
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed99-attempt01",
+      "instance_seed": 99,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20270926,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 7.592,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 53
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 140
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1051
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 212
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [
+        "INC-DB"
+      ],
+      "attempt": 1
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed99-attempt02",
+      "instance_seed": 99,
+      "status": "completed",
+      "reward": 0.0,
+      "sampling_seed": 20270927,
+      "temperature": 0.7,
+      "passed": false,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 7.408,
+      "events": [
+        {
+          "incident_id": "INC-AUTH",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 53
+          },
+          "actual": {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-DB",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 140
+          },
+          "actual": {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-cart",
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 1688
+          },
+          "severity_correct": true,
+          "services_correct": false,
+          "count_correct": false,
+          "complete_correct": false
+        },
+        {
+          "incident_id": "INC-PAY",
+          "missing": false,
+          "expected": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 212
+          },
+          "actual": {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 0
+          },
+          "severity_correct": true,
+          "services_correct": true,
+          "count_correct": false,
+          "complete_correct": false
+        }
+      ],
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "priority_expected": [
+        "INC-PAY",
+        "INC-DB"
+      ],
+      "priority_actual": [
+        "INC-DB"
+      ],
+      "attempt": 2
+    },
+    {
+      "folder": "artifacts\\model-eval-v3\\deepseek-flash-run01\\seed99-attempt03",
+      "instance_seed": 99,
+      "status": "execution_error",
+      "reward": null,
+      "sampling_seed": 20270928,
+      "temperature": 0.7,
+      "passed": null,
+      "tool_calls": 1,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "elapsed_seconds": 43.71,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": null,
+      "priority_actual": null,
+      "attempt": 3
+    }
+  ],
+  "task_code_sha256": {
+    "alert_rlvr\\__init__.py": "735b93f033d1b3e5edd6a56502c7507fef98a2fcad37a50aec21cb59b1ec19f2",
+    "alert_rlvr\\__main__.py": "0f1be967b7d0b6c3573adc9860ed0f59cb03d6621065397567d3f5bebfe09568",
+    "alert_rlvr\\config.py": "5503e707baf7b1266be3239f166e13c180114901e0322dc8d2f2c699fba8b5cb",
+    "alert_rlvr\\data.py": "81b3fb8b4aa3197505e8b3141f1d9486fbb067ce330b9d640e38b1d0afe3a157",
+    "alert_rlvr\\environment.py": "fb64c24f5e6b95c0e391f77344b685b7aeb8bb2cc48e436505fd56a0143af13a",
+    "alert_rlvr\\tools.py": "f4e41d3c9ffa4919c3d74df6e046fd3f8ece26dadf7a00bac07e36c5951002c0",
+    "alert_rlvr\\verifier.py": "e3c3d1032bd204e0384792bbd13c6e8188bdc9422b8d31a1a3d5749429474e3d"
+  },
+  "evaluation_code_sha256": {
+    "run_model_pilot.py": "dff07e8efa9e2ddd8f2661d6ceb00011ffedad7286e6d4f222412ec8d09ca872",
+    "local_qwen_driver.py": "2d8f3fbde41a63dc63276ad075559ad7cff28499081dda6af1a866fa218c0736",
+    "run_repeated_evaluation.py": "00d30ad8b1a46fa17e6a9af50f741f10ed6420ecef91a7a87e7aa38f7f107136"
+  },
+  "error": {
+    "type": "RuntimeError",
+    "message": "Infrastructure failure; batch paused without treating it as a business error"
+  },
+  "finished_at": "2026-10-25T11:05:32.319415+00:00"
+}

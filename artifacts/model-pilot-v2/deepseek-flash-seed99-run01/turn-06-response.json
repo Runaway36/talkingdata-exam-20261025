@@ -1,0 +1,45 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"svc-pay-stage\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\"}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 7755,
+    "completion_tokens": 58,
+    "total_tokens": 7813,
+    "prompt_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "prompt_cache_hit_tokens": 4224,
+    "prompt_cache_miss_tokens": 3531
+  },
+  "seconds": 1.347798299997521,
+  "raw_response": {
+    "id": "e10b8a24-79fb-4f75-a200-574af8f67046",
+    "object": "chat.completion",
+    "created": 1792925091,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"svc-pay-stage\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\"}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 7755,
+      "completion_tokens": 58,
+      "total_tokens": 7813,
+      "prompt_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "prompt_cache_hit_tokens": 4224,
+      "prompt_cache_miss_tokens": 3531
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1
+}

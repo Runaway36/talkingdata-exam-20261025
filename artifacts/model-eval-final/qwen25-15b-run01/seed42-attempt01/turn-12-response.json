@@ -1,0 +1,16 @@
+{
+  "content": "```json\n{\n    \"action\": \"call\",\n    \"name\": \"get_incident_services\",\n    \"arguments\": {\n        \"incident_ids\": [\"incident_1\", \"incident_2\"]\n    }\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 2957,
+  "output_tokens": 46,
+  "finish_reason": "stop",
+  "seconds": 12.509921400000167,
+  "sampling": {
+    "temperature": 0.7,
+    "do_sample": true,
+    "top_p": 1.0,
+    "top_k": 0,
+    "sampling_seed": 20681136,
+    "seed_control": "torch_manual_seed_and_cuda_manual_seed_all"
+  }
+}

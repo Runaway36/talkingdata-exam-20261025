@@ -1,0 +1,53 @@
+{
+  "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v3-seed-99\",\"incidents\":[{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-cart\",\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":760},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":0}],\"priority\":[\"INC-DB\"]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 8247,
+    "completion_tokens": 140,
+    "total_tokens": 8387,
+    "prompt_tokens_details": {
+      "cached_tokens": 7936
+    },
+    "prompt_cache_hit_tokens": 7936,
+    "prompt_cache_miss_tokens": 311
+  },
+  "seconds": 1.3309083999993163,
+  "raw_response": {
+    "id": "ac477125-fd96-455a-bd6f-811073e74262",
+    "object": "chat.completion",
+    "created": 1792927885,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v3-seed-99\",\"incidents\":[{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-cart\",\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":760},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":0}],\"priority\":[\"INC-DB\"]}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 8247,
+      "completion_tokens": 140,
+      "total_tokens": 8387,
+      "prompt_tokens_details": {
+        "cached_tokens": 7936
+      },
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 311
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": 21251231,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

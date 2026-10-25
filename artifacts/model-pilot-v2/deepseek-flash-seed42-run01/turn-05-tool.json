@@ -1,0 +1,70 @@
+{
+  "name": "get_maintenance_windows",
+  "arguments": {
+    "service_ids": [
+      "svc-auth",
+      "svc-baseline",
+      "svc-cart",
+      "svc-checkout",
+      "svc-search",
+      "svc-log",
+      "svc-pay"
+    ],
+    "start": "2026-10-25T08:00:00Z",
+    "end": "2026-10-25T08:30:00Z"
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v2-seed-42",
+    "data": [
+      {
+        "maintenance_id": "M-AUTH-BUCKET",
+        "service_id": "svc-auth",
+        "starts_at": "2026-10-25T08:05:00Z",
+        "ends_at": "2026-10-25T08:10:00Z",
+        "status": "approved",
+        "reason": "One complete bucket"
+      },
+      {
+        "maintenance_id": "M-AUTH-CANCELLED",
+        "service_id": "svc-auth",
+        "starts_at": "2026-10-25T08:10:00Z",
+        "ends_at": "2026-10-25T08:15:00Z",
+        "status": "cancelled",
+        "reason": "Cancelled deployment"
+      },
+      {
+        "maintenance_id": "M-AUTH-PARTIAL",
+        "service_id": "svc-auth",
+        "starts_at": "2026-10-25T08:17:00Z",
+        "ends_at": "2026-10-25T08:19:00Z",
+        "status": "approved",
+        "reason": "Partial coverage only"
+      },
+      {
+        "maintenance_id": "M-DB-PARTIAL",
+        "service_id": "svc-checkout",
+        "starts_at": "2026-10-25T08:11:00Z",
+        "ends_at": "2026-10-25T08:14:00Z",
+        "status": "approved",
+        "reason": "Does not cover a complete bucket"
+      },
+      {
+        "maintenance_id": "M-LOG-FULL",
+        "service_id": "svc-log",
+        "starts_at": "2026-10-25T08:00:00Z",
+        "ends_at": "2026-10-25T08:30:00Z",
+        "status": "approved",
+        "reason": "Planned audit migration"
+      },
+      {
+        "maintenance_id": "M-PAY-CANCELLED",
+        "service_id": "svc-pay",
+        "starts_at": "2026-10-25T08:00:00Z",
+        "ends_at": "2026-10-25T08:30:00Z",
+        "status": "cancelled",
+        "reason": "Migration did not take place"
+      }
+    ]
+  }
+}

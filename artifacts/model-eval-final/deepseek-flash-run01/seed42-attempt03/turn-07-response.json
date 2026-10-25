@@ -1,0 +1,53 @@
+{
+  "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v3-seed-42\",\"incidents\":[{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-cart\",\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":1431},{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":77},{\"incident_id\":\"INC-BASE\",\"severity\":\"P1\",\"service_ids\":[\"svc-baseline\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-LOG\",\"severity\":\"P0\",\"service_ids\":[\"svc-log\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":0}],\"priority\":[\"INC-DB\",\"INC-AUTH\"]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 8264,
+    "completion_tokens": 211,
+    "total_tokens": 8475,
+    "prompt_tokens_details": {
+      "cached_tokens": 7936
+    },
+    "prompt_cache_hit_tokens": 7936,
+    "prompt_cache_miss_tokens": 328
+  },
+  "seconds": 1.533756099997845,
+  "raw_response": {
+    "id": "4b8e1316-e76a-4c6c-aec2-cf42c0154e8e",
+    "object": "chat.completion",
+    "created": 1792927863,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v3-seed-42\",\"incidents\":[{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-cart\",\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":1431},{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":77},{\"incident_id\":\"INC-BASE\",\"severity\":\"P1\",\"service_ids\":[\"svc-baseline\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-LOG\",\"severity\":\"P0\",\"service_ids\":[\"svc-log\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":0}],\"priority\":[\"INC-DB\",\"INC-AUTH\"]}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 8264,
+      "completion_tokens": 211,
+      "total_tokens": 8475,
+      "prompt_tokens_details": {
+        "cached_tokens": 7936
+      },
+      "prompt_cache_hit_tokens": 7936,
+      "prompt_cache_miss_tokens": 328
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": 20681331,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

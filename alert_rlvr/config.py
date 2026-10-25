@@ -47,8 +47,9 @@ def make_task(seed=DEFAULT_SEED):
 处置顺序按事件异常失败总量降序，同量时 P0 优先于 P1，再按 incident_id 字典序；事件不足 {TOP_K} 个时列出全部。
 
 返回 JSON：snapshot_id；incidents 数组（每项含 incident_id、severity、service_ids、excess_failed_requests）；priority 数组（前 {TOP_K} 个事件 ID）。
-excess_failed_requests 必须为非负整数；明细行与 service_ids 顺序无关，priority 顺序有意义。只能通过业务 API 获取数据，不能直接访问数据库。
+excess_failed_requests 必须为非负整数值，数值等价的 JSON 写法（如 48、48.0、48e0）均接受；明细行与 service_ids 顺序无关，priority 顺序有意义。只能通过业务 API 获取数据，不能直接访问数据库。
 JSON 只包含上述字段，不得重复 JSON 键、事件 ID、同一事件内服务 ID 或优先级 ID；priority 只能引用已提交事件。快照不符、额外字段或类型错误等格式违规得 0。
+答案的 UTF-8 JSON 编码不得超过 {MAX_ANSWER_BYTES} 字节（包含空白字符），超过时按输入超限处理并得 0。
 奖励只依据最终结果：完整正确的事件分析计 {INCIDENT_POINTS} 单位；位置正确且事件分析完整正确的优先级项计 {PRIORITY_POINTS} 单位。
 奖励为所得单位除以（应输出事件数 × {INCIDENT_POINTS} + 应输出优先级项数 × {PRIORITY_POINTS} + 多报事件数 × {EXTRA_INCIDENT_PENALTY}）。无应输出事件且答案为空时得 1；不检查调用轨迹。"""
 

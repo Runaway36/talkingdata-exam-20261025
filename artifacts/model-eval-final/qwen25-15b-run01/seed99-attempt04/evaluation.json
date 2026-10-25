@@ -1,0 +1,12 @@
+{
+  "reward": 0.0,
+  "valid": false,
+  "components": {
+    "incidents": 0.0,
+    "priority": 0.0
+  },
+  "errors": [
+    "snapshot_id does not match task"
+  ],
+  "expected_count": 3
+}

@@ -1,0 +1,60 @@
+{
+  "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-171\",\"severity\":\"P0\",\"service_ids\":[\"SVC-1001\",\"SVC-1002\"],\"excess_failed_requests\":1096}],\"priority\":[\"INC-171\"]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 12297,
+    "completion_tokens": 237,
+    "total_tokens": 12534,
+    "prompt_tokens_details": {
+      "cached_tokens": 9856
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 162
+    },
+    "prompt_cache_hit_tokens": 9856,
+    "prompt_cache_miss_tokens": 2441
+  },
+  "seconds": 2.238586399995256,
+  "raw_response": {
+    "id": "75cc5af5-22f9-493b-a5f5-4b878151a473",
+    "object": "chat.completion",
+    "created": 1792928372,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v3-seed-17\",\"incidents\":[{\"incident_id\":\"INC-171\",\"severity\":\"P0\",\"service_ids\":[\"SVC-1001\",\"SVC-1002\"],\"excess_failed_requests\":1096}],\"priority\":[\"INC-171\"]}}",
+          "reasoning_content": "We need respond protocol error again? The final message must be one complete JSON. I did. Maybe parser thinks because extra? It says protocol error. Need only output JSON, no markdown. We did. Maybe the issue is the answer content? Or the final should have \"answer\" as final JSON. We have. It might be because I output Chinese? No. Wait conversation says \"\u534f\u8bae\u9519\u8bef\u3002\u8bf7\u53ea\u8f93\u51fa\u4e00\u4e2a\u5b8c\u6574 JSON...\" after my final. That may be an injected error due system expecting valid. Perhaps my final was not accepted because maybe answer value has correct structure? It seems valid. Need re-output exactly one JSON. Maybe ensure no trailing? We can resubmit. But perhaps there is concern about our result incorrect, but protocol error means format. Let's output the same."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 12297,
+      "completion_tokens": 237,
+      "total_tokens": 12534,
+      "prompt_tokens_details": {
+        "cached_tokens": 9856
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 162
+      },
+      "prompt_cache_hit_tokens": 9856,
+      "prompt_cache_miss_tokens": 2441
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": null,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

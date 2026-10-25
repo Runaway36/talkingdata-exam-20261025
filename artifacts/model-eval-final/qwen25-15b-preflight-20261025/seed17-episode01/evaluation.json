@@ -1,0 +1,12 @@
+{
+  "reward": 0.0,
+  "valid": false,
+  "components": {
+    "incidents": 0.0,
+    "priority": 0.0
+  },
+  "errors": [
+    "excess_failed_requests must be a nonnegative integer"
+  ],
+  "expected_count": 3
+}

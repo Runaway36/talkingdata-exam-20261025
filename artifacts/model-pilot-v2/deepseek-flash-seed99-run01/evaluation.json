@@ -1,0 +1,13 @@
+{
+  "reward": 0.4652777777777778,
+  "valid": true,
+  "components": {
+    "coverage": 0.75,
+    "fields": 0.5555555555555556,
+    "priority": 0.0
+  },
+  "errors": [],
+  "expected_count": 3,
+  "matched_count": 3,
+  "matched_fields": 5
+}

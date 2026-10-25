@@ -1,0 +1,13 @@
+{
+  "reward": 0.0,
+  "valid": true,
+  "components": {
+    "incidents": 0.0,
+    "priority": 0.0
+  },
+  "errors": [],
+  "expected_count": 3,
+  "matched_count": 0,
+  "priority_matches": 0,
+  "extra_count": 1
+}

@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-10-25T11:30:56.645378+00:00",
+  "core_sha256": {
+    "alert_rlvr\\__init__.py": "735b93f033d1b3e5edd6a56502c7507fef98a2fcad37a50aec21cb59b1ec19f2",
+    "alert_rlvr\\__main__.py": "0f1be967b7d0b6c3573adc9860ed0f59cb03d6621065397567d3f5bebfe09568",
+    "alert_rlvr\\config.py": "338f3430885f18d93710129619035ee066767c70754939baa3ff50c80214dabb",
+    "alert_rlvr\\data.py": "81b3fb8b4aa3197505e8b3141f1d9486fbb067ce330b9d640e38b1d0afe3a157",
+    "alert_rlvr\\environment.py": "fb64c24f5e6b95c0e391f77344b685b7aeb8bb2cc48e436505fd56a0143af13a",
+    "alert_rlvr\\tools.py": "f4e41d3c9ffa4919c3d74df6e046fd3f8ece26dadf7a00bac07e36c5951002c0",
+    "alert_rlvr\\verifier.py": "6d8f9bfd88d81acbb816dbe88d5ab4c732773135eec0480ad9e8b96465eb68b7"
+  },
+  "evaluation_sha256": {
+    "run_model_pilot.py": "7454cb270b71635ca511af5ecb91b08ae31df12bd56b5bb713c927d7602d096a",
+    "run_repeated_evaluation.py": "114094cc16338c3384c6f7671dba4e10f6d71a805aa7c176c61450cf84e0c23b",
+    "local_qwen_driver.py": "5c465daa0e951869069753ed9ba43b27c2768b28a4a04501790166bc7f848c41"
+  },
+  "output": "artifacts\\model-eval-final\\qwen25-15b-run01",
+  "preflight_status": "invalid_final_answer",
+  "task_seeds": [
+    17,
+    42,
+    99
+  ],
+  "attempts_per_seed": 4,
+  "sampling_seed_rule": "20261025 + task_instance_seed*10000 + attempt*100; plus turn-1",
+  "temperature": 0.7,
+  "top_p": 1.0,
+  "top_k": 0,
+  "max_turns": 12,
+  "max_tokens": 1024,
+  "requested_device": "cuda",
+  "dtype_policy": "unchanged bfloat16 if supported"
+}

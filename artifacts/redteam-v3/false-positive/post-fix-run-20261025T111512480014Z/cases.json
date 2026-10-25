@@ -1,0 +1,2538 @@
+[
+  {
+    "case": "equivalent_48",
+    "mode": "raw_json",
+    "number_representation": "48",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_48.0",
+    "mode": "raw_json",
+    "number_representation": "48.0",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_48.000000000000000000000000000",
+    "mode": "raw_json",
+    "number_representation": "48.000000000000000000000000000",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_48e0",
+    "mode": "raw_json",
+    "number_representation": "48e0",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_48E+0",
+    "mode": "raw_json",
+    "number_representation": "48E+0",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_4.8e1",
+    "mode": "raw_json",
+    "number_representation": "4.8e1",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_480e-1",
+    "mode": "raw_json",
+    "number_representation": "480e-1",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_0.48e2",
+    "mode": "raw_json",
+    "number_representation": "0.48e2",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_4.800e+1",
+    "mode": "raw_json",
+    "number_representation": "4.800e+1",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "equivalent_48e-0",
+    "mode": "raw_json",
+    "number_representation": "48e-0",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_1",
+    "mode": "raw_json",
+    "number_representation": "48.1",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_1",
+    "mode": "raw_json",
+    "number_representation": "47.9",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_1",
+    "mode": "raw_json",
+    "number_representation": "481e-1",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_1",
+    "mode": "raw_json",
+    "number_representation": "480e-1",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_1",
+    "mode": "raw_json",
+    "number_representation": "1e-1",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_2",
+    "mode": "raw_json",
+    "number_representation": "48.01",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_2",
+    "mode": "raw_json",
+    "number_representation": "47.99",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_2",
+    "mode": "raw_json",
+    "number_representation": "4801e-2",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_2",
+    "mode": "raw_json",
+    "number_representation": "4800e-2",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_2",
+    "mode": "raw_json",
+    "number_representation": "1e-2",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_6",
+    "mode": "raw_json",
+    "number_representation": "48.000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_6",
+    "mode": "raw_json",
+    "number_representation": "47.999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_6",
+    "mode": "raw_json",
+    "number_representation": "48000001e-6",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_6",
+    "mode": "raw_json",
+    "number_representation": "48000000e-6",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_6",
+    "mode": "raw_json",
+    "number_representation": "1e-6",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_15",
+    "mode": "raw_json",
+    "number_representation": "48.000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_15",
+    "mode": "raw_json",
+    "number_representation": "47.999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_15",
+    "mode": "raw_json",
+    "number_representation": "48000000000000001e-15",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_15",
+    "mode": "raw_json",
+    "number_representation": "48000000000000000e-15",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_15",
+    "mode": "raw_json",
+    "number_representation": "1e-15",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_16",
+    "mode": "raw_json",
+    "number_representation": "48.0000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_16",
+    "mode": "raw_json",
+    "number_representation": "47.9999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_16",
+    "mode": "raw_json",
+    "number_representation": "480000000000000001e-16",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_16",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000e-16",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_16",
+    "mode": "raw_json",
+    "number_representation": "1e-16",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_17",
+    "mode": "raw_json",
+    "number_representation": "48.00000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_17",
+    "mode": "raw_json",
+    "number_representation": "47.99999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_17",
+    "mode": "raw_json",
+    "number_representation": "4800000000000000001e-17",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_17",
+    "mode": "raw_json",
+    "number_representation": "4800000000000000000e-17",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_17",
+    "mode": "raw_json",
+    "number_representation": "1e-17",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_18",
+    "mode": "raw_json",
+    "number_representation": "48.000000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_18",
+    "mode": "raw_json",
+    "number_representation": "47.999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_18",
+    "mode": "raw_json",
+    "number_representation": "48000000000000000001e-18",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_18",
+    "mode": "raw_json",
+    "number_representation": "48000000000000000000e-18",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_18",
+    "mode": "raw_json",
+    "number_representation": "1e-18",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_28",
+    "mode": "raw_json",
+    "number_representation": "48.0000000000000000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_28",
+    "mode": "raw_json",
+    "number_representation": "47.9999999999999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_28",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000000000000001e-28",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_28",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000000000000000e-28",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_28",
+    "mode": "raw_json",
+    "number_representation": "1e-28",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_29",
+    "mode": "raw_json",
+    "number_representation": "48.00000000000000000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_29",
+    "mode": "raw_json",
+    "number_representation": "47.99999999999999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_29",
+    "mode": "raw_json",
+    "number_representation": "4800000000000000000000000000001e-29",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_29",
+    "mode": "raw_json",
+    "number_representation": "4800000000000000000000000000000e-29",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_29",
+    "mode": "raw_json",
+    "number_representation": "1e-29",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_50",
+    "mode": "raw_json",
+    "number_representation": "48.00000000000000000000000000000000000000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_50",
+    "mode": "raw_json",
+    "number_representation": "47.99999999999999999999999999999999999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_50",
+    "mode": "raw_json",
+    "number_representation": "4800000000000000000000000000000000000000000000000001e-50",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_50",
+    "mode": "raw_json",
+    "number_representation": "4800000000000000000000000000000000000000000000000000e-50",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_50",
+    "mode": "raw_json",
+    "number_representation": "1e-50",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_100",
+    "mode": "raw_json",
+    "number_representation": "48.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_100",
+    "mode": "raw_json",
+    "number_representation": "47.9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_100",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e-100",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_100",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-100",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_100",
+    "mode": "raw_json",
+    "number_representation": "1e-100",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_1000",
+    "mode": "raw_json",
+    "number_representation": "48.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_1000",
+    "mode": "raw_json",
+    "number_representation": "47.9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_1000",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e-1000",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_1000",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-1000",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_1000",
+    "mode": "raw_json",
+    "number_representation": "1e-1000",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_decimal_10000",
+    "mode": "raw_json",
+    "number_representation": "48.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "below_48_decimal_10000",
+    "mode": "raw_json",
+    "number_representation": "47.9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "above_48_exponent_10000",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001e-10000",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "equal_48_scaled_exponent_10000",
+    "mode": "raw_json",
+    "number_representation": "480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-10000",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "positive_tiny_fraction_10000",
+    "mode": "raw_json",
+    "number_representation": "1e-10000",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_NaN",
+    "mode": "raw_json",
+    "number_representation": "NaN",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "non-finite JSON number: NaN"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_Infinity",
+    "mode": "raw_json",
+    "number_representation": "Infinity",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "non-finite JSON number: Infinity"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_-Infinity",
+    "mode": "raw_json",
+    "number_representation": "-Infinity",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "non-finite JSON number: -Infinity"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_sNaN",
+    "mode": "raw_json",
+    "number_representation": "sNaN",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting value: line 1 column 159 (char 158)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_nan",
+    "mode": "raw_json",
+    "number_representation": "nan",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting value: line 1 column 159 (char 158)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_inf",
+    "mode": "raw_json",
+    "number_representation": "inf",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting value: line 1 column 159 (char 158)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_true",
+    "mode": "raw_json",
+    "number_representation": "true",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_false",
+    "mode": "raw_json",
+    "number_representation": "false",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_null",
+    "mode": "raw_json",
+    "number_representation": "null",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_\"48\"",
+    "mode": "raw_json",
+    "number_representation": "\"48\"",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_-48",
+    "mode": "raw_json",
+    "number_representation": "-48",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_-48.0",
+    "mode": "raw_json",
+    "number_representation": "-48.0",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_48.5",
+    "mode": "raw_json",
+    "number_representation": "48.5",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_4.81e1",
+    "mode": "raw_json",
+    "number_representation": "4.81e1",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_48.000000000000000001",
+    "mode": "raw_json",
+    "number_representation": "48.000000000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_47.999999999999999999",
+    "mode": "raw_json",
+    "number_representation": "47.999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_1e-999999",
+    "mode": "raw_json",
+    "number_representation": "1e-999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_1e-999999999999999999",
+    "mode": "raw_json",
+    "number_representation": "1e-999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_1e9999999999999999999",
+    "mode": "raw_json",
+    "number_representation": "1e9999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "malformed answer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_1e-9999999999999999999",
+    "mode": "raw_json",
+    "number_representation": "1e-9999999999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "malformed answer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_00",
+    "mode": "raw_json",
+    "number_representation": "00",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting ',' delimiter: line 1 column 160 (char 159)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_+48",
+    "mode": "raw_json",
+    "number_representation": "+48",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting value: line 1 column 159 (char 158)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_048",
+    "mode": "raw_json",
+    "number_representation": "048",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting ',' delimiter: line 1 column 160 (char 159)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_48.",
+    "mode": "raw_json",
+    "number_representation": "48.",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting ',' delimiter: line 1 column 161 (char 160)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_.48e2",
+    "mode": "raw_json",
+    "number_representation": ".48e2",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting value: line 1 column 159 (char 158)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_48e",
+    "mode": "raw_json",
+    "number_representation": "48e",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting ',' delimiter: line 1 column 161 (char 160)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "reject_0x30",
+    "mode": "raw_json",
+    "number_representation": "0x30",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting ',' delimiter: line 1 column 160 (char 159)"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_0",
+    "mode": "raw_json",
+    "number_representation": "0",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_0.0",
+    "mode": "raw_json",
+    "number_representation": "0.0",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_-0",
+    "mode": "raw_json",
+    "number_representation": "-0",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_-0.0",
+    "mode": "raw_json",
+    "number_representation": "-0.0",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_0e999999",
+    "mode": "raw_json",
+    "number_representation": "0e999999",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_49",
+    "mode": "raw_json",
+    "number_representation": "49",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_47.0",
+    "mode": "raw_json",
+    "number_representation": "47.0",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_1e999",
+    "mode": "raw_json",
+    "number_representation": "1e999",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_1e999999",
+    "mode": "raw_json",
+    "number_representation": "1e999999",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "wrong_integer_1e999999999999999999",
+    "mode": "raw_json",
+    "number_representation": "1e999999999999999999",
+    "expected_valid": true,
+    "expected_reward": 0.8,
+    "actual": {
+      "reward": 0.8,
+      "valid": true,
+      "components": {
+        "incidents": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 2,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_int",
+    "mode": "dict",
+    "number_representation": "48",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_integer_float",
+    "mode": "dict",
+    "number_representation": "48.0",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_nextafter_up",
+    "mode": "dict",
+    "number_representation": "48.00000000000001",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_nextafter_down",
+    "mode": "dict",
+    "number_representation": "47.99999999999999",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_bool_true",
+    "mode": "dict",
+    "number_representation": "True",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_bool_false",
+    "mode": "dict",
+    "number_representation": "False",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_nan",
+    "mode": "dict",
+    "number_representation": "nan",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Out of range float values are not JSON compliant: nan"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_positive_infinity",
+    "mode": "dict",
+    "number_representation": "inf",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Out of range float values are not JSON compliant: inf"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_negative_infinity",
+    "mode": "dict",
+    "number_representation": "-inf",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Out of range float values are not JSON compliant: -inf"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_string",
+    "mode": "dict",
+    "number_representation": "'48'",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "dict_Decimal_not_standard_json_serializable",
+    "mode": "dict",
+    "number_representation": "Decimal('48.0')",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Object of type Decimal is not JSON serializable"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  },
+  {
+    "case": "all_three_scientific",
+    "mode": "raw_json",
+    "number_representation": "all event counts equivalent",
+    "expected_valid": true,
+    "expected_reward": 1.0,
+    "actual": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    },
+    "passed": true
+  },
+  {
+    "case": "duplicate_numeric_key",
+    "mode": "raw_json",
+    "number_representation": "48 and 48.0",
+    "expected_valid": false,
+    "expected_reward": 0.0,
+    "actual": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "duplicate JSON key: excess_failed_requests"
+      ],
+      "expected_count": 3
+    },
+    "passed": true
+  }
+]

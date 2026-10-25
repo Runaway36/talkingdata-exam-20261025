@@ -1,0 +1,26 @@
+{
+  "name": "business_rules_engine",
+  "arguments": {
+    "config": {
+      "timestamp_range_start": "2026-10-25T08:00:00Z",
+      "timestamp_range_end": "2026-10-25T08:30:00Z",
+      "severity_filter": [
+        "P0",
+        "P1"
+      ],
+      "state_filter": [
+        "firing"
+      ],
+      "window_resolution": "5m"
+    },
+    "filters": []
+  },
+  "result": {
+    "ok": false,
+    "snapshot_id": "alert-impact-v3-seed-99",
+    "error": {
+      "code": "UNKNOWN_API",
+      "message": "unknown business API"
+    }
+  }
+}

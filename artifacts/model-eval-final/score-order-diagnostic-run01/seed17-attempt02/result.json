@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "reward": 1.0,
+  "tool_calls": 5,
+  "protocol_errors": 1,
+  "turns": 7,
+  "truncated_responses": 0,
+  "reported_model": "deepseek-flash",
+  "evaluation": {
+    "reward": 1.0,
+    "valid": true,
+    "components": {
+      "incidents": 1.0,
+      "priority": 1.0
+    },
+    "errors": [],
+    "expected_count": 3,
+    "matched_count": 3,
+    "priority_matches": 2,
+    "extra_count": 0
+  },
+  "elapsed_seconds": 20.689,
+  "finished_at": "2026-10-25T11:38:40.789626+00:00"
+}

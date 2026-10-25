@@ -1,0 +1,45 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"svc-auth\",\"svc-baseline\",\"svc-cart\",\"svc-checkout\",\"svc-search\",\"svc-log\",\"svc-pay\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\"}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 4173,
+    "completion_tokens": 85,
+    "total_tokens": 4258,
+    "prompt_tokens_details": {
+      "cached_tokens": 3584
+    },
+    "prompt_cache_hit_tokens": 3584,
+    "prompt_cache_miss_tokens": 589
+  },
+  "seconds": 1.1484648999976343,
+  "raw_response": {
+    "id": "16ee2b1c-74ae-4e6c-8dc0-c9c9a8d5d6d0",
+    "object": "chat.completion",
+    "created": 1792925090,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"svc-auth\",\"svc-baseline\",\"svc-cart\",\"svc-checkout\",\"svc-search\",\"svc-log\",\"svc-pay\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\"}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4173,
+      "completion_tokens": 85,
+      "total_tokens": 4258,
+      "prompt_tokens_details": {
+        "cached_tokens": 3584
+      },
+      "prompt_cache_hit_tokens": 3584,
+      "prompt_cache_miss_tokens": 589
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1
+}

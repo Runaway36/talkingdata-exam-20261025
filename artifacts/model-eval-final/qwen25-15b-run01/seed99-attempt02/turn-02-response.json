@@ -1,0 +1,16 @@
+{
+  "content": "```json\n{\n  \"action\": \"call\",\n  \"name\": \"business_rules_engine\",\n  \"arguments\": {\n    \"config\": {\n      \"timestamp_range_start\": \"2026-10-25T08:00:00Z\",\n      \"timestamp_range_end\": \"2026-10-25T08:30:00Z\",\n      \"severity_filter\": [\"P0\", \"P1\"],\n      \"state_filter\": [\"firing\"],\n      \"window_resolution\": \"5m\"\n    },\n    \"filters\": []\n  }\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 2052,
+  "output_tokens": 129,
+  "finish_reason": "stop",
+  "seconds": 4.673145000000659,
+  "sampling": {
+    "temperature": 0.7,
+    "do_sample": true,
+    "top_p": 1.0,
+    "top_k": 0,
+    "sampling_seed": 21251226,
+    "seed_control": "torch_manual_seed_and_cuda_manual_seed_all"
+  }
+}

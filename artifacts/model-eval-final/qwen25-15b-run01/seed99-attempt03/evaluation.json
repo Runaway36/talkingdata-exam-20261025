@@ -1,0 +1,12 @@
+{
+  "reward": 0.0,
+  "valid": false,
+  "components": {
+    "incidents": 0.0,
+    "priority": 0.0
+  },
+  "errors": [
+    "duplicate incident_id"
+  ],
+  "expected_count": 3
+}

@@ -1,0 +1,275 @@
+{
+  "scope": "Three fixed instances, one rollout each; not a stable pass-rate estimate.",
+  "protocol": "text-json-single-action-v1; business API tools only; no code execution tool",
+  "reference_controls": [
+    {
+      "seed": 17,
+      "answer": {
+        "snapshot_id": "alert-impact-v2-seed-17",
+        "incidents": [
+          {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 174
+          },
+          {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 120
+          }
+        ],
+        "priority": [
+          "INC-DB",
+          "INC-PAY"
+        ]
+      },
+      "reward": 1.0,
+      "api_reference_matches_sql_oracle": true
+    },
+    {
+      "seed": 42,
+      "answer": {
+        "snapshot_id": "alert-impact-v2-seed-42",
+        "incidents": [
+          {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 48
+          },
+          {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 171
+          },
+          {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 175
+          }
+        ],
+        "priority": [
+          "INC-PAY",
+          "INC-DB"
+        ]
+      },
+      "reward": 1.0,
+      "api_reference_matches_sql_oracle": true
+    },
+    {
+      "seed": 99,
+      "answer": {
+        "snapshot_id": "alert-impact-v2-seed-99",
+        "incidents": [
+          {
+            "incident_id": "INC-AUTH",
+            "severity": "P1",
+            "service_ids": [
+              "svc-auth"
+            ],
+            "excess_failed_requests": 53
+          },
+          {
+            "incident_id": "INC-DB",
+            "severity": "P0",
+            "service_ids": [
+              "svc-checkout",
+              "svc-search"
+            ],
+            "excess_failed_requests": 140
+          },
+          {
+            "incident_id": "INC-PAY",
+            "severity": "P1",
+            "service_ids": [
+              "svc-pay"
+            ],
+            "excess_failed_requests": 212
+          }
+        ],
+        "priority": [
+          "INC-PAY",
+          "INC-DB"
+        ]
+      },
+      "reward": 1.0,
+      "api_reference_matches_sql_oracle": true
+    }
+  ],
+  "model_runs": [
+    {
+      "model": "deepseek-flash",
+      "seed": 17,
+      "status": "completed",
+      "reward": 0.5208333333333333,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "strict_correct": false,
+      "correct_counts": 0,
+      "correct_service_sets": 3,
+      "expected_incidents": 3,
+      "evidence": "artifacts\\model-pilot-v2\\deepseek-flash-seed17-run01",
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "missing_incidents": [],
+      "priority_exact": false
+    },
+    {
+      "model": "qwen25-15b",
+      "seed": 17,
+      "status": "completed",
+      "reward": 0.47916666666666663,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "strict_correct": false,
+      "correct_counts": 0,
+      "correct_service_sets": 0,
+      "expected_incidents": 3,
+      "evidence": "artifacts\\model-pilot-v2\\qwen25-15b-seed17-run01",
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "missing_incidents": [],
+      "priority_exact": false
+    },
+    {
+      "model": "deepseek-flash",
+      "seed": 42,
+      "status": "completed",
+      "reward": 0.4652777777777778,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "strict_correct": false,
+      "correct_counts": 0,
+      "correct_service_sets": 2,
+      "expected_incidents": 3,
+      "evidence": "artifacts\\model-pilot-v2\\deepseek-flash-seed42-run01",
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "missing_incidents": [],
+      "priority_exact": false
+    },
+    {
+      "model": "qwen25-15b",
+      "seed": 42,
+      "status": "completed",
+      "reward": 0.35416666666666663,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "strict_correct": false,
+      "correct_counts": 0,
+      "correct_service_sets": 0,
+      "expected_incidents": 3,
+      "evidence": "artifacts\\model-pilot-v2\\qwen25-15b-seed42-run01",
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "missing_incidents": [],
+      "priority_exact": false
+    },
+    {
+      "model": "deepseek-flash",
+      "seed": 99,
+      "status": "completed",
+      "reward": 0.4652777777777778,
+      "tool_calls": 6,
+      "protocol_errors": 0,
+      "truncated_responses": 0,
+      "strict_correct": false,
+      "correct_counts": 0,
+      "correct_service_sets": 2,
+      "expected_incidents": 3,
+      "evidence": "artifacts\\model-pilot-v2\\deepseek-flash-seed99-run01",
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "missing_incidents": [],
+      "priority_exact": false
+    },
+    {
+      "model": "qwen25-15b",
+      "seed": 99,
+      "status": "completed",
+      "reward": 0.25396825396825395,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "strict_correct": false,
+      "correct_counts": 0,
+      "correct_service_sets": 0,
+      "expected_incidents": 3,
+      "evidence": "artifacts\\model-pilot-v2\\qwen25-15b-seed99-run01",
+      "extra_incidents": [
+        "INC-BASE",
+        "INC-LOG"
+      ],
+      "missing_incidents": [
+        "INC-PAY"
+      ],
+      "priority_exact": false
+    }
+  ],
+  "reward_interpretation_controls": {
+    "all_counts_wrong_other_fields_correct": {
+      "reward": 0.8333333333333333,
+      "valid": true,
+      "components": {
+        "coverage": 1.0,
+        "fields": 0.6666666666666666,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "matched_fields": 6
+    },
+    "one_extra_incident_other_fields_correct": {
+      "reward": 0.9642857142857143,
+      "valid": true,
+      "components": {
+        "coverage": 0.8571428571428571,
+        "fields": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "matched_fields": 9
+    }
+  }
+}

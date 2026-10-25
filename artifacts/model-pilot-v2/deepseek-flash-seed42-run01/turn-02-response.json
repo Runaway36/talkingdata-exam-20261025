@@ -1,0 +1,45 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"get_incident_services\",\"arguments\":{\"incident_ids\":[\"INC-AUTH\",\"INC-BASE\",\"INC-DB\",\"INC-LOG\",\"INC-PAY\"]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 2483,
+    "completion_tokens": 42,
+    "total_tokens": 2525,
+    "prompt_tokens_details": {
+      "cached_tokens": 1664
+    },
+    "prompt_cache_hit_tokens": 1664,
+    "prompt_cache_miss_tokens": 819
+  },
+  "seconds": 0.9083093000008375,
+  "raw_response": {
+    "id": "b95d3de3-5bc6-4e6c-853a-804426eb820e",
+    "object": "chat.completion",
+    "created": 1792925057,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"get_incident_services\",\"arguments\":{\"incident_ids\":[\"INC-AUTH\",\"INC-BASE\",\"INC-DB\",\"INC-LOG\",\"INC-PAY\"]}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2483,
+      "completion_tokens": 42,
+      "total_tokens": 2525,
+      "prompt_tokens_details": {
+        "cached_tokens": 1664
+      },
+      "prompt_cache_hit_tokens": 1664,
+      "prompt_cache_miss_tokens": 819
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1
+}

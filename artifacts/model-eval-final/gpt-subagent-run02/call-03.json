@@ -1,0 +1,88 @@
+{
+  "at": "2026-10-25T11:39:27.801043+00:00",
+  "request": {
+    "name": "get_service_profiles",
+    "arguments": {
+      "service_ids": [
+        "svc-auth",
+        "svc-baseline",
+        "svc-cart",
+        "svc-checkout",
+        "svc-search",
+        "svc-log",
+        "svc-pay",
+        "svc-pay-stage"
+      ]
+    }
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v3-seed-17",
+    "data": [
+      {
+        "service_id": "svc-auth",
+        "name": "Authentication",
+        "environment": "production",
+        "baseline_failure_bps": 100,
+        "owner_team": "identity",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-auth"
+      },
+      {
+        "service_id": "svc-baseline",
+        "name": "Returns",
+        "environment": "production",
+        "baseline_failure_bps": 1000,
+        "owner_team": "orders",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-baseline"
+      },
+      {
+        "service_id": "svc-cart",
+        "name": "Cart",
+        "environment": "production",
+        "baseline_failure_bps": 200,
+        "owner_team": "orders",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-cart"
+      },
+      {
+        "service_id": "svc-checkout",
+        "name": "Checkout",
+        "environment": "production",
+        "baseline_failure_bps": 100,
+        "owner_team": "orders",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-checkout"
+      },
+      {
+        "service_id": "svc-log",
+        "name": "Audit logging",
+        "environment": "production",
+        "baseline_failure_bps": 0,
+        "owner_team": "platform",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-log"
+      },
+      {
+        "service_id": "svc-pay",
+        "name": "Payment",
+        "environment": "production",
+        "baseline_failure_bps": 50,
+        "owner_team": "payments",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-pay"
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "name": "Payment staging",
+        "environment": "staging",
+        "baseline_failure_bps": 0,
+        "owner_team": "payments",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-pay-stage"
+      },
+      {
+        "service_id": "svc-search",
+        "name": "Search",
+        "environment": "production",
+        "baseline_failure_bps": 300,
+        "owner_team": "discovery",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-search"
+      }
+    ]
+  }
+}

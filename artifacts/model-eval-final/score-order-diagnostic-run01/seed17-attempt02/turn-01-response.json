@@ -1,0 +1,60 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"list_alerts\",\"arguments\":{\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\",\"severities\":[\"P0\",\"P1\"],\"states\":[\"firing\"]}}\n\n<output>\n</output>",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 1871,
+    "completion_tokens": 177,
+    "total_tokens": 2048,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1871
+  },
+  "seconds": 1.6940764999962994,
+  "raw_response": {
+    "id": "2dba4868-a0a1-4126-b993-126cebd6d060",
+    "object": "chat.completion",
+    "created": 1792928298,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"list_alerts\",\"arguments\":{\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\",\"severities\":[\"P0\",\"P1\"],\"states\":[\"firing\"]}}\n\n<output>\n</output>",
+          "reasoning_content": "We need solve. Need use tools. Need understand window. Need list alerts overlapping [08:00,08:30) firing P0/P1 at window end. \"\u7eb3\u5165\u622a\u81f3\u7a97\u53e3\u7ed3\u675f\u4ecd\u5728\u89e6\u53d1\uff08firing\uff09\u7684 P0/P1 \u544a\u8b66\u6240\u5bf9\u5e94\u6839\u56e0\u4e8b\u4ef6.\" Need list alerts perhaps states firing, severities P0,P1, window. Need snapshot_id? Tool outputs likely includes snapshot_id. Need query.\n\nLet's call list_alerts start/end states firing severities P0,P1."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1871,
+      "completion_tokens": 177,
+      "total_tokens": 2048,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 107
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 1871
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": null,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

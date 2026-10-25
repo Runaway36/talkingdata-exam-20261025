@@ -1,0 +1,219 @@
+{
+  "system": "你是执行告警业务分析任务的 Agent。你只能通过下面列出的业务工具查询数据，不能访问文件、数据库、评分器或参考答案。\n每轮只能输出一个 JSON 对象，不要 Markdown 或其他正文。\n调用工具：{\"action\":\"call\",\"name\":\"业务工具名\",\"arguments\":{参数}}\n提交最终结果：{\"action\":\"final\",\"answer\":{任务要求的最终JSON}}\n工具调用与最终结果不能放在同一轮。你会收到工具返回的数据。你可以自主选择查询顺序、参数和计算方法。\n请依据完整业务规则计算，不要猜测缺少的数据。工具错误可以修正后重新调用。\n",
+  "task": "任务编号：alert-impact-v3-seed-17\n你是监控平台的值班分析员，需要为下一班提供一份按实际业务影响排序的处置清单。\n报告范围是 UTC [2026-10-25T08:00:00Z, 2026-10-25T08:30:00Z)；纳入截至窗口结束仍在触发（firing）的 P0/P1 告警所对应根因事件。\n请给出各事件影响的生产服务、异常失败调用总量，并选出优先处理的前 2 个事件。\n\n交接统计制度：\n一个根因事件以 incident_id 标识，可有多条告警；事件等级取符合纳入条件告警中的最高等级。\n服务归属及影响起止时间以事件登记关系为准；只统计环境为 production 的服务。\n统计单位是服务调用失败次数，不是去重用户数，不涉及金额。每个 5 分钟观测桶须完整处于报告范围和事件影响时段内，同一事件、服务、桶只计一次。\n已批准（approved）的计划维护完整覆盖的桶不属于事件业务影响；取消（cancelled）或只覆盖部分时间的维护不适用这一豁免。\n常态失败量按每桶请求量与该服务基线计算并向下取整：request_count * baseline_failure_bps // 10000。异常失败量为实际 failed_requests 减去常态失败量，最低为 0，再累计各有效桶。\n只列有正异常失败量的事件及服务。快照保证一个服务桶不会归属多个根因事件。\n处置顺序按事件异常失败总量降序，同量时 P0 优先于 P1，再按 incident_id 字典序；事件不足 2 个时列出全部。\n\n返回 JSON：snapshot_id；incidents 数组（每项含 incident_id、severity、service_ids、excess_failed_requests）；priority 数组（前 2 个事件 ID）。\nexcess_failed_requests 必须为非负整数值，数值等价的 JSON 写法（如 48、48.0、48e0）均接受；明细行与 service_ids 顺序无关，priority 顺序有意义。只能通过业务 API 获取数据，不能直接访问数据库。\nJSON 只包含上述字段，不得重复 JSON 键、事件 ID、同一事件内服务 ID 或优先级 ID；priority 只能引用已提交事件。快照不符、额外字段或类型错误等格式违规得 0。\n答案的 UTF-8 JSON 编码不得超过 1000000 字节（包含空白字符），超过时按输入超限处理并得 0。\n奖励只依据最终结果：完整正确的事件分析计 1 单位；位置正确且事件分析完整正确的优先级项计 1 单位。\n奖励为所得单位除以（应输出事件数 × 1 + 应输出优先级项数 × 1 + 多报事件数 × 1）。无应输出事件且答案为空时得 1；不检查调用轨迹。",
+  "tools": [
+    {
+      "name": "list_alerts",
+      "description": "List alerts overlapping a window, optionally filtered by severity and current state.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+            "description": "Strict UTC timestamp within the snapshot window."
+          },
+          "end": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+            "description": "Strict UTC timestamp within the snapshot window."
+          },
+          "severities": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string",
+              "enum": [
+                "P0",
+                "P1",
+                "P2",
+                "P3"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 50
+          },
+          "states": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string",
+              "enum": [
+                "firing",
+                "resolved",
+                "suppressed"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 50
+          }
+        },
+        "required": [
+          "start",
+          "end"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_incident_services",
+      "description": "Get authoritative incident/service relationships and impact intervals.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "incident_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 50
+          }
+        },
+        "required": [
+          "incident_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_service_profiles",
+      "description": "Get service environment, baseline request failure rate, and ownership.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "service_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 50
+          }
+        },
+        "required": [
+          "service_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_request_metrics",
+      "description": "Get request and failed-request counts for complete observation buckets within the supplied window.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "service_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 50
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+            "description": "Strict UTC timestamp within the snapshot window."
+          },
+          "end": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+            "description": "Strict UTC timestamp within the snapshot window."
+          }
+        },
+        "required": [
+          "service_ids",
+          "start",
+          "end"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_maintenance_windows",
+      "description": "Get overlapping maintenance records, including cancelled and partial coverage.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "service_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 50
+          },
+          "start": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+            "description": "Strict UTC timestamp within the snapshot window."
+          },
+          "end": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$",
+            "description": "Strict UTC timestamp within the snapshot window."
+          }
+        },
+        "required": [
+          "service_ids",
+          "start",
+          "end"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_host_metrics",
+      "description": "Get host CPU and memory utilization with collection timestamps.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "resource_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 50
+          }
+        },
+        "required": [
+          "resource_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_notification_history",
+      "description": "Get synthetic message delivery records for incidents.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "incident_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "maxItems": 50
+          }
+        },
+        "required": [
+          "incident_ids"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

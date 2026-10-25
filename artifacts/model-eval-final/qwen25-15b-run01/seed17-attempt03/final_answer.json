@@ -1,0 +1,18 @@
+{
+    "snapshot_id": "alert-impact-v3-seed-17",
+    "incidents": [
+      {
+        "incident_id": "incident_1",
+        "severity": "P1",
+        "service_ids": ["production-service-1"],
+        "excess_failed_requests": 3000
+      },
+      {
+        "incident_id": "incident_2",
+        "severity": "P0",
+        "service_ids": ["production-service-2", "production-service-3"],
+        "excess_failed_requests": 2000
+      }
+    ],
+    "priority": ["incident_1", "incident_2"]
+  }

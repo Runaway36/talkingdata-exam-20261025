@@ -1,0 +1,1307 @@
+{
+  "answer": {
+    "snapshot_id": "alert-impact-v3-seed-23",
+    "incidents": [
+      {
+        "incident_id": "INC-AUTH",
+        "severity": "P1",
+        "service_ids": [
+          "svc-auth"
+        ],
+        "excess_failed_requests": 48
+      },
+      {
+        "incident_id": "INC-DB",
+        "severity": "P0",
+        "service_ids": [
+          "svc-checkout",
+          "svc-search"
+        ],
+        "excess_failed_requests": 148
+      },
+      {
+        "incident_id": "INC-PAY",
+        "severity": "P1",
+        "service_ids": [
+          "svc-pay"
+        ],
+        "excess_failed_requests": 164
+      }
+    ],
+    "priority": [
+      "INC-PAY",
+      "INC-DB"
+    ]
+  },
+  "ledger": [
+    {
+      "incident_id": "INC-AUTH",
+      "service_id": "svc-auth",
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "request_count": 1057,
+      "failed_requests": 18,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 10,
+      "approved_full_maintenance": false,
+      "excess": 8
+    },
+    {
+      "incident_id": "INC-AUTH",
+      "service_id": "svc-auth",
+      "bucket_start": "2026-10-25T08:05:00Z",
+      "request_count": 1189,
+      "failed_requests": 19,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 11,
+      "approved_full_maintenance": true,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-AUTH",
+      "service_id": "svc-auth",
+      "bucket_start": "2026-10-25T08:10:00Z",
+      "request_count": 1113,
+      "failed_requests": 19,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 11,
+      "approved_full_maintenance": false,
+      "excess": 8
+    },
+    {
+      "incident_id": "INC-AUTH",
+      "service_id": "svc-auth",
+      "bucket_start": "2026-10-25T08:15:00Z",
+      "request_count": 1096,
+      "failed_requests": 21,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 10,
+      "approved_full_maintenance": false,
+      "excess": 11
+    },
+    {
+      "incident_id": "INC-AUTH",
+      "service_id": "svc-auth",
+      "bucket_start": "2026-10-25T08:20:00Z",
+      "request_count": 1019,
+      "failed_requests": 20,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 10,
+      "approved_full_maintenance": false,
+      "excess": 10
+    },
+    {
+      "incident_id": "INC-AUTH",
+      "service_id": "svc-auth",
+      "bucket_start": "2026-10-25T08:25:00Z",
+      "request_count": 1050,
+      "failed_requests": 21,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 10,
+      "approved_full_maintenance": false,
+      "excess": 11
+    },
+    {
+      "incident_id": "INC-BASE",
+      "service_id": "svc-baseline",
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "request_count": 1105,
+      "failed_requests": 110,
+      "baseline_failure_bps": 1000,
+      "baseline_failures": 110,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-BASE",
+      "service_id": "svc-baseline",
+      "bucket_start": "2026-10-25T08:05:00Z",
+      "request_count": 1163,
+      "failed_requests": 115,
+      "baseline_failure_bps": 1000,
+      "baseline_failures": 116,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-BASE",
+      "service_id": "svc-baseline",
+      "bucket_start": "2026-10-25T08:10:00Z",
+      "request_count": 1108,
+      "failed_requests": 107,
+      "baseline_failure_bps": 1000,
+      "baseline_failures": 110,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-BASE",
+      "service_id": "svc-baseline",
+      "bucket_start": "2026-10-25T08:15:00Z",
+      "request_count": 1142,
+      "failed_requests": 114,
+      "baseline_failure_bps": 1000,
+      "baseline_failures": 114,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-BASE",
+      "service_id": "svc-baseline",
+      "bucket_start": "2026-10-25T08:20:00Z",
+      "request_count": 1027,
+      "failed_requests": 102,
+      "baseline_failure_bps": 1000,
+      "baseline_failures": 102,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-BASE",
+      "service_id": "svc-baseline",
+      "bucket_start": "2026-10-25T08:25:00Z",
+      "request_count": 1085,
+      "failed_requests": 105,
+      "baseline_failure_bps": 1000,
+      "baseline_failures": 108,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-cart",
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "request_count": 1188,
+      "failed_requests": 21,
+      "baseline_failure_bps": 200,
+      "baseline_failures": 23,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-cart",
+      "bucket_start": "2026-10-25T08:05:00Z",
+      "request_count": 1094,
+      "failed_requests": 19,
+      "baseline_failure_bps": 200,
+      "baseline_failures": 21,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-cart",
+      "bucket_start": "2026-10-25T08:10:00Z",
+      "request_count": 1146,
+      "failed_requests": 22,
+      "baseline_failure_bps": 200,
+      "baseline_failures": 22,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-cart",
+      "bucket_start": "2026-10-25T08:15:00Z",
+      "request_count": 1045,
+      "failed_requests": 17,
+      "baseline_failure_bps": 200,
+      "baseline_failures": 20,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-cart",
+      "bucket_start": "2026-10-25T08:20:00Z",
+      "request_count": 1114,
+      "failed_requests": 21,
+      "baseline_failure_bps": 200,
+      "baseline_failures": 22,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-cart",
+      "bucket_start": "2026-10-25T08:25:00Z",
+      "request_count": 1045,
+      "failed_requests": 18,
+      "baseline_failure_bps": 200,
+      "baseline_failures": 20,
+      "approved_full_maintenance": false,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-checkout",
+      "bucket_start": "2026-10-25T08:05:00Z",
+      "request_count": 1021,
+      "failed_requests": 36,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 10,
+      "approved_full_maintenance": false,
+      "excess": 26
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-checkout",
+      "bucket_start": "2026-10-25T08:10:00Z",
+      "request_count": 1108,
+      "failed_requests": 43,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 11,
+      "approved_full_maintenance": false,
+      "excess": 32
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-checkout",
+      "bucket_start": "2026-10-25T08:15:00Z",
+      "request_count": 1033,
+      "failed_requests": 39,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 10,
+      "approved_full_maintenance": false,
+      "excess": 29
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-checkout",
+      "bucket_start": "2026-10-25T08:20:00Z",
+      "request_count": 1003,
+      "failed_requests": 39,
+      "baseline_failure_bps": 100,
+      "baseline_failures": 10,
+      "approved_full_maintenance": false,
+      "excess": 29
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-search",
+      "bucket_start": "2026-10-25T08:10:00Z",
+      "request_count": 1187,
+      "failed_requests": 52,
+      "baseline_failure_bps": 300,
+      "baseline_failures": 35,
+      "approved_full_maintenance": false,
+      "excess": 17
+    },
+    {
+      "incident_id": "INC-DB",
+      "service_id": "svc-search",
+      "bucket_start": "2026-10-25T08:15:00Z",
+      "request_count": 1014,
+      "failed_requests": 45,
+      "baseline_failure_bps": 300,
+      "baseline_failures": 30,
+      "approved_full_maintenance": false,
+      "excess": 15
+    },
+    {
+      "incident_id": "INC-LOG",
+      "service_id": "svc-log",
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "request_count": 1023,
+      "failed_requests": 413,
+      "baseline_failure_bps": 0,
+      "baseline_failures": 0,
+      "approved_full_maintenance": true,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-LOG",
+      "service_id": "svc-log",
+      "bucket_start": "2026-10-25T08:05:00Z",
+      "request_count": 1166,
+      "failed_requests": 421,
+      "baseline_failure_bps": 0,
+      "baseline_failures": 0,
+      "approved_full_maintenance": true,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-LOG",
+      "service_id": "svc-log",
+      "bucket_start": "2026-10-25T08:10:00Z",
+      "request_count": 1142,
+      "failed_requests": 430,
+      "baseline_failure_bps": 0,
+      "baseline_failures": 0,
+      "approved_full_maintenance": true,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-LOG",
+      "service_id": "svc-log",
+      "bucket_start": "2026-10-25T08:15:00Z",
+      "request_count": 1107,
+      "failed_requests": 421,
+      "baseline_failure_bps": 0,
+      "baseline_failures": 0,
+      "approved_full_maintenance": true,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-LOG",
+      "service_id": "svc-log",
+      "bucket_start": "2026-10-25T08:20:00Z",
+      "request_count": 1195,
+      "failed_requests": 443,
+      "baseline_failure_bps": 0,
+      "baseline_failures": 0,
+      "approved_full_maintenance": true,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-LOG",
+      "service_id": "svc-log",
+      "bucket_start": "2026-10-25T08:25:00Z",
+      "request_count": 1106,
+      "failed_requests": 421,
+      "baseline_failure_bps": 0,
+      "baseline_failures": 0,
+      "approved_full_maintenance": true,
+      "excess": 0
+    },
+    {
+      "incident_id": "INC-PAY",
+      "service_id": "svc-pay",
+      "bucket_start": "2026-10-25T08:00:00Z",
+      "request_count": 1133,
+      "failed_requests": 32,
+      "baseline_failure_bps": 50,
+      "baseline_failures": 5,
+      "approved_full_maintenance": false,
+      "excess": 27
+    },
+    {
+      "incident_id": "INC-PAY",
+      "service_id": "svc-pay",
+      "bucket_start": "2026-10-25T08:05:00Z",
+      "request_count": 1021,
+      "failed_requests": 30,
+      "baseline_failure_bps": 50,
+      "baseline_failures": 5,
+      "approved_full_maintenance": false,
+      "excess": 25
+    },
+    {
+      "incident_id": "INC-PAY",
+      "service_id": "svc-pay",
+      "bucket_start": "2026-10-25T08:10:00Z",
+      "request_count": 1145,
+      "failed_requests": 33,
+      "baseline_failure_bps": 50,
+      "baseline_failures": 5,
+      "approved_full_maintenance": false,
+      "excess": 28
+    },
+    {
+      "incident_id": "INC-PAY",
+      "service_id": "svc-pay",
+      "bucket_start": "2026-10-25T08:15:00Z",
+      "request_count": 1151,
+      "failed_requests": 34,
+      "baseline_failure_bps": 50,
+      "baseline_failures": 5,
+      "approved_full_maintenance": false,
+      "excess": 29
+    },
+    {
+      "incident_id": "INC-PAY",
+      "service_id": "svc-pay",
+      "bucket_start": "2026-10-25T08:20:00Z",
+      "request_count": 1073,
+      "failed_requests": 33,
+      "baseline_failure_bps": 50,
+      "baseline_failures": 5,
+      "approved_full_maintenance": false,
+      "excess": 28
+    },
+    {
+      "incident_id": "INC-PAY",
+      "service_id": "svc-pay",
+      "bucket_start": "2026-10-25T08:25:00Z",
+      "request_count": 1140,
+      "failed_requests": 32,
+      "baseline_failure_bps": 50,
+      "baseline_failures": 5,
+      "approved_full_maintenance": false,
+      "excess": 27
+    }
+  ],
+  "api_data": {
+    "alerts": [
+      {
+        "alert_id": "A-AUTH-1",
+        "incident_id": "INC-AUTH",
+        "resource_id": "host-auth",
+        "severity": "P1",
+        "state": "firing",
+        "started_at": "2026-10-25T08:00:00Z",
+        "ended_at": null,
+        "title": "Authentication errors",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-BASE-1",
+        "incident_id": "INC-BASE",
+        "resource_id": "host-returns",
+        "severity": "P1",
+        "state": "firing",
+        "started_at": "2026-10-25T08:00:00Z",
+        "ended_at": null,
+        "title": "Failure counter threshold",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-DB-1",
+        "incident_id": "INC-DB",
+        "resource_id": "host-db",
+        "severity": "P0",
+        "state": "firing",
+        "started_at": "2026-10-25T08:05:00Z",
+        "ended_at": null,
+        "title": "Database connection pressure",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-DB-2",
+        "incident_id": "INC-DB",
+        "resource_id": "host-db",
+        "severity": "P1",
+        "state": "firing",
+        "started_at": "2026-10-25T08:06:00Z",
+        "ended_at": null,
+        "title": "Repeated database notification",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-DB-3",
+        "incident_id": "INC-DB",
+        "resource_id": "host-db",
+        "severity": "P0",
+        "state": "firing",
+        "started_at": "2026-10-25T08:07:00Z",
+        "ended_at": null,
+        "title": "Duplicate exporter alert",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-LOG-1",
+        "incident_id": "INC-LOG",
+        "resource_id": "host-log",
+        "severity": "P0",
+        "state": "firing",
+        "started_at": "2026-10-25T08:00:00Z",
+        "ended_at": null,
+        "title": "Audit writer unavailable",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-NOISE-1",
+        "incident_id": "INC-NOISE",
+        "resource_id": "host-recommend",
+        "severity": "P2",
+        "state": "firing",
+        "started_at": "2026-10-25T08:00:00Z",
+        "ended_at": null,
+        "title": "Background diagnostic warning",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-PAY-1",
+        "incident_id": "INC-PAY",
+        "resource_id": "host-pay",
+        "severity": "P1",
+        "state": "firing",
+        "started_at": "2026-10-25T07:50:00Z",
+        "ended_at": null,
+        "title": "Payment dependency errors",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-PAY-OLD",
+        "incident_id": "INC-PAY",
+        "resource_id": "host-pay",
+        "severity": "P0",
+        "state": "resolved",
+        "started_at": "2026-10-25T08:00:00Z",
+        "ended_at": "2026-10-25T08:03:00Z",
+        "title": "Earlier symptom recovered",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      },
+      {
+        "alert_id": "A-RESOLVED-1",
+        "incident_id": "INC-RESOLVED",
+        "resource_id": "host-reconcile",
+        "severity": "P0",
+        "state": "resolved",
+        "started_at": "2026-10-25T07:50:00Z",
+        "ended_at": "2026-10-25T08:10:00Z",
+        "title": "Recovered incident",
+        "description": "Synthetic observation; query incident services for authoritative scope.",
+        "source": "synthetic-monitor"
+      }
+    ],
+    "incident_services": [
+      {
+        "incident_id": "INC-AUTH",
+        "service_id": "svc-auth",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-BASE",
+        "service_id": "svc-baseline",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-DB",
+        "service_id": "svc-cart",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-DB",
+        "service_id": "svc-checkout",
+        "impact_start": "2026-10-25T08:05:00Z",
+        "impact_end": "2026-10-25T08:25:00Z"
+      },
+      {
+        "incident_id": "INC-DB",
+        "service_id": "svc-search",
+        "impact_start": "2026-10-25T08:07:00Z",
+        "impact_end": "2026-10-25T08:23:00Z"
+      },
+      {
+        "incident_id": "INC-LOG",
+        "service_id": "svc-log",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-NOISE",
+        "service_id": "svc-noise",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-PAY",
+        "service_id": "svc-pay",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-PAY",
+        "service_id": "svc-pay-stage",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-RESOLVED",
+        "service_id": "svc-recovered",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:10:00Z"
+      }
+    ],
+    "services": [
+      {
+        "service_id": "svc-auth",
+        "name": "Authentication",
+        "environment": "production",
+        "baseline_failure_bps": 100,
+        "owner_team": "identity",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-auth"
+      },
+      {
+        "service_id": "svc-baseline",
+        "name": "Returns",
+        "environment": "production",
+        "baseline_failure_bps": 1000,
+        "owner_team": "orders",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-baseline"
+      },
+      {
+        "service_id": "svc-cart",
+        "name": "Cart",
+        "environment": "production",
+        "baseline_failure_bps": 200,
+        "owner_team": "orders",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-cart"
+      },
+      {
+        "service_id": "svc-checkout",
+        "name": "Checkout",
+        "environment": "production",
+        "baseline_failure_bps": 100,
+        "owner_team": "orders",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-checkout"
+      },
+      {
+        "service_id": "svc-log",
+        "name": "Audit logging",
+        "environment": "production",
+        "baseline_failure_bps": 0,
+        "owner_team": "platform",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-log"
+      },
+      {
+        "service_id": "svc-noise",
+        "name": "Recommendations",
+        "environment": "production",
+        "baseline_failure_bps": 0,
+        "owner_team": "discovery",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-noise"
+      },
+      {
+        "service_id": "svc-pay",
+        "name": "Payment",
+        "environment": "production",
+        "baseline_failure_bps": 50,
+        "owner_team": "payments",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-pay"
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "name": "Payment staging",
+        "environment": "staging",
+        "baseline_failure_bps": 0,
+        "owner_team": "payments",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-pay-stage"
+      },
+      {
+        "service_id": "svc-recovered",
+        "name": "Reconciler",
+        "environment": "production",
+        "baseline_failure_bps": 0,
+        "owner_team": "payments",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-recovered"
+      },
+      {
+        "service_id": "svc-search",
+        "name": "Search",
+        "environment": "production",
+        "baseline_failure_bps": 300,
+        "owner_team": "discovery",
+        "dashboard_url": "https://monitoring.example.invalid/services/svc-search"
+      }
+    ],
+    "request_metrics": [
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1057,
+        "failed_requests": 18,
+        "retry_count": 227,
+        "latency_p95_ms": 3317
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1189,
+        "failed_requests": 19,
+        "retry_count": 551,
+        "latency_p95_ms": 3889
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1113,
+        "failed_requests": 19,
+        "retry_count": 354,
+        "latency_p95_ms": 85
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1096,
+        "failed_requests": 21,
+        "retry_count": 197,
+        "latency_p95_ms": 171
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1019,
+        "failed_requests": 20,
+        "retry_count": 477,
+        "latency_p95_ms": 2265
+      },
+      {
+        "service_id": "svc-auth",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1050,
+        "failed_requests": 21,
+        "retry_count": 302,
+        "latency_p95_ms": 904
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1105,
+        "failed_requests": 110,
+        "retry_count": 709,
+        "latency_p95_ms": 3954
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1163,
+        "failed_requests": 115,
+        "retry_count": 558,
+        "latency_p95_ms": 1229
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1108,
+        "failed_requests": 107,
+        "retry_count": 306,
+        "latency_p95_ms": 3180
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1142,
+        "failed_requests": 114,
+        "retry_count": 846,
+        "latency_p95_ms": 1186
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1027,
+        "failed_requests": 102,
+        "retry_count": 646,
+        "latency_p95_ms": 590
+      },
+      {
+        "service_id": "svc-baseline",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1085,
+        "failed_requests": 105,
+        "retry_count": 254,
+        "latency_p95_ms": 697
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1188,
+        "failed_requests": 21,
+        "retry_count": 579,
+        "latency_p95_ms": 3132
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1094,
+        "failed_requests": 19,
+        "retry_count": 676,
+        "latency_p95_ms": 1307
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1146,
+        "failed_requests": 22,
+        "retry_count": 833,
+        "latency_p95_ms": 1961
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1045,
+        "failed_requests": 17,
+        "retry_count": 604,
+        "latency_p95_ms": 3261
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1114,
+        "failed_requests": 21,
+        "retry_count": 186,
+        "latency_p95_ms": 3292
+      },
+      {
+        "service_id": "svc-cart",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1045,
+        "failed_requests": 18,
+        "retry_count": 689,
+        "latency_p95_ms": 3361
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1199,
+        "failed_requests": 611,
+        "retry_count": 296,
+        "latency_p95_ms": 3675
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1021,
+        "failed_requests": 36,
+        "retry_count": 606,
+        "latency_p95_ms": 1276
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1108,
+        "failed_requests": 43,
+        "retry_count": 542,
+        "latency_p95_ms": 1486
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1033,
+        "failed_requests": 39,
+        "retry_count": 273,
+        "latency_p95_ms": 1840
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1003,
+        "failed_requests": 39,
+        "retry_count": 635,
+        "latency_p95_ms": 1883
+      },
+      {
+        "service_id": "svc-checkout",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1006,
+        "failed_requests": 610,
+        "retry_count": 108,
+        "latency_p95_ms": 371
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1023,
+        "failed_requests": 413,
+        "retry_count": 569,
+        "latency_p95_ms": 2186
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1166,
+        "failed_requests": 421,
+        "retry_count": 707,
+        "latency_p95_ms": 2246
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1142,
+        "failed_requests": 430,
+        "retry_count": 259,
+        "latency_p95_ms": 429
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1107,
+        "failed_requests": 421,
+        "retry_count": 12,
+        "latency_p95_ms": 1841
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1195,
+        "failed_requests": 443,
+        "retry_count": 672,
+        "latency_p95_ms": 3674
+      },
+      {
+        "service_id": "svc-log",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1106,
+        "failed_requests": 421,
+        "retry_count": 631,
+        "latency_p95_ms": 2837
+      },
+      {
+        "service_id": "svc-noise",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1169,
+        "failed_requests": 410,
+        "retry_count": 345,
+        "latency_p95_ms": 2322
+      },
+      {
+        "service_id": "svc-noise",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1176,
+        "failed_requests": 469,
+        "retry_count": 116,
+        "latency_p95_ms": 982
+      },
+      {
+        "service_id": "svc-noise",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1143,
+        "failed_requests": 460,
+        "retry_count": 818,
+        "latency_p95_ms": 1861
+      },
+      {
+        "service_id": "svc-noise",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1183,
+        "failed_requests": 434,
+        "retry_count": 4,
+        "latency_p95_ms": 1405
+      },
+      {
+        "service_id": "svc-noise",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1096,
+        "failed_requests": 403,
+        "retry_count": 804,
+        "latency_p95_ms": 3938
+      },
+      {
+        "service_id": "svc-noise",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1036,
+        "failed_requests": 495,
+        "retry_count": 888,
+        "latency_p95_ms": 1665
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1133,
+        "failed_requests": 32,
+        "retry_count": 596,
+        "latency_p95_ms": 488
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1021,
+        "failed_requests": 30,
+        "retry_count": 436,
+        "latency_p95_ms": 179
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1145,
+        "failed_requests": 33,
+        "retry_count": 586,
+        "latency_p95_ms": 1169
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1151,
+        "failed_requests": 34,
+        "retry_count": 111,
+        "latency_p95_ms": 1534
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1073,
+        "failed_requests": 33,
+        "retry_count": 796,
+        "latency_p95_ms": 1882
+      },
+      {
+        "service_id": "svc-pay",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1140,
+        "failed_requests": 32,
+        "retry_count": 264,
+        "latency_p95_ms": 632
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1027,
+        "failed_requests": 479,
+        "retry_count": 802,
+        "latency_p95_ms": 509
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1181,
+        "failed_requests": 463,
+        "retry_count": 243,
+        "latency_p95_ms": 1364
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1139,
+        "failed_requests": 418,
+        "retry_count": 763,
+        "latency_p95_ms": 2447
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1025,
+        "failed_requests": 449,
+        "retry_count": 171,
+        "latency_p95_ms": 1860
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1008,
+        "failed_requests": 407,
+        "retry_count": 645,
+        "latency_p95_ms": 1724
+      },
+      {
+        "service_id": "svc-pay-stage",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1100,
+        "failed_requests": 402,
+        "retry_count": 166,
+        "latency_p95_ms": 3335
+      },
+      {
+        "service_id": "svc-recovered",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1052,
+        "failed_requests": 487,
+        "retry_count": 30,
+        "latency_p95_ms": 729
+      },
+      {
+        "service_id": "svc-recovered",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1167,
+        "failed_requests": 457,
+        "retry_count": 763,
+        "latency_p95_ms": 1750
+      },
+      {
+        "service_id": "svc-recovered",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1020,
+        "failed_requests": 453,
+        "retry_count": 716,
+        "latency_p95_ms": 1155
+      },
+      {
+        "service_id": "svc-recovered",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1122,
+        "failed_requests": 476,
+        "retry_count": 705,
+        "latency_p95_ms": 2228
+      },
+      {
+        "service_id": "svc-recovered",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1184,
+        "failed_requests": 471,
+        "retry_count": 181,
+        "latency_p95_ms": 2175
+      },
+      {
+        "service_id": "svc-recovered",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1136,
+        "failed_requests": 438,
+        "retry_count": 271,
+        "latency_p95_ms": 3701
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "bucket_end": "2026-10-25T08:05:00Z",
+        "request_count": 1181,
+        "failed_requests": 535,
+        "retry_count": 510,
+        "latency_p95_ms": 1745
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:05:00Z",
+        "bucket_end": "2026-10-25T08:10:00Z",
+        "request_count": 1005,
+        "failed_requests": 530,
+        "retry_count": 524,
+        "latency_p95_ms": 2590
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:10:00Z",
+        "bucket_end": "2026-10-25T08:15:00Z",
+        "request_count": 1187,
+        "failed_requests": 52,
+        "retry_count": 367,
+        "latency_p95_ms": 3177
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:15:00Z",
+        "bucket_end": "2026-10-25T08:20:00Z",
+        "request_count": 1014,
+        "failed_requests": 45,
+        "retry_count": 801,
+        "latency_p95_ms": 164
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:20:00Z",
+        "bucket_end": "2026-10-25T08:25:00Z",
+        "request_count": 1150,
+        "failed_requests": 534,
+        "retry_count": 377,
+        "latency_p95_ms": 2714
+      },
+      {
+        "service_id": "svc-search",
+        "bucket_start": "2026-10-25T08:25:00Z",
+        "bucket_end": "2026-10-25T08:30:00Z",
+        "request_count": 1044,
+        "failed_requests": 531,
+        "retry_count": 635,
+        "latency_p95_ms": 904
+      }
+    ],
+    "maintenance": [
+      {
+        "maintenance_id": "M-AUTH-BUCKET",
+        "service_id": "svc-auth",
+        "starts_at": "2026-10-25T08:05:00Z",
+        "ends_at": "2026-10-25T08:10:00Z",
+        "status": "approved",
+        "reason": "One complete bucket"
+      },
+      {
+        "maintenance_id": "M-AUTH-CANCELLED",
+        "service_id": "svc-auth",
+        "starts_at": "2026-10-25T08:10:00Z",
+        "ends_at": "2026-10-25T08:15:00Z",
+        "status": "cancelled",
+        "reason": "Cancelled deployment"
+      },
+      {
+        "maintenance_id": "M-AUTH-PARTIAL",
+        "service_id": "svc-auth",
+        "starts_at": "2026-10-25T08:17:00Z",
+        "ends_at": "2026-10-25T08:19:00Z",
+        "status": "approved",
+        "reason": "Partial coverage only"
+      },
+      {
+        "maintenance_id": "M-DB-PARTIAL",
+        "service_id": "svc-checkout",
+        "starts_at": "2026-10-25T08:11:00Z",
+        "ends_at": "2026-10-25T08:14:00Z",
+        "status": "approved",
+        "reason": "Does not cover a complete bucket"
+      },
+      {
+        "maintenance_id": "M-LOG-FULL",
+        "service_id": "svc-log",
+        "starts_at": "2026-10-25T08:00:00Z",
+        "ends_at": "2026-10-25T08:30:00Z",
+        "status": "approved",
+        "reason": "Planned audit migration"
+      },
+      {
+        "maintenance_id": "M-PAY-CANCELLED",
+        "service_id": "svc-pay",
+        "starts_at": "2026-10-25T08:00:00Z",
+        "ends_at": "2026-10-25T08:30:00Z",
+        "status": "cancelled",
+        "reason": "Migration did not take place"
+      }
+    ]
+  },
+  "report": {
+    "reward": 1.0,
+    "valid": true,
+    "components": {
+      "incidents": 1.0,
+      "priority": 1.0
+    },
+    "errors": [],
+    "expected_count": 3,
+    "matched_count": 3,
+    "priority_matches": 2,
+    "extra_count": 0
+  }
+}

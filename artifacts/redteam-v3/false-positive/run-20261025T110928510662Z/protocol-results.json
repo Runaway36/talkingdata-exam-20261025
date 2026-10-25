@@ -1,0 +1,1277 @@
+[
+  {
+    "case": "count_nan",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Out of range float values are not JSON compliant: nan"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_infinity",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Out of range float values are not JSON compliant: inf"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_negative_infinity",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Out of range float values are not JSON compliant: -inf"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_bool",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_negative",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_integer_float",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_fraction",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_null",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_number_string",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_list",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "count_dict",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "incidents_type_None",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incidents must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "incidents_type_True",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incidents must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "incidents_type_1",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incidents must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "incidents_type_{}",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incidents must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "incidents_type_''",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incidents must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "incidents_type_('INC-DB',)",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incidents must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "priority_type_None",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "priority must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "priority_type_True",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "priority must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "priority_type_1",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "priority must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "priority_type_{}",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "priority must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "priority_type_''",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "priority must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "priority_type_('INC-DB',)",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "priority must be an array"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "services_type_None",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "service_ids must be an array of nonempty strings"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "services_type_True",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "service_ids must be an array of nonempty strings"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "services_type_1",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "service_ids must be an array of nonempty strings"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "services_type_{}",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "service_ids must be an array of nonempty strings"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "services_type_''",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "service_ids must be an array of nonempty strings"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "services_type_('INC-DB',)",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "service_ids must be an array of nonempty strings"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('snapshot_id',)None",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "snapshot_id must be a string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('snapshot_id',)1",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "snapshot_id must be a string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('snapshot_id',)True",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "snapshot_id must be a string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('snapshot_id',)[]",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "snapshot_id must be a string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('snapshot_id',){}",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "snapshot_id must be a string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('snapshot_id',)''",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "snapshot_id does not match task"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('snapshot_id',)' '",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "snapshot_id does not match task"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('snapshot_id',)'\\ud800'",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "'utf-8' codec can't encode character '\\ud800' in position 17: surrogates not allowed"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'incident_id')None",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incident_id must be a nonempty string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'incident_id')1",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incident_id must be a nonempty string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'incident_id')True",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incident_id must be a nonempty string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'incident_id')[]",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incident_id must be a nonempty string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'incident_id'){}",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incident_id must be a nonempty string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'incident_id')''",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incident_id must be a nonempty string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'incident_id')' '",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "incident_id must be a nonempty string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'incident_id')'\\ud800'",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "'utf-8' codec can't encode character '\\ud800' in position 74: surrogates not allowed"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'severity')None",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "severity must be a supported severity string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'severity')1",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "severity must be a supported severity string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'severity')True",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "severity must be a supported severity string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'severity')[]",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "severity must be a supported severity string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'severity'){}",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "severity must be a supported severity string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'severity')''",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "severity must be a supported severity string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'severity')' '",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "severity must be a supported severity string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "string_type_('incidents', 0, 'severity')'\\ud800'",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "'utf-8' codec can't encode character '\\ud800' in position 98: surrogates not allowed"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "top_extra_field",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer must contain exactly snapshot_id, incidents and priority"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "nested_extra_field",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "each incident must contain exactly the four required fields"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "duplicate_incident",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "duplicate incident_id"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "duplicate_service",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "duplicate service_id"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "duplicate_priority",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "duplicate priority ID"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "unknown_priority",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "priority must reference submitted incident details"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "wrong_snapshot",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "snapshot_id does not match task"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "duplicate_top_json_key",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "duplicate JSON key: snapshot_id"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "duplicate_escaped_top_json_key",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "duplicate JSON key: snapshot_id"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "duplicate_nested_json_key",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "duplicate JSON key: excess_failed_requests"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_NaN",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "non-finite JSON number: NaN"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_Infinity",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "non-finite JSON number: Infinity"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_-Infinity",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "non-finite JSON number: -Infinity"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_1e999",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_-1e999",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_true",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_null",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_0.0",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "json_numeric_1e0",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "excess_failed_requests must be a nonnegative integer"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "too_large_answer",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer exceeds byte limit"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "giant_integer",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Exceeds the limit (4300 digits) for integer string conversion: value has 5000 digits; use sys.set_int_max_str_digits() to increase the limit"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_None",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer must be a dict or JSON object string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_True",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer must be a dict or JSON object string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_1",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer must be a dict or JSON object string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_[]",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer must be a dict or JSON object string"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_'null'",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer root must be an object"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_'[]'",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer root must be an object"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_'{}'",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "answer must contain exactly snapshot_id, incidents and priority"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_'not json'",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting value: line 1 column 1 (char 0)"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_'{\"snapshot_id\": \"alert-impact-v3-seed-1",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Extra data: line 1 column 427 (char 426)"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "bad_root_'[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Expecting value: line 1 column 2001 (char 2000)"
+      ],
+      "expected_count": 3
+    }
+  },
+  {
+    "case": "cyclic_dict",
+    "report": {
+      "reward": 0.0,
+      "valid": false,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [
+        "Circular reference detected"
+      ],
+      "expected_count": 3
+    }
+  }
+]

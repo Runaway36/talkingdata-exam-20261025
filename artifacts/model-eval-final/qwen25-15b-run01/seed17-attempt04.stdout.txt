@@ -1,0 +1,4 @@
+{"turn": 1, "action": "protocol_error"}
+{"turn": 2, "action": "call", "name": "list_alerts", "ok": true}
+{"turn": 3, "action": "final", "reward": 0.0}
+{"status": "completed", "reward": 0.0, "tool_calls": 1, "protocol_errors": 1, "turns": 3, "truncated_responses": 0, "reported_model": "Qwen2.5-1.5B-Instruct", "evaluation": {"reward": 0.0, "valid": true, "components": {"incidents": 0.0, "priority": 0.0}, "errors": [], "expected_count": 3, "matched_count": 0, "priority_matches": 0, "extra_count": 2}, "elapsed_seconds": 28.098, "finished_at": "2026-10-25T11:32:40.957269+00:00"}

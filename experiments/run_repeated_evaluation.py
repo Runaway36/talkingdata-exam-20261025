@@ -1,6 +1,7 @@
 """Four independent attempts per fixed instance; no feedback across attempts."""
 import argparse
 from datetime import datetime, timezone
+from decimal import Decimal
 import hashlib
 import json
 from pathlib import Path
@@ -11,6 +12,17 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from alert_rlvr.config import TASK_VERSION, make_task
 from alert_rlvr.verifier import evaluate, expected_answer
+
+
+def diagnostic_json(value):
+    """Keep exact decimal text in diagnostic displays, including huge exponents."""
+    if isinstance(value, Decimal):
+        return str(value)
+    if isinstance(value, dict):
+        return {key: diagnostic_json(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [diagnostic_json(item) for item in value]
+    return value
 
 
 def inspect_attempt(folder, seed):
@@ -32,13 +44,17 @@ def inspect_attempt(folder, seed):
     answer_file = folder / "final_answer.json"
     if not answer_file.exists():
         return record
-    answer = json.loads(answer_file.read_text(encoding="utf-8"))
-    grading = evaluate(make_task(seed), answer)
+    answer_json = answer_file.read_text(encoding="utf-8")
+    grading = evaluate(make_task(seed), answer_json)
     assert grading == result["evaluation"], "Saved grading differs from current frozen rules"
     record["passed"] = grading["valid"] and grading["reward"] == 1.0
     if not grading["valid"]:
         record["format_errors"] = grading["errors"]
         return record
+    # Parse only after validation, retaining precision during comparisons. Decimal
+    # values become strings only in diagnostic output, never before grading.
+    answer = json.loads(answer_json, parse_float=Decimal)
+    record["decimal_display"] = "Exact decimal strings in diagnostics; original JSON retained in final_answer.json"
     actual = {row["incident_id"]: row for row in answer["incidents"]}
     record["extra_incidents"] = sorted(actual.keys() - {row["incident_id"] for row in expected["incidents"]})
     record["priority_actual"] = answer["priority"]
@@ -50,7 +66,7 @@ def inspect_attempt(folder, seed):
             "count_correct": bool(received and received["excess_failed_requests"] == row["excess_failed_requests"]),
         }
         record["events"].append({"incident_id": row["incident_id"], "missing": received is None,
-                                 "expected": row, "actual": received,
+                                 "expected": row, "actual": diagnostic_json(received),
                                  **checks, "complete_correct": all(checks.values())})
     return record
 
@@ -84,7 +100,9 @@ def main():
         for seed in report["instances"]:
             for attempt in range(1, 5):
                 folder = output / f"seed{seed}-attempt{attempt:02d}"
-                sampling_seed = 20261025 + seed * 100 + attempt
+                # Disjoint RNG-seed blocks across both instances and attempts;
+                # each attempt uses at most 12 consecutive per-turn seeds.
+                sampling_seed = 20261025 + seed * 10000 + attempt * 100
                 command = [sys.executable, "-X", "utf8", str(ROOT / "experiments/run_model_pilot.py"),
                            "--backend", args.backend, "--seed", str(seed), "--temperature", "0.7",
                            "--sampling-seed", str(sampling_seed), "--max-turns", "12", "--max-tokens", "1024",
@@ -123,7 +141,7 @@ def main():
         raise
     finally:
         report["finished_at"] = datetime.now(timezone.utc).isoformat()
-        (output / "summary.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+        (output / "summary.json").write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
         print("Evidence: " + str(output), flush=True)
 
 

@@ -1,0 +1,48 @@
+{
+  "name": "get_host_metrics",
+  "arguments": {
+    "resource_ids": [
+      "host-auth",
+      "host-returns",
+      "host-db",
+      "host-log",
+      "host-pay"
+    ]
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v3-seed-42",
+    "data": [
+      {
+        "resource_id": "host-auth",
+        "cpu_percent": 32.1,
+        "memory_percent": 24.8,
+        "collected_at": "2026-10-25T08:25:00Z"
+      },
+      {
+        "resource_id": "host-db",
+        "cpu_percent": 11.9,
+        "memory_percent": 61.5,
+        "collected_at": "2026-10-25T08:25:00Z"
+      },
+      {
+        "resource_id": "host-log",
+        "cpu_percent": 16.0,
+        "memory_percent": 22.4,
+        "collected_at": "2026-10-25T08:25:00Z"
+      },
+      {
+        "resource_id": "host-pay",
+        "cpu_percent": 39.4,
+        "memory_percent": 58.6,
+        "collected_at": "2026-10-25T08:25:00Z"
+      },
+      {
+        "resource_id": "host-returns",
+        "cpu_percent": 88.5,
+        "memory_percent": 63.2,
+        "collected_at": "2026-10-25T08:25:00Z"
+      }
+    ]
+  }
+}

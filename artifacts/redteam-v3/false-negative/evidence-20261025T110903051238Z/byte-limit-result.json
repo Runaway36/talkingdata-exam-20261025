@@ -1,0 +1,31 @@
+{
+  "at_limit_bytes": 1000000,
+  "above_limit_bytes": 1000001,
+  "semantic_equality": true,
+  "at_limit": {
+    "reward": 1.0,
+    "valid": true,
+    "components": {
+      "incidents": 1.0,
+      "priority": 1.0
+    },
+    "errors": [],
+    "expected_count": 3,
+    "matched_count": 3,
+    "priority_matches": 2,
+    "extra_count": 0
+  },
+  "above_limit": {
+    "reward": 0.0,
+    "valid": false,
+    "components": {
+      "incidents": 0.0,
+      "priority": 0.0
+    },
+    "errors": [
+      "answer exceeds byte limit"
+    ],
+    "expected_count": 3
+  },
+  "above_limit_compute_reward": 0.0
+}

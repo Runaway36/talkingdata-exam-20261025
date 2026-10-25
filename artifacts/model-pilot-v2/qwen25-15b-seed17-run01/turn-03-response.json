@@ -1,0 +1,8 @@
+{
+  "content": "```json\n{\n  \"action\": \"final\",\n  \"answer\": {\n    \"snapshot_id\": \"alert-impact-v2-seed-17\",\n    \"incidents\": [\n      {\n        \"incident_id\": \"INC-AUTH\",\n        \"severity\": \"P1\",\n        \"service_ids\": [],\n        \"excess_failed_requests\": 0\n      },\n      {\n        \"incident_id\": \"INC-BASE\",\n        \"severity\": \"P1\",\n        \"service_ids\": [],\n        \"excess_failed_requests\": 0\n      },\n      {\n        \"incident_id\": \"INC-DB\",\n        \"severity\": \"P0\",\n        \"service_ids\": [\"host-db\"],\n        \"excess_failed_requests\": 10\n      },\n      {\n        \"incident_id\": \"INC-LOG\",\n        \"severity\": \"P0\",\n        \"service_ids\": [\"host-log\"],\n        \"excess_failed_requests\": 0\n      },\n      {\n        \"incident_id\": \"INC-PAY\",\n        \"severity\": \"P1\",\n        \"service_ids\": [\"host-pay\"],\n        \"excess_failed_requests\": 0\n      }\n    ],\n    \"priority\": [\"INC-DB\"]\n  }\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 2742,
+  "output_tokens": 255,
+  "finish_reason": "stop",
+  "seconds": 8.936661499996262
+}

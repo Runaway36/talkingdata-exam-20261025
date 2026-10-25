@@ -1,0 +1,45 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"get_maintenance_windows\",\"arguments\":{\"service_ids\":[\"svc-auth\",\"svc-baseline\",\"svc-cart\",\"svc-checkout\",\"svc-search\",\"svc-log\",\"svc-pay\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\"}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 3591,
+    "completion_tokens": 86,
+    "total_tokens": 3677,
+    "prompt_tokens_details": {
+      "cached_tokens": 3072
+    },
+    "prompt_cache_hit_tokens": 3072,
+    "prompt_cache_miss_tokens": 519
+  },
+  "seconds": 1.0291903000033926,
+  "raw_response": {
+    "id": "210c37ce-5764-4850-9215-eeb071241574",
+    "object": "chat.completion",
+    "created": 1792924839,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"get_maintenance_windows\",\"arguments\":{\"service_ids\":[\"svc-auth\",\"svc-baseline\",\"svc-cart\",\"svc-checkout\",\"svc-search\",\"svc-log\",\"svc-pay\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\"}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3591,
+      "completion_tokens": 86,
+      "total_tokens": 3677,
+      "prompt_tokens_details": {
+        "cached_tokens": 3072
+      },
+      "prompt_cache_hit_tokens": 3072,
+      "prompt_cache_miss_tokens": 519
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1
+}

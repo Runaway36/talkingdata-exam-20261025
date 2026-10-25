@@ -1,0 +1,26 @@
+{
+        "snapshot_id": "alert-impact-v3-seed-42",
+        "incidents": [
+            {
+                "incident_id": "7c69bfae-cbaa-407a-80db-0beedfd0fc1f",
+                "severity": "P2",
+                "service_ids": [
+                    "production-service1",
+                    "production-service2"
+                ],
+                "excess_failed_requests": 21
+            },
+            {
+                "incident_id": "ec94ef1d-bca5-422c-aeb7-77effbf2c1df",
+                "severity": "P0",
+                "service_ids": [
+                    "production-service3",
+                    "production-service4"
+                ],
+                "excess_failed_requests": 17
+            }
+        ],
+        "priority": [
+            "7c69bfae-cbaa-407a-80db-0beedfd0fc1f"
+        ]
+    }

@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "reward": 0.4652777777777778,
+  "tool_calls": 6,
+  "protocol_errors": 0,
+  "turns": 7,
+  "truncated_responses": 0,
+  "reported_model": "deepseek-flash",
+  "evaluation": {
+    "reward": 0.4652777777777778,
+    "valid": true,
+    "components": {
+      "coverage": 0.75,
+      "fields": 0.5555555555555556,
+      "priority": 0.0
+    },
+    "errors": [],
+    "expected_count": 3,
+    "matched_count": 3,
+    "matched_fields": 5
+  },
+  "elapsed_seconds": 7.085,
+  "finished_at": "2026-10-25T10:44:24.894232+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "content": "```json\n{\n  \"action\": \"final\",\n  \"answer\": {\n    \"snapshot_id\": \"alert-impact-v3-seed-17\",\n    \"incidents\": [\n      {\n        \"incident_id\": \"123abc\",\n        \"severity\": \"P1\",\n        \"service_ids\": [\"production-service-a-1\"],\n        \"excess_failed_requests\": 0\n      },\n      {\n        \"incident_id\": \"exclude-event-id\",\n        \"severity\": \"P1\",\n        \"service_ids\": [\"production-service-a-2\", \"production-service-b-1\"],\n        \"excess_failed_requests\": -1\n      },\n      {\n        \"incident_id\": \"event-with-zero-excess\",\n        \"severity\": \"P0\",\n        \"service_ids\": [\"production-service-c-1\", \"production-service-d-1\"],\n        \"excess_failed_requests\": 0\n      }\n    ],\n    \"priority\": [\"event-with-zero-excess\"]\n  }\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 2065,
+  "output_tokens": 206,
+  "finish_reason": "stop",
+  "seconds": 7.005572300004133,
+  "sampling": {
+    "temperature": 0.7,
+    "do_sample": true,
+    "top_p": 1.0,
+    "top_k": 0,
+    "sampling_seed": 20431226,
+    "seed_control": "torch_manual_seed_and_cuda_manual_seed_all"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "snapshot_id": "alert-impact-v3-seed-17",
+  "incidents": [
+    {
+      "incident_id": "INC-DB",
+      "severity": "P0",
+      "service_ids": ["svc-checkout", "svc-search"],
+      "excess_failed_requests": 174
+    },
+    {
+      "incident_id": "INC-PAY",
+      "severity": "P1",
+      "service_ids": ["svc-pay"],
+      "excess_failed_requests": 120
+    },
+    {
+      "incident_id": "INC-AUTH",
+      "severity": "P1",
+      "service_ids": ["svc-auth"],
+      "excess_failed_requests": 48
+    }
+  ],
+  "priority": ["INC-DB", "INC-PAY"]
+}

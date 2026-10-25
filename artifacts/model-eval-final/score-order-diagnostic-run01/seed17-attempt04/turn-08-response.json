@@ -1,0 +1,60 @@
+{
+  "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"snap-2026-10-25T08-30-00Z-17\",\"incidents\":[{\"incident_id\":\"inc-017\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-payments\",\"svc-cart\"],\"excess_failed_requests\":1252},{\"incident_id\":\"inc-003\",\"severity\":\"P1\",\"service_ids\":[\"svc-search\",\"svc-api\"],\"excess_failed_requests\":782},{\"incident_id\":\"inc-006\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\",\"svc-frontend\"],\"excess_failed_requests\":391}],\"priority\":[\"inc-017\",\"inc-003\"]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 16535,
+    "completion_tokens": 393,
+    "total_tokens": 16928,
+    "prompt_tokens_details": {
+      "cached_tokens": 14336
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 228
+    },
+    "prompt_cache_hit_tokens": 14336,
+    "prompt_cache_miss_tokens": 2199
+  },
+  "seconds": 3.2711867000034545,
+  "raw_response": {
+    "id": "6c9ac4e3-9442-4e8b-958b-51c298ea54e7",
+    "object": "chat.completion",
+    "created": 1792928396,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"snap-2026-10-25T08-30-00Z-17\",\"incidents\":[{\"incident_id\":\"inc-017\",\"severity\":\"P0\",\"service_ids\":[\"svc-checkout\",\"svc-payments\",\"svc-cart\"],\"excess_failed_requests\":1252},{\"incident_id\":\"inc-003\",\"severity\":\"P1\",\"service_ids\":[\"svc-search\",\"svc-api\"],\"excess_failed_requests\":782},{\"incident_id\":\"inc-006\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\",\"svc-frontend\"],\"excess_failed_requests\":391}],\"priority\":[\"inc-017\",\"inc-003\"]}}",
+          "reasoning_content": "We need output final JSON only? Earlier final got protocol error? It says protocol error: only output one complete JSON, action=call/include name arguments; action=final/include answer. My prior final seems valid JSON but maybe they want no final nested? Wait I provided {\"action\":\"final\",\"answer\":{...}}. It says protocol error. Did I include maybe in wrong format? It did. Could be because answer snapshot_id choice? No protocol error. It might be because in this environment each round must output a single JSON, and my final was that. Why protocol error? Maybe because action final must have answer as top-level but with no \"snapshot_id\"? No, answer includes. Maybe issue is I returned final too soon after a tool response? Hmm.\n\nWe need now output final again. Ensure exactly one JSON object, no markdown. Could be the previous final had newline? That's okay. Maybe the system says action=final contains answer, we did. Perhaps it doesn't like \"final\" because we accidentally sent whitespace? Let's just output {\"action\":\"final\",\"answer\":{...}}."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 16535,
+      "completion_tokens": 393,
+      "total_tokens": 16928,
+      "prompt_tokens_details": {
+        "cached_tokens": 14336
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 228
+      },
+      "prompt_cache_hit_tokens": 14336,
+      "prompt_cache_miss_tokens": 2199
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": null,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

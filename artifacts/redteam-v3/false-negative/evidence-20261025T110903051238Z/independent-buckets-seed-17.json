@@ -1,0 +1,205 @@
+[
+  {
+    "incident_id": "INC-AUTH",
+    "service_id": "svc-auth",
+    "bucket_start": "2026-10-25T08:00:00Z",
+    "baseline": 10,
+    "excess": 9
+  },
+  {
+    "incident_id": "INC-AUTH",
+    "service_id": "svc-auth",
+    "bucket_start": "2026-10-25T08:10:00Z",
+    "baseline": 11,
+    "excess": 11
+  },
+  {
+    "incident_id": "INC-AUTH",
+    "service_id": "svc-auth",
+    "bucket_start": "2026-10-25T08:15:00Z",
+    "baseline": 11,
+    "excess": 10
+  },
+  {
+    "incident_id": "INC-AUTH",
+    "service_id": "svc-auth",
+    "bucket_start": "2026-10-25T08:20:00Z",
+    "baseline": 11,
+    "excess": 10
+  },
+  {
+    "incident_id": "INC-AUTH",
+    "service_id": "svc-auth",
+    "bucket_start": "2026-10-25T08:25:00Z",
+    "baseline": 10,
+    "excess": 8
+  },
+  {
+    "incident_id": "INC-BASE",
+    "service_id": "svc-baseline",
+    "bucket_start": "2026-10-25T08:00:00Z",
+    "baseline": 116,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-BASE",
+    "service_id": "svc-baseline",
+    "bucket_start": "2026-10-25T08:05:00Z",
+    "baseline": 106,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-BASE",
+    "service_id": "svc-baseline",
+    "bucket_start": "2026-10-25T08:10:00Z",
+    "baseline": 101,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-BASE",
+    "service_id": "svc-baseline",
+    "bucket_start": "2026-10-25T08:15:00Z",
+    "baseline": 112,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-BASE",
+    "service_id": "svc-baseline",
+    "bucket_start": "2026-10-25T08:20:00Z",
+    "baseline": 113,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-BASE",
+    "service_id": "svc-baseline",
+    "bucket_start": "2026-10-25T08:25:00Z",
+    "baseline": 111,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-cart",
+    "bucket_start": "2026-10-25T08:00:00Z",
+    "baseline": 22,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-cart",
+    "bucket_start": "2026-10-25T08:05:00Z",
+    "baseline": 20,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-cart",
+    "bucket_start": "2026-10-25T08:10:00Z",
+    "baseline": 22,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-cart",
+    "bucket_start": "2026-10-25T08:15:00Z",
+    "baseline": 20,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-cart",
+    "bucket_start": "2026-10-25T08:20:00Z",
+    "baseline": 21,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-cart",
+    "bucket_start": "2026-10-25T08:25:00Z",
+    "baseline": 22,
+    "excess": 0
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-checkout",
+    "bucket_start": "2026-10-25T08:05:00Z",
+    "baseline": 10,
+    "excess": 36
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-checkout",
+    "bucket_start": "2026-10-25T08:10:00Z",
+    "baseline": 11,
+    "excess": 39
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-checkout",
+    "bucket_start": "2026-10-25T08:15:00Z",
+    "baseline": 10,
+    "excess": 31
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-checkout",
+    "bucket_start": "2026-10-25T08:20:00Z",
+    "baseline": 11,
+    "excess": 37
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-search",
+    "bucket_start": "2026-10-25T08:10:00Z",
+    "baseline": 34,
+    "excess": 15
+  },
+  {
+    "incident_id": "INC-DB",
+    "service_id": "svc-search",
+    "bucket_start": "2026-10-25T08:15:00Z",
+    "baseline": 31,
+    "excess": 16
+  },
+  {
+    "incident_id": "INC-PAY",
+    "service_id": "svc-pay",
+    "bucket_start": "2026-10-25T08:00:00Z",
+    "baseline": 5,
+    "excess": 18
+  },
+  {
+    "incident_id": "INC-PAY",
+    "service_id": "svc-pay",
+    "bucket_start": "2026-10-25T08:05:00Z",
+    "baseline": 5,
+    "excess": 18
+  },
+  {
+    "incident_id": "INC-PAY",
+    "service_id": "svc-pay",
+    "bucket_start": "2026-10-25T08:10:00Z",
+    "baseline": 5,
+    "excess": 19
+  },
+  {
+    "incident_id": "INC-PAY",
+    "service_id": "svc-pay",
+    "bucket_start": "2026-10-25T08:15:00Z",
+    "baseline": 5,
+    "excess": 23
+  },
+  {
+    "incident_id": "INC-PAY",
+    "service_id": "svc-pay",
+    "bucket_start": "2026-10-25T08:20:00Z",
+    "baseline": 5,
+    "excess": 22
+  },
+  {
+    "incident_id": "INC-PAY",
+    "service_id": "svc-pay",
+    "bucket_start": "2026-10-25T08:25:00Z",
+    "baseline": 5,
+    "excess": 20
+  }
+]

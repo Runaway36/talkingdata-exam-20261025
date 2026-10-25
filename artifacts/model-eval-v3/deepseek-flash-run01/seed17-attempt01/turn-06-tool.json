@@ -1,0 +1,53 @@
+{
+  "name": "get_notification_history",
+  "arguments": {
+    "incident_ids": [
+      "INC-AUTH",
+      "INC-BASE",
+      "INC-DB",
+      "INC-LOG",
+      "INC-PAY"
+    ]
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v3-seed-17",
+    "data": [
+      {
+        "notification_id": "N-000",
+        "incident_id": "INC-AUTH",
+        "channel": "synthetic-chat",
+        "delivered": 0,
+        "sent_at": "2026-10-25T08:28:00Z"
+      },
+      {
+        "notification_id": "N-001",
+        "incident_id": "INC-BASE",
+        "channel": "synthetic-chat",
+        "delivered": 1,
+        "sent_at": "2026-10-25T08:28:00Z"
+      },
+      {
+        "notification_id": "N-002",
+        "incident_id": "INC-DB",
+        "channel": "synthetic-chat",
+        "delivered": 1,
+        "sent_at": "2026-10-25T08:28:00Z"
+      },
+      {
+        "notification_id": "N-005",
+        "incident_id": "INC-LOG",
+        "channel": "synthetic-chat",
+        "delivered": 1,
+        "sent_at": "2026-10-25T08:28:00Z"
+      },
+      {
+        "notification_id": "N-007",
+        "incident_id": "INC-PAY",
+        "channel": "synthetic-chat",
+        "delivered": 1,
+        "sent_at": "2026-10-25T08:28:00Z"
+      }
+    ]
+  }
+}

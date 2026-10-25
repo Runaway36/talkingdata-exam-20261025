@@ -1,0 +1,1 @@
+{"name":"get_request_metrics","arguments":{"service_ids":["svc-auth","svc-baseline","svc-cart","svc-checkout","svc-search","svc-pay"],"start":"2026-10-25T08:00:00Z","end":"2026-10-25T08:30:00Z"}}

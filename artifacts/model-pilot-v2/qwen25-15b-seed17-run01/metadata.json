@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-10-25T10:42:53.693824+00:00",
+  "backend": "qwen",
+  "requested_model": "Qwen2.5-1.5B-Instruct",
+  "thinking": "not_applicable",
+  "seed": 17,
+  "max_turns": 12,
+  "max_output_tokens_per_turn": 1024,
+  "temperature": 0.0,
+  "request_timeout_seconds": 180.0,
+  "protocol": "text-json-single-action-v1",
+  "task_code_sha256": {
+    "alert_rlvr\\__init__.py": "735b93f033d1b3e5edd6a56502c7507fef98a2fcad37a50aec21cb59b1ec19f2",
+    "alert_rlvr\\__main__.py": "0f1be967b7d0b6c3573adc9860ed0f59cb03d6621065397567d3f5bebfe09568",
+    "alert_rlvr\\config.py": "5b5cf2e20747e7e29e91824365d59c02dbcdb74028a37cea8db0c1c058528647",
+    "alert_rlvr\\data.py": "81b3fb8b4aa3197505e8b3141f1d9486fbb067ce330b9d640e38b1d0afe3a157",
+    "alert_rlvr\\environment.py": "116a61b050c7f424aaa1dff96b1692c82002b51c754e6b2ccef29254d857c3ba",
+    "alert_rlvr\\tools.py": "f4e41d3c9ffa4919c3d74df6e046fd3f8ece26dadf7a00bac07e36c5951002c0",
+    "alert_rlvr\\verifier.py": "d0a0a03ad157c306af1b691e8d1ba7fa0363b1c992349c817c1036b9f940c37d"
+  },
+  "scope": "Single-seed pilot, no claim of pass-rate or intrinsic model difficulty."
+}

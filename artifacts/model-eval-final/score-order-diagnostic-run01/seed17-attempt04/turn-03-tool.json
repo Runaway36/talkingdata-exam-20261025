@@ -1,0 +1,15 @@
+{
+  "name": "get_request_metrics",
+  "arguments": {
+    "service_ids": [
+      "svc-payments"
+    ],
+    "start": "2026-10-25T08:00:00Z",
+    "end": "2026-10-25T08:25:00Z"
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v3-seed-17",
+    "data": []
+  }
+}

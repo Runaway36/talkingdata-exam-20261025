@@ -1,0 +1,16 @@
+{
+  "content": "```json\n{\n    \"action\": \"final\",\n    \"answer\": {\n        \"snapshot_id\": \"alert-impact-v3-seed-42\",\n        \"incidents\": [\n            {\n                \"incident_id\": \"7c69bfae-cbaa-407a-80db-0beedfd0fc1f\",\n                \"severity\": \"P2\",\n                \"service_ids\": [\n                    \"production-service1\",\n                    \"production-service2\"\n                ],\n                \"excess_failed_requests\": 21\n            },\n            {\n                \"incident_id\": \"ec94ef1d-bca5-422c-aeb7-77effbf2c1df\",\n                \"severity\": \"P0\",\n                \"service_ids\": [\n                    \"production-service3\",\n                    \"production-service4\"\n                ],\n                \"excess_failed_requests\": 17\n            }\n        ],\n        \"priority\": [\n            \"7c69bfae-cbaa-407a-80db-0beedfd0fc1f\"\n        ]\n    }\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 2157,
+  "output_tokens": 238,
+  "finish_reason": "stop",
+  "seconds": 8.630766900001618,
+  "sampling": {
+    "temperature": 0.7,
+    "do_sample": true,
+    "top_p": 1.0,
+    "top_k": 0,
+    "sampling_seed": 20681326,
+    "seed_control": "torch_manual_seed_and_cuda_manual_seed_all"
+  }
+}

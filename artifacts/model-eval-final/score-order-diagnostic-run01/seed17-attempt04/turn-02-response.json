@@ -1,0 +1,60 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"svc-checkout\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:20:00Z\"}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 5815,
+    "completion_tokens": 135,
+    "total_tokens": 5950,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 3895
+  },
+  "seconds": 1.1296202000012272,
+  "raw_response": {
+    "id": "2d4a89e1-51ac-49b2-bd09-4bc800c840d2",
+    "object": "chat.completion",
+    "created": 1792928339,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"svc-checkout\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:20:00Z\"}}",
+          "reasoning_content": "Need output valid JSON only. We have partial metrics? Tool result was truncated by malformed? Actually previous tool result got cut at \"bucket_end\". We need continue query. Since protocol error likely due I accidentally included weird prefix? Need now call. We can call again for checkout maybe one service at a time to avoid truncation. Let's query svc-checkout all window."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5815,
+      "completion_tokens": 135,
+      "total_tokens": 5950,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 77
+      },
+      "prompt_cache_hit_tokens": 1920,
+      "prompt_cache_miss_tokens": 3895
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": null,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "started_at": "2026-10-25T10:30:22.537008+00:00",
+  "expected_sha": "4a23820622cbfa662ca6a55a72bc8a03f0d54025",
+  "remote": "git@github.com:Runaway36/talkingdata-exam-20261025.git",
+  "clone_path": "C:\\Users\\runaway\\Desktop\\实习\\99-临时材料\\talkingdata-fresh-clone-20261025",
+  "build_context": "C:\\Users\\runaway\\Desktop\\实习\\99-临时材料\\talkingdata-fresh-clone-20261025",
+  "image": "talkingdata-alert-rlvr:fresh-clone-v2",
+  "command_timeout_seconds": 120,
+  "steps": [
+    {
+      "name": "01-clone",
+      "argv": [
+        "git",
+        "-c",
+        "core.sshCommand=ssh -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=yes",
+        "clone",
+        "--single-branch",
+        "--branch",
+        "main",
+        "git@github.com:Runaway36/talkingdata-exam-20261025.git",
+        "C:\\Users\\runaway\\Desktop\\实习\\99-临时材料\\talkingdata-fresh-clone-20261025"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 4.092,
+      "stdout_file": "01-clone.stdout.txt",
+      "stderr_file": "01-clone.stderr.txt"
+    },
+    {
+      "name": "02-head",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "C:\\Users\\runaway\\Desktop\\实习\\99-临时材料\\talkingdata-fresh-clone-20261025",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.028,
+      "stdout_file": "02-head.stdout.txt",
+      "stderr_file": "02-head.stderr.txt"
+    },
+    {
+      "name": "03-branch",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "cwd": "C:\\Users\\runaway\\Desktop\\实习\\99-临时材料\\talkingdata-fresh-clone-20261025",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.026,
+      "stdout_file": "03-branch.stdout.txt",
+      "stderr_file": "03-branch.stderr.txt"
+    },
+    {
+      "name": "04-clean-before",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "C:\\Users\\runaway\\Desktop\\实习\\99-临时材料\\talkingdata-fresh-clone-20261025",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.036,
+      "stdout_file": "04-clean-before.stdout.txt",
+      "stderr_file": "04-clean-before.stderr.txt"
+    },
+    {
+      "name": "05-repository",
+      "argv": [
+        "gh",
+        "repo",
+        "view",
+        "Runaway36/talkingdata-exam-20261025",
+        "--json",
+        "url,isPrivate,defaultBranchRef,createdAt"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.837,
+      "stdout_file": "05-repository.stdout.txt",
+      "stderr_file": "05-repository.stderr.txt"
+    },
+    {
+      "name": "06-api-head",
+      "argv": [
+        "gh",
+        "api",
+        "repos/Runaway36/talkingdata-exam-20261025/commits/main",
+        "--jq",
+        ".sha"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.241,
+      "stdout_file": "06-api-head.stdout.txt",
+      "stderr_file": "06-api-head.stderr.txt"
+    },
+    {
+      "name": "07-build",
+      "argv": [
+        "docker",
+        "build",
+        "--tag",
+        "talkingdata-alert-rlvr:fresh-clone-v2",
+        "C:\\Users\\runaway\\Desktop\\实习\\99-临时材料\\talkingdata-fresh-clone-20261025"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.472,
+      "stdout_file": "07-build.stdout.txt",
+      "stderr_file": "07-build.stderr.txt"
+    },
+    {
+      "name": "08-image-config",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "talkingdata-alert-rlvr:fresh-clone-v2",
+        "--format",
+        "{{json .Config}}"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.215,
+      "stdout_file": "08-image-config.stdout.txt",
+      "stderr_file": "08-image-config.stderr.txt"
+    },
+    {
+      "name": "09-container-uid",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "talkingdata-alert-rlvr:fresh-clone-v2",
+        "id",
+        "-u"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.623,
+      "stdout_file": "09-container-uid.stdout.txt",
+      "stderr_file": "09-container-uid.stderr.txt"
+    },
+    {
+      "name": "10-default-cmd",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "talkingdata-alert-rlvr:fresh-clone-v2"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.847,
+      "stdout_file": "10-default-cmd.stdout.txt",
+      "stderr_file": "10-default-cmd.stderr.txt"
+    },
+    {
+      "name": "11-unittest",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "talkingdata-alert-rlvr:fresh-clone-v2",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.05,
+      "stdout_file": "11-unittest.stdout.txt",
+      "stderr_file": "11-unittest.stderr.txt"
+    },
+    {
+      "name": "12-clean-after",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "C:\\Users\\runaway\\Desktop\\实习\\99-临时材料\\talkingdata-fresh-clone-20261025",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.035,
+      "stdout_file": "12-clean-after.stdout.txt",
+      "stderr_file": "12-clean-after.stderr.txt"
+    }
+  ],
+  "success": true,
+  "cloned_sha": "4a23820622cbfa662ca6a55a72bc8a03f0d54025",
+  "cloned_branch": "main",
+  "clean_before": true,
+  "github_repository": {
+    "createdAt": "2026-10-25T09:57:33Z",
+    "defaultBranchRef": {
+      "name": "main"
+    },
+    "isPrivate": false,
+    "url": "https://github.com/Runaway36/talkingdata-exam-20261025"
+  },
+  "github_api_head": "4a23820622cbfa662ca6a55a72bc8a03f0d54025",
+  "image_config": {
+    "User": "10001:10001",
+    "Env": [
+      "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+      "PYTHON_VERSION=3.13.17",
+      "PYTHON_SHA256=6020bd10aff3bf4821be16f088ebb1591beb7b811dcd8fab1da8f7c22a7b27e7",
+      "PYTHONUNBUFFERED=1",
+      "PYTHONUTF8=1",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "PYTHONPATH=/app"
+    ],
+    "Cmd": [
+      "python",
+      "-m",
+      "examples.demo"
+    ],
+    "WorkingDir": "/app",
+    "ArgsEscaped": true
+  },
+  "container_uid": "10001",
+  "default_cmd_rewards": [
+    {
+      "path": "root.scenarios[0].evaluation",
+      "reward": 1.0
+    },
+    {
+      "path": "root.scenarios[1].evaluation",
+      "reward": 0.6944444444444444
+    },
+    {
+      "path": "root.scenarios[2].evaluation",
+      "reward": 0.0
+    }
+  ],
+  "test_count": 41,
+  "clean_after": true,
+  "finished_at": "2026-10-25T10:30:33.042838+00:00"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "get_incident_services",
+  "arguments": {
+    "incident_ids": [
+      "INC-AUTH",
+      "INC-BASE",
+      "INC-DB",
+      "INC-LOG",
+      "INC-PAY"
+    ]
+  },
+  "result": {
+    "ok": true,
+    "snapshot_id": "alert-impact-v2-seed-17",
+    "data": [
+      {
+        "incident_id": "INC-AUTH",
+        "service_id": "svc-auth",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-BASE",
+        "service_id": "svc-baseline",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-DB",
+        "service_id": "svc-cart",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-DB",
+        "service_id": "svc-checkout",
+        "impact_start": "2026-10-25T08:05:00Z",
+        "impact_end": "2026-10-25T08:25:00Z"
+      },
+      {
+        "incident_id": "INC-DB",
+        "service_id": "svc-search",
+        "impact_start": "2026-10-25T08:07:00Z",
+        "impact_end": "2026-10-25T08:23:00Z"
+      },
+      {
+        "incident_id": "INC-LOG",
+        "service_id": "svc-log",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-PAY",
+        "service_id": "svc-pay",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      },
+      {
+        "incident_id": "INC-PAY",
+        "service_id": "svc-pay-stage",
+        "impact_start": "2026-10-25T08:00:00Z",
+        "impact_end": "2026-10-25T08:30:00Z"
+      }
+    ]
+  }
+}

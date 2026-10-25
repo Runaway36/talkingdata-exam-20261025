@@ -1,0 +1,53 @@
+{
+  "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v3-seed-99\",\"incidents\":[{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-cart\",\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":1240},{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":73},{\"incident_id\":\"INC-BASE\",\"severity\":\"P1\",\"service_ids\":[\"svc-baseline\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":0}],\"priority\":[\"INC-DB\",\"INC-AUTH\"]}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 7934,
+    "completion_tokens": 179,
+    "total_tokens": 8113,
+    "prompt_tokens_details": {
+      "cached_tokens": 4224
+    },
+    "prompt_cache_hit_tokens": 4224,
+    "prompt_cache_miss_tokens": 3710
+  },
+  "seconds": 1.0763211000012234,
+  "raw_response": {
+    "id": "5eb4bea1-d4b1-4d29-9fab-78903deb2c4b",
+    "object": "chat.completion",
+    "created": 1792927877,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"final\",\"answer\":{\"snapshot_id\":\"alert-impact-v3-seed-99\",\"incidents\":[{\"incident_id\":\"INC-DB\",\"severity\":\"P0\",\"service_ids\":[\"svc-cart\",\"svc-checkout\",\"svc-search\"],\"excess_failed_requests\":1240},{\"incident_id\":\"INC-AUTH\",\"severity\":\"P1\",\"service_ids\":[\"svc-auth\"],\"excess_failed_requests\":73},{\"incident_id\":\"INC-BASE\",\"severity\":\"P1\",\"service_ids\":[\"svc-baseline\"],\"excess_failed_requests\":0},{\"incident_id\":\"INC-PAY\",\"severity\":\"P1\",\"service_ids\":[\"svc-pay\"],\"excess_failed_requests\":0}],\"priority\":[\"INC-DB\",\"INC-AUTH\"]}}"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 7934,
+      "completion_tokens": 179,
+      "total_tokens": 8113,
+      "prompt_tokens_details": {
+        "cached_tokens": 4224
+      },
+      "prompt_cache_hit_tokens": 4224,
+      "prompt_cache_miss_tokens": 3710
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": 21251130,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

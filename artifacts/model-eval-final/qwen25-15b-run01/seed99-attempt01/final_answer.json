@@ -1,0 +1,18 @@
+{
+        "snapshot_id": "seed-99",
+        "incidents": [
+            {
+                "incident_id": "event_002",
+                "severity": "P0",
+                "service_ids": ["service_001"],
+                "excess_failed_requests": -48
+            },
+            {
+                "incident_id": "event_001",
+                "severity": "P1",
+                "service_ids": ["service_001", "service_002"],
+                "excess_failed_requests": 96
+            }
+        ],
+        "priority": ["event_002"]
+    }

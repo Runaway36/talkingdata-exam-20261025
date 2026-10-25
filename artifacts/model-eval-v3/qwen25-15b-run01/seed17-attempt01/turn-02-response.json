@@ -1,0 +1,16 @@
+{
+  "content": "```json\n{\n  \"action\": \"call\",\n  \"name\": \"list_alerts\",\n  \"arguments\": {\n    \"start\": \"2026-10-25T08:00:00Z\",\n    \"end\": \"2026-10-25T08:30:00Z\",\n    \"severities\": [\"P0\", \"P1\"],\n    \"states\": [\"firing\"]\n  }\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 1902,
+  "output_tokens": 104,
+  "finish_reason": "stop",
+  "seconds": 4.368007700002636,
+  "sampling": {
+    "temperature": 0.7,
+    "do_sample": true,
+    "top_p": 1.0,
+    "top_k": 0,
+    "sampling_seed": 20262727,
+    "seed_control": "torch_manual_seed_and_cuda_manual_seed_all"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "reward": 0.25396825396825395,
+  "tool_calls": 1,
+  "protocol_errors": 1,
+  "turns": 3,
+  "truncated_responses": 0,
+  "reported_model": "Qwen2.5-1.5B-Instruct",
+  "evaluation": {
+    "reward": 0.25396825396825395,
+    "valid": true,
+    "components": {
+      "coverage": 0.5714285714285714,
+      "fields": 0.2222222222222222,
+      "priority": 0.0
+    },
+    "errors": [],
+    "expected_count": 3,
+    "matched_count": 2,
+    "matched_fields": 2
+  },
+  "elapsed_seconds": 27.829,
+  "finished_at": "2026-10-25T10:45:28.683968+00:00"
+}

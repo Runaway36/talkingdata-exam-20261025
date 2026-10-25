@@ -1,0 +1,56 @@
+{
+  "task_version": 3,
+  "backend": "qwen",
+  "instances": [
+    17,
+    42,
+    99
+  ],
+  "attempts_per_instance": 4,
+  "temperature": 0.7,
+  "thinking": "not_applicable",
+  "max_turns": 12,
+  "max_output_tokens_per_turn": 1024,
+  "started_at": "2026-10-25T11:03:14.721678+00:00",
+  "scope": "Three fixed instances, four independent attempts each; not population performance.",
+  "complete": false,
+  "runs": [
+    {
+      "folder": "artifacts\\model-eval-v3\\qwen25-15b-run01\\seed17-attempt01",
+      "instance_seed": 17,
+      "status": "execution_error",
+      "reward": null,
+      "sampling_seed": 20262726,
+      "temperature": 0.7,
+      "passed": null,
+      "tool_calls": 1,
+      "protocol_errors": 1,
+      "truncated_responses": 0,
+      "elapsed_seconds": 31.634,
+      "events": [],
+      "extra_incidents": [],
+      "priority_expected": null,
+      "priority_actual": null,
+      "attempt": 1
+    }
+  ],
+  "task_code_sha256": {
+    "alert_rlvr\\__init__.py": "735b93f033d1b3e5edd6a56502c7507fef98a2fcad37a50aec21cb59b1ec19f2",
+    "alert_rlvr\\__main__.py": "0f1be967b7d0b6c3573adc9860ed0f59cb03d6621065397567d3f5bebfe09568",
+    "alert_rlvr\\config.py": "5503e707baf7b1266be3239f166e13c180114901e0322dc8d2f2c699fba8b5cb",
+    "alert_rlvr\\data.py": "81b3fb8b4aa3197505e8b3141f1d9486fbb067ce330b9d640e38b1d0afe3a157",
+    "alert_rlvr\\environment.py": "fb64c24f5e6b95c0e391f77344b685b7aeb8bb2cc48e436505fd56a0143af13a",
+    "alert_rlvr\\tools.py": "f4e41d3c9ffa4919c3d74df6e046fd3f8ece26dadf7a00bac07e36c5951002c0",
+    "alert_rlvr\\verifier.py": "e3c3d1032bd204e0384792bbd13c6e8188bdc9422b8d31a1a3d5749429474e3d"
+  },
+  "evaluation_code_sha256": {
+    "run_model_pilot.py": "dff07e8efa9e2ddd8f2661d6ceb00011ffedad7286e6d4f222412ec8d09ca872",
+    "local_qwen_driver.py": "2d8f3fbde41a63dc63276ad075559ad7cff28499081dda6af1a866fa218c0736",
+    "run_repeated_evaluation.py": "00d30ad8b1a46fa17e6a9af50f741f10ed6420ecef91a7a87e7aa38f7f107136"
+  },
+  "error": {
+    "type": "RuntimeError",
+    "message": "Infrastructure failure; batch paused without treating it as a business error"
+  },
+  "finished_at": "2026-10-25T11:03:46.653107+00:00"
+}

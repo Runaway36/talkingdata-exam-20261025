@@ -1,0 +1,60 @@
+{
+  "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"SVC-1004\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\"}}",
+  "model": "deepseek-flash",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 5817,
+    "completion_tokens": 271,
+    "total_tokens": 6088,
+    "prompt_tokens_details": {
+      "cached_tokens": 1920
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 212
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 3897
+  },
+  "seconds": 1.9498443999982555,
+  "raw_response": {
+    "id": "103a077b-bac1-4ed4-9754-13f8f151692a",
+    "object": "chat.completion",
+    "created": 1792928336,
+    "model": "deepseek-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"action\":\"call\",\"name\":\"get_request_metrics\",\"arguments\":{\"service_ids\":[\"SVC-1004\"],\"start\":\"2026-10-25T08:00:00Z\",\"end\":\"2026-10-25T08:30:00Z\"}}",
+          "reasoning_content": "We need output valid JSON only. Need continue queries maybe ambiguous data. Need interpret corrupt response. The last tool response seems malformed, duplicate/extra fields, missing SVC-1004 08:20/25? Need retry perhaps narrower ranges or individually to get clean data. Need output JSON only this turn. Call get_request_metrics per service maybe avoid aggregation corruption. We can call fresh for SVC-1004 maybe start 08:00 end 08:30 individually. Also SVC-1001/2 perhaps data clean enough, but duplicates for SVC-1002 08:15 same bucket repeated; same event/service/bucket count only once. So no issue if identical. SVC-1004 corrupt. Need individual queries. We can call one tool per round only? It says each round only one JSON object. We can call one tool. Let's call SVC-1004 metrics maybe narrower? But tool requires window. Same. Maybe malformed due multi service concatenation, individual may be clean."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5817,
+      "completion_tokens": 271,
+      "total_tokens": 6088,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 212
+      },
+      "prompt_cache_hit_tokens": 1920,
+      "prompt_cache_miss_tokens": 3897
+    },
+    "system_fingerprint": "e72d3c7f663d3e1383b00b3884cb4501"
+  },
+  "network_attempts": 1,
+  "sampling": {
+    "temperature": 0.7,
+    "requested_sampling_seed": null,
+    "sampling_seed": null,
+    "seed_control": "unsupported_api_seed; server_sampling_seed_uncontrolled",
+    "top_p": 1.0,
+    "top_k": "provider_default"
+  }
+}

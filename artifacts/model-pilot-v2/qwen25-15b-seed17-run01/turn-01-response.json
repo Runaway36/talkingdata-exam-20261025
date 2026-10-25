@@ -1,0 +1,8 @@
+{
+  "content": "```json\n{\n  \"snapshot_id\": \"seed_17\",\n  \"incidents\": [\n    {\n      \"incident_id\": \"incident_1\",\n      \"severity\": \"P1\",\n      \"service_ids\": [\"service_a\"],\n      \"excess_failed_requests\": 10\n    },\n    {\n      \"incident_id\": \"incident_2\",\n      \"severity\": \"P0\",\n      \"service_ids\": [\"service_b\"],\n      \"excess_failed_requests\": 5\n    }\n  ],\n  \"priority\": [\"incident_1\"]\n}\n```",
+  "model": "Qwen2.5-1.5B-Instruct",
+  "input_tokens": 1711,
+  "output_tokens": 118,
+  "finish_reason": "stop",
+  "seconds": 4.402561399998376
+}

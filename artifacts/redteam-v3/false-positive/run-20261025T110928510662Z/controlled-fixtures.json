@@ -1,0 +1,200 @@
+{
+  "empty": {
+    "truth": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [],
+      "priority": []
+    },
+    "empty_report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    },
+    "extra_report": {
+      "reward": 0.0,
+      "valid": true,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [],
+      "expected_count": 0,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 3
+    }
+  },
+  "single": {
+    "truth": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-CONTROLLED",
+          "severity": "P0",
+          "service_ids": [
+            "svc-controlled"
+          ],
+          "excess_failed_requests": 100
+        }
+      ],
+      "priority": [
+        "INC-CONTROLLED"
+      ]
+    },
+    "gold_report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 1,
+      "priority_matches": 1,
+      "extra_count": 0
+    },
+    "omitted_report": {
+      "reward": 0.0,
+      "valid": true,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    }
+  },
+  "overflow": {
+    "scope": "controlled fixture only; NOT reachable from any current public seed",
+    "task": "任务编号：alert-impact-v3-seed-17\n你是监控平台的值班分析员，需要为下一班提供一份按实际业务影响排序的处置清单。\n报告范围是 UTC [2026-10-25T08:00:00Z, 2026-10-25T08:30:00Z)；纳入截至窗口结束仍在触发（firing）的 P0/P1 告警所对应根因事件。\n请给出各事件影响的生产服务、异常失败调用总量，并选出优先处理的前 2 个事件。\n\n交接统计制度：\n一个根因事件以 incident_id 标识，可有多条告警；事件等级取符合纳入条件告警中的最高等级。\n服务归属及影响起止时间以事件登记关系为准；只统计环境为 production 的服务。\n统计单位是服务调用失败次数，不是去重用户数，不涉及金额。每个 5 分钟观测桶须完整处于报告范围和事件影响时段内，同一事件、服务、桶只计一次。\n已批准（approved）的计划维护完整覆盖的桶不属于事件业务影响；取消（cancelled）或只覆盖部分时间的维护不适用这一豁免。\n常态失败量按每桶请求量与该服务基线计算并向下取整：request_count * baseline_failure_bps // 10000。异常失败量为实际 failed_requests 减去常态失败量，最低为 0，再累计各有效桶。\n只列有正异常失败量的事件及服务。快照保证一个服务桶不会归属多个根因事件。\n处置顺序按事件异常失败总量降序，同量时 P0 优先于 P1，再按 incident_id 字典序；事件不足 2 个时列出全部。\n\n返回 JSON：snapshot_id；incidents 数组（每项含 incident_id、severity、service_ids、excess_failed_requests）；priority 数组（前 2 个事件 ID）。\nexcess_failed_requests 必须为非负整数；明细行与 service_ids 顺序无关，priority 顺序有意义。只能通过业务 API 获取数据，不能直接访问数据库。\nJSON 只包含上述字段，不得重复 JSON 键、事件 ID、同一事件内服务 ID 或优先级 ID；priority 只能引用已提交事件。快照不符、额外字段或类型错误等格式违规得 0。\n奖励只依据最终结果：完整正确的事件分析计 1 单位；位置正确且事件分析完整正确的优先级项计 1 单位。\n奖励为所得单位除以（应输出事件数 × 1 + 应输出优先级项数 × 1 + 多报事件数 × 1）。无应输出事件且答案为空时得 1；不检查调用轨迹。",
+    "raw": {
+      "alerts": [
+        {
+          "alert_id": "A-CONTROLLED",
+          "incident_id": "INC-CONTROLLED",
+          "resource_id": "host-control",
+          "severity": "P0",
+          "state": "firing",
+          "started_at": "2026-10-25T08:00:00Z",
+          "ended_at": null,
+          "title": "Controlled fixture",
+          "description": "",
+          "source": ""
+        }
+      ],
+      "incident_services": [
+        {
+          "incident_id": "INC-CONTROLLED",
+          "service_id": "svc-controlled",
+          "impact_start": "2026-10-25T08:00:00Z",
+          "impact_end": "2026-10-25T08:30:00Z"
+        }
+      ],
+      "services": [
+        {
+          "service_id": "svc-controlled",
+          "name": "Controlled fixture",
+          "environment": "production",
+          "baseline_failure_bps": 100,
+          "owner_team": "audit",
+          "dashboard_url": ""
+        }
+      ],
+      "request_metrics": [
+        {
+          "service_id": "svc-controlled",
+          "bucket_start": "2026-10-25T08:00:00Z",
+          "bucket_end": "2026-10-25T08:05:00Z",
+          "request_count": 9223372036854775807,
+          "failed_requests": 92233720368547858,
+          "retry_count": 0,
+          "latency_p95_ms": 0
+        }
+      ],
+      "maintenance": []
+    },
+    "ledger": [
+      {
+        "incident_id": "INC-CONTROLLED",
+        "service_id": "svc-controlled",
+        "bucket_start": "2026-10-25T08:00:00Z",
+        "request_count": 9223372036854775807,
+        "failed_requests": 92233720368547858,
+        "baseline_failure_bps": 100,
+        "baseline_failures": 92233720368547758,
+        "approved_full_maintenance": false,
+        "excess": 100
+      }
+    ],
+    "truth": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-CONTROLLED",
+          "severity": "P0",
+          "service_ids": [
+            "svc-controlled"
+          ],
+          "excess_failed_requests": 100
+        }
+      ],
+      "priority": [
+        "INC-CONTROLLED"
+      ]
+    },
+    "wrong_answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-CONTROLLED",
+          "severity": "P0",
+          "service_ids": [
+            "svc-controlled"
+          ],
+          "excess_failed_requests": 96
+        }
+      ],
+      "priority": [
+        "INC-CONTROLLED"
+      ]
+    },
+    "wrong_report": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 1,
+      "priority_matches": 1,
+      "extra_count": 0
+    },
+    "true_report": {
+      "reward": 0.0,
+      "valid": true,
+      "components": {
+        "incidents": 0.0,
+        "priority": 0.0
+      },
+      "errors": [],
+      "expected_count": 1,
+      "matched_count": 0,
+      "priority_matches": 0,
+      "extra_count": 0
+    }
+  }
+}
