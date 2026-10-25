@@ -1,0 +1,60 @@
+# 冻结实现约定 v2
+
+这是本次考试内形成的告警业务分析任务。业务数据为确定性模拟快照，不连接真实监控平台或企微。
+
+## 任务
+
+固定 UTC 窗口 `[2026-10-25T08:00:00Z, 2026-10-25T08:30:00Z)`，5 分钟一个观测桶。分析窗口结束时仍为 firing 的 P0/P1 告警所关联的根因事件。告警不是事件：同一 incident_id 可有多条重复告警。事件影响范围由 incident_services 表提供，不能靠告警标题猜服务。
+
+只统计 production 服务、落在事件影响区间内的完整观测桶；维护状态为 approved 且完整覆盖该桶时排除，cancelled 或只部分覆盖不能排除。模拟数据保证同一 service_id/bucket_start 不同时归属不同根因事件，避免无依据的因果分摊。
+
+每个有效服务桶：`baseline_failures = request_count * baseline_failure_bps // 10000`；`excess_failed_requests = max(0, failed_requests - baseline_failures)`。同一事件/服务/桶只计一次。事件严重等级取符合条件告警中的最高等级。只输出异常失败请求数大于 0 的事件，service_ids 只包括贡献异常失败的服务。计量单位为服务调用失败次数，不是去重用户数，不涉及金额；跨服务的计数不声称等于独立用户请求数。
+
+输出全部符合条件事件的明细，并选出前 2 个优先处理事件。按 excess_failed_requests 降序、严重等级 P0 优先、incident_id 字典序排序。明细行和 service_ids 顺序不影响正确性；priority 数组顺序有意义。
+
+## Python 公开接口
+
+包名 `alert_rlvr`。
+
+- `config.make_task(seed=17) -> str`：规范自然语言任务，首行 `任务编号：alert-impact-v2-seed-{seed}`。
+- `config.resolve_task(task: str) -> int`：只接受此版本生成的规范任务文本，支持 CRLF/首尾空白；未知或被篡改任务抛 ValueError；不声称理解任意自然语言。
+- `config.snapshot_id(seed) -> str`：`alert-impact-v2-seed-{seed}`，seed 必须为 int（非 bool），0..9999。
+- `data.build_database(seed=17) -> sqlite3.Connection`：可信环境内部建库，row_factory=sqlite3.Row。
+- `environment.AlertEnvironment(seed=17)`：只读业务 API；`.task`、`.snapshot_id`；上下文管理和 `.close()`。
+- 每个 API 返回 `{ok: true, snapshot_id: str, data: list[dict]}`；错误返回 `{ok: false, snapshot_id: str, error: {code: str, message: str}}`，不向 agent 泄露 SQL、数据库路径或异常堆栈。
+- `.call(name, arguments)`：严格业务方法白名单，非法 name/参数不导致未捕获异常。
+- `.list_alerts(start, end, severities=None, states=None)`：与查询窗口相交的告警（started_at < end 且 ended_at 为 null 或 > start）。
+- `.get_incident_services(incident_ids)`：事件服务关系及影响区间。
+- `.get_service_profiles(service_ids)`：环境、基线失败率等。
+- `.get_request_metrics(service_ids, start, end)`：完整落入查询窗口的观测桶。
+- `.get_maintenance_windows(service_ids, start, end)`：与查询窗口相交的维护记录，包括 cancelled。
+- 冗余 API：`.get_host_metrics(resource_ids)`、`.get_notification_history(incident_ids)`。
+- `API_SCHEMAS`：环境模块提供 API 名称/描述/参数 JSON schema，供 tool-calling harness 注册。
+- 所有 ID 列表最多 50 项；必须为非空字符串列表，拒绝 bool/错误类型；时间使用严格 UTC ISO 格式且 start < end，限制在快照窗口内。
+
+## 数据表契约（列名固定）
+
+- alerts(alert_id TEXT PRIMARY KEY, incident_id TEXT, resource_id TEXT, severity TEXT, state TEXT, started_at TEXT, ended_at TEXT nullable, title TEXT, description TEXT, source TEXT)
+- incident_services(incident_id TEXT, service_id TEXT, impact_start TEXT, impact_end TEXT)
+- services(service_id TEXT PRIMARY KEY, name TEXT, environment TEXT, baseline_failure_bps INTEGER, owner_team TEXT, dashboard_url TEXT)
+- request_metrics(service_id TEXT, bucket_start TEXT, bucket_end TEXT, request_count INTEGER, failed_requests INTEGER, retry_count INTEGER, latency_p95_ms INTEGER)
+- maintenance(maintenance_id TEXT PRIMARY KEY, service_id TEXT, starts_at TEXT, ends_at TEXT, status TEXT, reason TEXT)
+- host_metrics(resource_id TEXT, cpu_percent REAL, memory_percent REAL, collected_at TEXT)
+- notification_history(notification_id TEXT, incident_id TEXT, channel TEXT, delivered INTEGER, sent_at TEXT)
+
+至少包含：重复告警、P2 噪声、resolved 高等级告警、staging 服务、全窗口维护、部分桶维护、取消维护、部分覆盖维护、基线内失败、影响区间外指标。数据随 seed 确定性变化；三个种子应产生不同的数值答案。所有字节/消息均为合成数据。
+
+## 答案与评分
+
+答案为 dict 或 JSON 字符串：
+`{snapshot_id, incidents: [{incident_id, severity, service_ids, excess_failed_requests}], priority: [incident_id, ...]}`。
+
+`verifier.evaluate(task, answer) -> dict` 返回 reward、valid、components、errors、expected_count；`verifier.compute_reward(task, answer) -> float` 为统一训练入口。不接收也不检查调用轨迹。验证器独立从可信快照计算预期结果（SQL 实现），不调用样例解法、不调用 LLM。
+
+合法答案奖励：0.25 × 事件覆盖 F1 + 0.50 × 字段正确率 + 0.25 × priority 位置正确率。字段为 severity/service_ids/excess_failed_requests，按全部期望事件的 3 个字段计，缺失记 0。priority 最多 top_k 项，重复或不在提交明细中的 ID 为协议错误；缺项可部分得分。未知事件会降低覆盖分。完整正确才可得 1。快照不匹配、重复事件/服务 ID、非法类型、负数、非有限数、重复 JSON key、未知字段等协议错误 reward=0。不强制提交事件明细顺序或服务列表顺序。
+
+评分配置常量放 config.py。未知任务/非法输入返回有效错误报告和 0 分，不崩溃。评分报告不能作为给 agent 的查询 API；参考答案只在可信评分侧使用。
+
+## 模块职责
+
+data.py 构造可信快照；environment.py 封装查询；verifier.py 独立计算奖励；examples/reference_agent.py 仅使用业务 API；tests/ 使用独立手算 fixture 验证业务边界。共享配置管理规则常量，求解计算不共享实现函数。更改快照时间范围或业务数据结构时，须同步更新数据生成器并重新验收。

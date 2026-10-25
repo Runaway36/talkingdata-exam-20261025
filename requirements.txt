@@ -1,0 +1,2 @@
+# Runtime uses only the Python standard library (including sqlite3).
+# No third-party packages or model API credentials are required.

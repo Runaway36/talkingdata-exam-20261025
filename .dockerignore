@@ -1,0 +1,11 @@
+*
+!Dockerfile
+!requirements.txt
+!alert_rlvr/
+!alert_rlvr/**
+!examples/
+!examples/**
+!tests/
+!tests/**
+**/__pycache__/
+**/*.pyc

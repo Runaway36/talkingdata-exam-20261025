@@ -1,0 +1,50 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 560B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.13-slim
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 167B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 65.40kB done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/python:3.13-slim@sha256:d98cc29d3266e535dd9da1099688d9cb3ca4753813571e071763d17725460962
+#5 resolve docker.io/library/python:3.13-slim@sha256:d98cc29d3266e535dd9da1099688d9cb3ca4753813571e071763d17725460962 0.1s done
+#5 DONE 0.1s
+
+#6 [2/7] WORKDIR /app
+#6 CACHED
+
+#7 [3/7] COPY requirements.txt /app/requirements.txt
+#7 CACHED
+
+#8 [4/7] RUN python -m pip install --no-cache-dir -r requirements.txt     && groupadd --gid 10001 runner     && useradd --uid 10001 --gid 10001 --no-create-home runner
+#8 CACHED
+
+#9 [5/7] COPY --chown=10001:10001 alert_rlvr /app/alert_rlvr
+#9 DONE 0.1s
+
+#10 [6/7] COPY --chown=10001:10001 examples /app/examples
+#10 DONE 0.1s
+
+#11 [7/7] COPY --chown=10001:10001 tests /app/tests
+#11 DONE 0.1s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.4s done
+#12 exporting manifest sha256:2006d89a297dbb99754fef82876ab69c024ff55cb2f8b8b4f63b8f35a0c5e01d 0.0s done
+#12 exporting config sha256:0a29d917e51245b7cb44784fd8da239ace772ff589e889a205be902d96daac0e 0.0s done
+#12 exporting attestation manifest sha256:639b20781644f31893860e7c218052bcb0fb0a163ec86d8763692ffc94f5e318 0.0s done
+#12 exporting manifest list sha256:fca3c88b3fcbf7b5d41b8a356a60141e67515826c66bae71fd889ceef89ae94c 0.0s done
+#12 naming to docker.io/library/talkingdata-alert-rlvr:exam-v2
+#12 naming to docker.io/library/talkingdata-alert-rlvr:exam-v2 0.0s done
+#12 unpacking to docker.io/library/talkingdata-alert-rlvr:exam-v2 0.1s done
+#12 DONE 0.8s
