@@ -1,0 +1,5153 @@
+{
+  "0": {
+    "database_sha256": "7c20d3c864335fcc1c312ab3145cd3ee5a18d47cf63e941c6ba0d7d0cb93d05f",
+    "task_sha256": "e3706cd6e371b03470281c595dc81242bc9e88e682026f6176702ae5bd7cc370",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-0",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 36
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 139
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 137
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "1": {
+    "database_sha256": "cb492dee119d0e9e5e413e9f771bc764817e3b11fcd68661fd96a3e8d6d6b73c",
+    "task_sha256": "b8933a95663862206b146e74c86931f2535ce4ea1b0d5bb9b0e68899172d6a66",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-1",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 43
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 147
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 149
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "2": {
+    "database_sha256": "431820d8a9fa15b0334d6daa3cec6eb8380a046a5575d16866f93a56a2371cd8",
+    "task_sha256": "3cbaae5bc4c959bd1eb1a37c3ea3fc2e7f27c3b7b543e8c74fae4742b8cbbe6a",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-2",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 41
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 156
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 158
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "3": {
+    "database_sha256": "a1fc41a2b42eca6bda60b9fea870b48fae9a0608fe010137a144acbb076edba8",
+    "task_sha256": "43526ab01f7bff7b49ae99afec69f7977f2e8526c53faa927997de0fd8284a18",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-3",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 49
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 175
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 152
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "4": {
+    "database_sha256": "9a8fd0a7b9100ccd91f386872593d9fb9ff95a742cbcce476f9dc20b2e2094cd",
+    "task_sha256": "035e11b8a91881f0cf593cb0dfa40fa53127d39aead349c8f8d9bec2c40b9a9b",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-4",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 54
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 168
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 154
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "5": {
+    "database_sha256": "8ca2e65f8a2cebd5e224ec06bf1c0f4de0a836f877a2c1c805fc72ff70cd7c17",
+    "task_sha256": "4fd48bb58b93161648494d86bdc9079e242064ffbfb8d2d18cd20b3cbf0de78f",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-5",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 36
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 176
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 156
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "6": {
+    "database_sha256": "9d272a9c5b4413bfabbcb88560485838a60bb338e20013f4703fa9411f4246c4",
+    "task_sha256": "2cd64861930ac093202728a12f6dbce477aef9cf6e16c490763ca3ddc4b10fdf",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-6",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 43
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 188
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 167
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "7": {
+    "database_sha256": "c2c7440a6bbb3f8d915244e9994437a549498bfae3dfac8228af4d3551bdbb2f",
+    "task_sha256": "090f586876c766cd0d42b8cf88560c370199c6f71f038739eb78346d057e62e1",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-7",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 43
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 176
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 180
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "8": {
+    "database_sha256": "2033fcebfb61b6a202ce8e41e6e21c3c578085dda4097b1fa7d6239ca47fb0e1",
+    "task_sha256": "48059c375d1006d4a225bc7e3f656c8cc972824a09ae15e7463088fbe6729e6a",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-8",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 52
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 174
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 178
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "9": {
+    "database_sha256": "ef24d08651f5848a0c914521aa2ce236ddaeaed34d83245e156b3cd90f9a9e46",
+    "task_sha256": "4da8e8fd966fd0eddc9491d108a9256126dbeccc1db1a1a7d34cbc6b548259b0",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-9",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 52
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 189
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 178
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "10": {
+    "database_sha256": "53ff0f8b740b62aa13424c1ada4f900afd07fd5021f5bbefa4b26b2ddf1cb474",
+    "task_sha256": "989aedbc0fd57ea9212c24ed90de60b92675930ac371669ccee99963fcb78e5a",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-10",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 33
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 198
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 177
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "11": {
+    "database_sha256": "fa4eac064f09d143e7efab953b45e4a6f1affbf5f3e04d37e5dd446f5f49564b",
+    "task_sha256": "cb54d716deb755ea0f5fd67567682cc1d9cfae85345de6a106d39376002dbb16",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-11",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 38
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 156
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 198
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "12": {
+    "database_sha256": "ea3cebbcaf761070a8a28a2878f6ff169b516e09fdaa9491b7c110317666f024",
+    "task_sha256": "704ec01ab7736edb3d3b105ce6080537d680f237ad56f004bd549e1ba78bbe21",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-12",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 40
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 161
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 203
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "13": {
+    "database_sha256": "a62f3bc7294bf9bb1cdfb892be124f07f5bcb4de60a322fb4257d88dd9e060cd",
+    "task_sha256": "5eaaa26db24cb6e9c238529f68fea48cf75a3a07e0bcdc79999da1496e11cbdd",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-13",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 53
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 158
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 213
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "14": {
+    "database_sha256": "9e6baf9223f3e0bf43c78b7049605ee09c27912198ef14031755d8d0c38d39e2",
+    "task_sha256": "58a760035b79471b13a50a8c98e530ca50bc43fbd61302fcd679cb0438ec51b6",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-14",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 57
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 170
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 214
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "15": {
+    "database_sha256": "e07b3094b9323c3602f164f85d61d927caa3d51e6b410227883b7e3fce684e18",
+    "task_sha256": "a9a10f74df50e5c94836e7c266311c80ce510e16c0614ee8090a976f1fd04ba5",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-15",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 30
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 151
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 222
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "16": {
+    "database_sha256": "28d3f33be6113632e88842761a16ebde0ad304782951ae05d1dbfa7d4e766ef1",
+    "task_sha256": "e65b76d59dd31d76f4075fbb9b92bfe932e2491f7c3d254af0c2b2cbb2a30c49",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-16",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 36
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 170
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 230
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "17": {
+    "database_sha256": "ba75df89f20c08c024beb73f4b274542cdb86a39475b8ea7e56c16c8eb36dcbb",
+    "task_sha256": "32cf5b6dfbc140eeaa0738d6412ee3e32b2ca6cab4ed97f1db0085376e23d07a",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-17",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 48
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 174
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 120
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "18": {
+    "database_sha256": "7a05fe55f40d63cfb65fdb5fa885c1445ec0c8910dc59fc62a6e70811004674a",
+    "task_sha256": "3a7bc7d6e0baaf2cf4442da8329a05e30ffd327280892e8ea38bdeb50bb35e8a",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-18",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 51
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 186
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 144
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "19": {
+    "database_sha256": "94115ca531e1781ea178e074525ecc1ddcb5e6579ea57569e95ac8d19c4ac480",
+    "task_sha256": "45519f7f8dfed83675ee791c20e7851f017978b03e7fef887880223c70dd8992",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-19",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 55
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 179
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 156
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "20": {
+    "database_sha256": "9f42f3d31084702ce6f84b541555a2b804a44c9db95bfddc7cab55ff92aaf943",
+    "task_sha256": "b311e060ae79ee948fb8377aca2b3e4eb9f324caf81740e5f77748afb30d1ae8",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-20",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 25
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 183
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 150
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "21": {
+    "database_sha256": "92aeb0ba63557aa226b4a11449e1d64a68d5285d4ef2001ddfd27ae2692cb76c",
+    "task_sha256": "21c38dab5327e37795a21c7f3066543972b720cb3cfe3c3840072f2ff5be1885",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-21",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 41
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 184
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 158
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "22": {
+    "database_sha256": "0208e8bded6fc72beddea66172af264136b45625b7a007a6e9482ff509f0c6bb",
+    "task_sha256": "04f2e06351cd8ce4ce58f5190a5dcbb59c61580f686aacfd620f92abc2c7506f",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-22",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 38
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 151
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 164
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "23": {
+    "database_sha256": "77f9e8b08581a5b01fa230e86c9e4348ca47746a3d673a277ca1b5e20f8e04e7",
+    "task_sha256": "71abd6e63f7730feadb8c14de65df72f2584fdae2e33627251d398e49980e271",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-23",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 48
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 148
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 164
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "24": {
+    "database_sha256": "7e2fc4b8409eb000d382d7a6e028179b090641929aeb57e9f08d0bb90b9a8a8b",
+    "task_sha256": "27a7ab6b11eaf44525059439bbf11e6c002f645f0fe1f663161a29329ddab407",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-24",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 58
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 154
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 170
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "25": {
+    "database_sha256": "41699b658e4c00883c290659a41381a5ff406f5ae5b2f91153eaaa56ad73746d",
+    "task_sha256": "58df9e902fd7a4d98eb69430833bed4cbf99380cfd72af6d884c9008dcc73e34",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-25",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 37
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 170
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 186
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "26": {
+    "database_sha256": "5b37f2189b689bb52a9d0a52b62d66c1300e490348475003d425a8b9a5d33eaa",
+    "task_sha256": "0f03ae817bd80f3cdc4a7284fca1f4bf42924171c0c1945ba92e947ae3c7ed82",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-26",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 45
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 175
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 177
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "27": {
+    "database_sha256": "ff5c519b54b2862a6a11f12b38ad60a5504bef968ea57711b20592cd3284245b",
+    "task_sha256": "6aba68b47c15eb998c8ea17b2b1d2ddc291a34df11b2803d7ebb1b0b97963158",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-27",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 44
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 177
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 194
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "28": {
+    "database_sha256": "46a45ef525bff8749cc773ed61b49819a87daf518fbf59cb81b8a7f1ce04feff",
+    "task_sha256": "c4b7f0df2abbd6111b22e9deebd402edceed931ddb1248b770ba80f42c9d9556",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-28",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 54
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 174
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 196
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "29": {
+    "database_sha256": "35aa4e9ec3155890479f683be54b4c554acfe9f9ebee3e6aa6efecb516a39a8b",
+    "task_sha256": "ec70cd78bc120604cfb8dc068cc6338a92dcd3a1352a678162c3a370c1ab7ba0",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-29",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 53
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 177
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 204
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "30": {
+    "database_sha256": "38016a1d2d0786f85fd2a8aad9dae8c6f255669ffd09542b242bce230050ba68",
+    "task_sha256": "bd59317741ce90307af47aa9ba12f29ac6853da52639dc9e724a032e309f53aa",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-30",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 37
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 179
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 209
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "31": {
+    "database_sha256": "498d3f39faa7db5aa334a25c17109319b58810f29d8adde69a46298fa9aa9d69",
+    "task_sha256": "daa396f16e59af6ad144925bc11bc3e6479fbd1922b8e485b93bde6e972db78b",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-31",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 41
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 181
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 219
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "32": {
+    "database_sha256": "abf4fca969c0516ecd6c1cc1bb48497dc7c67f2cc49aefef389e9750dcab3153",
+    "task_sha256": "b7447fd5750e00160e16f4133219a74fa66a80ddcfe19de79ce3cf04b92571b1",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-32",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 43
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 191
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 221
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "33": {
+    "database_sha256": "47b0d65fcc1c269de0a17d2aa42a2086270fa2b4db296542d758f74a0bae2ba3",
+    "task_sha256": "9c7c76f73a0767ddd44b402ac382642644d5f88a9e9f012ab0851609c52944ed",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-33",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 50
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 172
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 216
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "34": {
+    "database_sha256": "5cafe29cbee2bec811249026a1eb97a6b4fb9dedaaee152afd9b0079bfab9790",
+    "task_sha256": "b7d13d9136c967958cb26e30705e8f3fb561dabf50042da882305c47f3f142fc",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-34",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 53
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 162
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 134
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "35": {
+    "database_sha256": "4b32be748d11418fdcd0da82a543e4fcc38559bdf5f3d4c6bfd7ccb3e9f108a8",
+    "task_sha256": "e7e6ae39c455494753b5bf6a62a9a6c14757ea21395a3edc352cdb811b820543",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-35",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 37
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 161
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 138
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "36": {
+    "database_sha256": "2eda3378f5b2ff1b146b4327e89fa6c5cf4b41f478f06aa6a922d7f482fd1999",
+    "task_sha256": "efde8acdb12ee7092be992a5e3127539419c2e541165597d36590440783fe6b5",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-36",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 39
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 156
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 145
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "37": {
+    "database_sha256": "07c0898c255b36bed74e2155cd0dd8828ab33861ae18727bd7bd28a3ec8fef67",
+    "task_sha256": "97d76a856ca3b856c990a3013629f2dea86247b0dd8d4784108d13267daa9607",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-37",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 46
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 181
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 140
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "38": {
+    "database_sha256": "8a2e2e110996deb7be675709753320d61f99926287f3ca8bf8bf6692ee807077",
+    "task_sha256": "ba072461e25f65b04e314b9f902687745b00e5be1eaba45604fb3f42374ee649",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-38",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 46
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 167
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 147
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "39": {
+    "database_sha256": "e420ac5c08cd20cd9bd5e7e141e4fd39de0c29eb340e4c015b464ba2c3eb47b3",
+    "task_sha256": "50a4c3c21ff4e334fb37a9e424201fa1222ccfb6f15401e5d3749149ffe0b173",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-39",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 48
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 182
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 162
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "40": {
+    "database_sha256": "8dd700132e042cfb37d48273595f86985ced6af0190dd8d82c50ecab5ea41446",
+    "task_sha256": "4734f3f8c15592a68231cc4ad539eae71b97c2987c8fbaf9da2eb035072c2074",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-40",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 35
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 170
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 165
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "41": {
+    "database_sha256": "0e4ff13026649a41feaa9b21e1548f773f59e1de4860367456304cd41459a2e3",
+    "task_sha256": "d833790e7f058fef19d4776531040544a869b544126a8277aaf8ce3120ae0f26",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-41",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 39
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 187
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 176
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "42": {
+    "database_sha256": "6c3c8ca8bf1082cbf19aa90b376d910a76ada5ce6aeea9ea0698b8c5e04a303f",
+    "task_sha256": "9b158843e5a26c1f511786af58d2af7a05c2ed5cc5a5cd5ca6534c64c50017a6",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-42",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 48
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 171
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 175
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "43": {
+    "database_sha256": "cd4b0439fd8495ce87cd0cafc3883013d2a98c3e80a451b501aa113951e63c6f",
+    "task_sha256": "c7b09caaaed0ee62a5a83919e18f0e6f5fb07402c9be8cceb8665227321cfc61",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-43",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 52
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 194
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 188
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "44": {
+    "database_sha256": "16635ba54b0cd6da040fa568dcffc0e1eaa61657025482e3b6a5a81180c740a2",
+    "task_sha256": "c98f5dc7ff601ad1c8a3d517a9a8f7c448b31471537c7ff07837d1d8eb31cc1e",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-44",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 52
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 154
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 190
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "45": {
+    "database_sha256": "7997c6efa1d578c92b806c2ba663dfd39e993d73e6fe4d895be5743848b49ae4",
+    "task_sha256": "d5583ca57ef576d94405f47c880492d2b1b88e378bf5de56c9c902f3efb254b9",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-45",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 33
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 144
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 203
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "46": {
+    "database_sha256": "18e38eae4ed3c62d7b21bc7215c48c3357bd9062a4af5dbd021046a3fbea0235",
+    "task_sha256": "4f3c58969a03eb4aeb346792937f44b33609ebe4dd6ecaecc265a9da1d3276c2",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-46",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 40
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 164
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 195
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "47": {
+    "database_sha256": "c47af590d6e10fdb36e07b3a35f065f325274224c5a2eff6c2cbfcb4e6087178",
+    "task_sha256": "69625f9929130a6ccb04295c23cbfe4f1f482ee30abc88610cb91dbed7d33e3e",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-47",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 43
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 165
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 215
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "48": {
+    "database_sha256": "f8683fa35af55fd5fd3f6fdfd5d203daa5fbaee4e0ade7d7255b455b2ea2254e",
+    "task_sha256": "5702ef4e9a84c8e5b04902e43c9de86a0a5ed2cf79af28e45ac798bb5e1d740f",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-48",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 47
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 167
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 218
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "49": {
+    "database_sha256": "6e9d4bd58da261fbbf62e567930e1f920c816c42b9af62f255069e7296ae0757",
+    "task_sha256": "d1724bffcc1576ab5e61d9a9a282c236e101bfd282c634e2d6017d7c8321f19a",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-49",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 56
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 163
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 219
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "50": {
+    "database_sha256": "620e978d8acd1df7a6ba373e9c891bc59447aa13257e2b8b21db76b72bd263df",
+    "task_sha256": "adc2bc3612e16b8c2422b4bd524ec4715ef6ac64c347384d515814fd4ec81189",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-50",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 38
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 171
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 228
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "51": {
+    "database_sha256": "781949304b8529268890416feaf7181fcbf79f3e7b37671eee9155d2ec8043b0",
+    "task_sha256": "0ec59a7fd0f039aceef69e4e2c9c934d723f58a00c3f99ba5623948d5fa1b4bd",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-51",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 42
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 185
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 132
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "52": {
+    "database_sha256": "7bd39feca0e613e7085e2688f82c2499272c69b955fc6084a175762c8ddc84e4",
+    "task_sha256": "901afd0a011f4d868d175a25d170bc0bddebde05579ced30ae33ebebbb4e793c",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-52",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 44
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 189
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 134
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "53": {
+    "database_sha256": "61ee09bba832ed179ac7f92881a8ddf973be51e31acf0dfe7b2f465aa2ab7808",
+    "task_sha256": "5991658c2e49c19a735183992b9ef9dc4a101a66bfb25c2c2b42041d3f25bc85",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-53",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 49
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 188
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 148
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "54": {
+    "database_sha256": "d751cd0aa0b9c03e0c8fd0fdc98347a69a5722cee86638b5b4c6f481784a2faf",
+    "task_sha256": "7cdcf25fa4e900a011a4e4e58263000c21f928cf678dcb114639a303aeb76b31",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-54",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 56
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 204
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 149
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "55": {
+    "database_sha256": "db56ba1d325ea7a066dd867498348cda965186b805dc3c17d1a867b624a4ac6f",
+    "task_sha256": "71eb0b15b0f1f4bf5a174448c773a529a34c62aad2db3bad8c37da33f9151338",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-55",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 33
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 164
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 148
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "56": {
+    "database_sha256": "c6e7301aa32740b890f60c3e15786e5090578b5f04f23d9e20bc5ccd4f348b2e",
+    "task_sha256": "e1167d785139ebf8506a1111331bef1b3915e6cb84f147a80ebd49f495f543e8",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-56",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 44
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 159
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 161
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "57": {
+    "database_sha256": "4292859555153f642e835dba0576c89e4f0be6be94d4d567f839eff913bedd29",
+    "task_sha256": "8b413c6f00d35798b8d4e72058587990ec0c6542681bcb9f30d357fd0bf39c8e",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-57",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 43
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 157
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 155
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "58": {
+    "database_sha256": "3ce7aea6dbb2c424fdc6db3bdca011f1b7838bdc917b733ea127911efded7a3d",
+    "task_sha256": "fa01f55f5fdad8b177b46cf1ce363f4dba81df7968e8f6e944f2530b51ab6f0f",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-58",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 48
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 164
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 174
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "59": {
+    "database_sha256": "ed3e8dd1e2e3bb29c4513415c8b9280c9da80207a7c3f4508f751825c1644b49",
+    "task_sha256": "f42830d33fec60c77a6357d1a21c4ca2e59c7d9155bcf5704da1677a4f68cbb4",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-59",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 52
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 171
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 178
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "60": {
+    "database_sha256": "f5cf8415364c2c0d92256ba44a31b87f87f434e9dffa692a73a48ee8ca077071",
+    "task_sha256": "3014582ae7d8707797ec3c921ac54ec9c8820372755866a5132256b48b09f10f",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-60",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 33
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 171
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 182
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "61": {
+    "database_sha256": "5d70e22cfca17d19d096aab4da42133b9ac76ca01b1726226bf1da1271d2a5cf",
+    "task_sha256": "65eac61a708e3c58a866bc5b89bbfbcf7dab2320032193e622b6ab5813ff831c",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-61",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 36
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 169
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 203
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "62": {
+    "database_sha256": "6932ef05d42386280e64a982c0df3679486f3b9f7cbae2e0e6fd96ff40356d74",
+    "task_sha256": "50154d922ed215223ef35d63c2b4a635f124c203bdaae4c12c2566bd20d3fc33",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-62",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 44
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 187
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 199
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "63": {
+    "database_sha256": "c26e918aa3194109333750f612e47124d60c38879442e15ee9d18ebb5aa12eae",
+    "task_sha256": "2e6eaf105e42b02627a5329b235f1ca74fd65e673004db9256be964212db7ee0",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-63",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 50
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 180
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 198
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "64": {
+    "database_sha256": "4dbd211e1db49d956a6bf3ef2eea27a28586757d904bcabc8868bbaa962a1071",
+    "task_sha256": "bc15dce9d1b0d1193c4610a8b277fd82e2d4f19887293913bf2f6921f19a14ca",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-64",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 56
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 173
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 200
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "65": {
+    "database_sha256": "f97da529f4e96e727761c98ab9c9c02d47f6d00910677adf653e1ef52e2c060e",
+    "task_sha256": "bca568efa008e40e248599e666213d8bd18312e6a7cebfaaf57b505e407c7790",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-65",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 33
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 193
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 212
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "66": {
+    "database_sha256": "c4ff96acc554b13112046fb4a58a53555ff29b25067230ffec0d2db700f5e426",
+    "task_sha256": "4de82ee9f86a2e2cad9ef5fccd4ea85df0adff5c35c4f21b24638647d7894cfd",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-66",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 42
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 150
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 222
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "67": {
+    "database_sha256": "ecc5389e55f254443a452e8de33034e6f9ab5222f7e3724270b7c0bbf08b8fd6",
+    "task_sha256": "ca7f8c9be306a26474716cc65bcbb07d105e1e87067c5697c88dd7429aa433fd",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-67",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 42
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 164
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 228
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "68": {
+    "database_sha256": "4af0f293bc4aef58dad6aaa749720edd4f860ea17417ebe5d92212214b074144",
+    "task_sha256": "fc6775e494b59d4cd2eab65bbb402375045f9162de555a81e65df4af9000ad95",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-68",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 52
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 161
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 130
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "69": {
+    "database_sha256": "d7f993888b8932cf9bda875e4b22d5e660390c6643681e1143d1850b57fa5b3b",
+    "task_sha256": "3a21bcd8f1c151fec080a569b70622502c2b5198969d3edaabcf60bb9f39e63d",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-69",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 58
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 178
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 131
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "70": {
+    "database_sha256": "34ae1636cf7e7ba3aa11854bf2d38dec813741497b2851bbbe9770d09d0199bd",
+    "task_sha256": "748b79c3ca3dc83bc8a6876db29c4f0eb0d3465c13a74c8f7ba67c9a50e621bd",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-70",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 37
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 167
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 138
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "71": {
+    "database_sha256": "bb6bf08dab77371aee47034662c73a7fdebefbb27c91b8ae378d7659699acd70",
+    "task_sha256": "0402b9bbb8c4adc635499b4cf0db7d256d3dfa9757f6506a9edd4f3e063616aa",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-71",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 43
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 176
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 152
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "72": {
+    "database_sha256": "4dc60c52f09dd07619eed415110a7b430185fe4343764b26cee7b3ba5b62be02",
+    "task_sha256": "826f3ab172b8e7b458edb30bdc0e184deaa32d2b7b688ad39eb85c7e884406a8",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-72",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 45
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 181
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 161
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "73": {
+    "database_sha256": "35a60c5bc39adc9149d7a8fc86704da41ab0f31c85b9db84f0e7af8d5fedb514",
+    "task_sha256": "268407a91e39c11c3532ced132b6bcc945408d7c4ec716aef403da88974c177d",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-73",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 49
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 190
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 160
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "74": {
+    "database_sha256": "9eae4a55f27e512ad9e4bb79d0eb8782042d2c7e494f1ef79fa791168ff03c35",
+    "task_sha256": "5ef7391207939aba4df267ea73cc80fb29dcd7c0d0eebd3a7a8abcd6dbc2a6ef",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-74",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 54
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 188
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 169
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "75": {
+    "database_sha256": "da568b6b471947a0fb98ce761bfaac5e87741b06c9c451e7d3a5a58d695e3318",
+    "task_sha256": "370e5eb0342fa809aebcb9ecc24822aa1d9b78f52afd479a3b7defad6f697445",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-75",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 32
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 193
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 165
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "76": {
+    "database_sha256": "1fcd5da22d6649d39203bdd1c7637e920953af051a1e3211b4d7023fd5a051cc",
+    "task_sha256": "e9222a20cd4ce2fe456a2a962d1e8750c4e635b6861798e0724e0c86b5646125",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-76",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 38
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 201
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 178
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "77": {
+    "database_sha256": "86395393a395f5f40ae618339a1531a5d3f9785a561d4888a05d9d07c4a2d06c",
+    "task_sha256": "f41a5399db9c1693566ac166a74ec052f7be37b50c9e51064e4081f60f00c3fe",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-77",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 40
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 149
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 184
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "78": {
+    "database_sha256": "9770763081fdb563c29f005045c68993d13508b1084edd93526080dc01a0e49e",
+    "task_sha256": "3db13f2534efab3ece2c53996341b063708791ed542df1ae693228e5495b33a9",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-78",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 47
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 150
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 185
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "79": {
+    "database_sha256": "26b8ca09dc1dfbcedcee56621522a37303b189498c08c50efbde0eca9b87f694",
+    "task_sha256": "2ddb5a6ab25bd504da00dfa784bef84c71bb36cbd1a3dc86c7fed0dbd0deb6f7",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-79",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 54
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 157
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 187
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "80": {
+    "database_sha256": "63ee1a41aa46ed50d3064a23fbd16ea711f0a9815aea1e41e6b8a276fdd32fb8",
+    "task_sha256": "58988ce6b8145a68e26abc8f1708ff4aa190413e2161ad43ef8c7ea39e58c02f",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-80",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 38
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 162
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 198
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "81": {
+    "database_sha256": "94742fbad410c7c031a7785aa59b06bd5a7222ab3c91d3a4232bf86ebba01256",
+    "task_sha256": "aea53f3ae16db2560999b054bae72ed74b13b20f21773b0b9018136af38264d7",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-81",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 44
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 178
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 206
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "82": {
+    "database_sha256": "0032af09e0f834bc41cd3afa28f42a1abfc0a6067ebd8f2a0b030a1bf0eb5104",
+    "task_sha256": "c003a601a6cf5934000d236754fad8b84c7f1d64a31b465e770c27bce5b5a6bf",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-82",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 42
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 164
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 214
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "83": {
+    "database_sha256": "31dd9b192ba550a25bb5e7a10326137a5b96d8b9aeef1cba75bb75d5b8f1ecbd",
+    "task_sha256": "802d4b2c7052657e18f7e35dcf6c426fef511a612cbf0192b21c6c57eb9c8cb2",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-83",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 47
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 172
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 218
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "84": {
+    "database_sha256": "927eef7ed77511a355d4450a1e69ca00768090cdd884c0c7fda5a5eeb98da122",
+    "task_sha256": "7c72418a53e3c9d0d2105367abdfe0ccfce77e59934b5bc53849116a84e44719",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-84",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 60
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 170
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 222
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "85": {
+    "database_sha256": "738b54a0aa28d66057e383ae6ba734f62de4b867ce340d2286db4afab0774b4b",
+    "task_sha256": "c16ca55958bdf9326711e44d98bbeffb1e92d482e51f840937f5e651f4b0df59",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-85",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 40
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 182
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 124
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "86": {
+    "database_sha256": "ec50ab5a387f6da93c77081a974d3c2a9195fb085ad79d93ccb2860a23fc1a59",
+    "task_sha256": "3a227cb96ee9af5b167c6427cc409143e519b0f7253397aff9dc5cb360269dac",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-86",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 39
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 183
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 134
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "87": {
+    "database_sha256": "86717f24c3badc016872597e185b525da876383a4fe116f35e794b8bf2f476f9",
+    "task_sha256": "f9b5335561c486cd32e0bd721cef65e89ab21dafe612b4876b6775ea448d6106",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-87",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 42
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 193
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 130
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "88": {
+    "database_sha256": "e28727c170c37f46488174755b2439ec6a75e711900ff018986d2a6d98a0d11d",
+    "task_sha256": "4e77ad379731cd5f2a1386d678ac7376b379b8b5d09edae8ffaac27122a19ece",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-88",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 52
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 146
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 147
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "89": {
+    "database_sha256": "3d57c1b9d7bd8eedb162bea8064e2abb080913eddd6869e546aa67cd9c328424",
+    "task_sha256": "a7846f8a3d2023651699b2d5b96321c22bc339e9ce47d0527124b96dd866026d",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-89",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 53
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 156
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 159
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "90": {
+    "database_sha256": "3c42ef622854c6b4ae2689f702fe37b253545bedd3856f35dc56edcf162b63ff",
+    "task_sha256": "296914096569b90dffa1a627ee0ceab103492b4ae86d49020374d3b61211834c",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-90",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 39
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 169
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 161
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "91": {
+    "database_sha256": "514a01fbc6c494ff1d3673fae5176fa2893856323fe6016b807e4fa5c431d258",
+    "task_sha256": "22893d9548ac5755bcf75afb20984b92daecba34f6fb9842732d480426a78e3b",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-91",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 43
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 163
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 169
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "92": {
+    "database_sha256": "d37a8a41fe5e28345b4a4875b9c4a5a458df60414a9333af623561c304e2ee54",
+    "task_sha256": "af379a03cf8205ccc7c626207e5c51bb3901529e7dfc243b6675d6a962e12a47",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-92",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 49
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 168
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 167
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "93": {
+    "database_sha256": "5b7b7975597e580780f7e82c7dceb90d5cce0cfc496001fc8a0a5f35e08ca1d2",
+    "task_sha256": "ca322f7559c6b8b51e172c6cfe1a71892ce9a1c6155e485dc5d1c9eb485aa6fd",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-93",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 51
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 166
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 177
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "94": {
+    "database_sha256": "b2b87611536ddcbc3c8326140352b185f62981adaf20591513a2bfc99276a91c",
+    "task_sha256": "a0c9956f1642c4292ccee582129a3f472d55c4050576712b39fdada0d5b5d11d",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-94",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 55
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 183
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 183
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "95": {
+    "database_sha256": "30f3702702fc34dacf528a6d9583b479eb52bfe089350bbe0ca6f1d0f7a2ea12",
+    "task_sha256": "23c3d1b7a7efe0e5662a0c024fe1cdacdf741ff123776b9fb070fe5e3c1e8422",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-95",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 39
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 191
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 187
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "96": {
+    "database_sha256": "bf1071e499e7e4d715287df58eb55889370f3f150ab90b8491de3f8b33b97cea",
+    "task_sha256": "3a9f550b6258cef71796ef40bb15903f21d5c4375cf39c987230ea5db1b1ca12",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-96",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 39
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 180
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 199
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "97": {
+    "database_sha256": "b5f9c1935475c6729cbdd23f852e932dea0b6e1e3b7adf53844ea1bf260c90bc",
+    "task_sha256": "5681477e7a910c7551dfe0e10b077b0d56cc194ec81f724fce3dca9bc911ed7b",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-97",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 47
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 185
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 193
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "98": {
+    "database_sha256": "d037d391e3ad5ac6c28af50db867f4624a1debe68901420e586e2471ebc5746a",
+    "task_sha256": "ec190ba00ea80a3922d77c5f24860d5a3ad5c24abe6be25ebe946229723846a7",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-98",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 51
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 187
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 202
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "99": {
+    "database_sha256": "2ad4e2e7544c86cc2dce15dfe67aa3a89a691a528df00c630da13fb786c4fc14",
+    "task_sha256": "6ce2fc8cd8ceba9e51c0f727c0f174efabdcbdc7d1ce3880135dd369f5c6331e",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-99",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 53
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 140
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 212
+        }
+      ],
+      "priority": [
+        "INC-PAY",
+        "INC-DB"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  },
+  "9999": {
+    "database_sha256": "86bc5e25611a30e96904f12a77235e64ffec006a85204a9ff61abed2ec6d9e81",
+    "task_sha256": "93f7b2a1b0f9f8d85ec61731b6da1c132c8f6c44ec536659ef64b2d378d7458c",
+    "answer": {
+      "snapshot_id": "alert-impact-v3-seed-9999",
+      "incidents": [
+        {
+          "incident_id": "INC-AUTH",
+          "severity": "P1",
+          "service_ids": [
+            "svc-auth"
+          ],
+          "excess_failed_requests": 53
+        },
+        {
+          "incident_id": "INC-DB",
+          "severity": "P0",
+          "service_ids": [
+            "svc-checkout",
+            "svc-search"
+          ],
+          "excess_failed_requests": 154
+        },
+        {
+          "incident_id": "INC-PAY",
+          "severity": "P1",
+          "service_ids": [
+            "svc-pay"
+          ],
+          "excess_failed_requests": 143
+        }
+      ],
+      "priority": [
+        "INC-DB",
+        "INC-PAY"
+      ]
+    },
+    "evaluation": {
+      "reward": 1.0,
+      "valid": true,
+      "components": {
+        "incidents": 1.0,
+        "priority": 1.0
+      },
+      "errors": [],
+      "expected_count": 3,
+      "matched_count": 3,
+      "priority_matches": 2,
+      "extra_count": 0
+    }
+  }
+}

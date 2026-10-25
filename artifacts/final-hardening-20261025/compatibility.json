@@ -1,0 +1,16 @@
+{
+  "default_instances_compared": 101,
+  "all_business_tables_tasks_answers_and_success_reports_identical": true,
+  "saved_final_answers_regraded": 29,
+  "all_saved_scores_identical": true,
+  "source_sha256": {
+    "alert_rlvr\\config.py": "338f3430885f18d93710129619035ee066767c70754939baa3ff50c80214dabb",
+    "alert_rlvr\\data.py": "5b394ca510936ffd31fea06c44dbd53a658094a9b2452763fa0730d3a309e526",
+    "alert_rlvr\\environment.py": "fb64c24f5e6b95c0e391f77344b685b7aeb8bb2cc48e436505fd56a0143af13a",
+    "alert_rlvr\\tools.py": "f4e41d3c9ffa4919c3d74df6e046fd3f8ece26dadf7a00bac07e36c5951002c0",
+    "alert_rlvr\\verifier.py": "fd28101021079af8d3d632b45996745feb9d231cb42c1722315e1217079fb0fe",
+    "alert_rlvr\\__init__.py": "735b93f033d1b3e5edd6a56502c7507fef98a2fcad37a50aec21cb59b1ec19f2",
+    "alert_rlvr\\__main__.py": "0f1be967b7d0b6c3573adc9860ed0f59cb03d6621065397567d3f5bebfe09568"
+  },
+  "original_model_runs_not_repeated": true
+}

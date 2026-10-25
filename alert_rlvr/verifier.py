@@ -21,6 +21,12 @@ _REQUIRED_EVENT_FIELDS = (
 )
 
 
+class VerifierInfrastructureError(RuntimeError):
+    """Trusted scoring failed; exclude the episode from reward aggregation."""
+
+    error_code = "TRUSTED_SNAPSHOT_UNAVAILABLE"
+
+
 def _zero_report(error, expected_count=0):
     return {
         "reward": 0.0,
@@ -234,7 +240,9 @@ def evaluate(task, answer):
     try:
         expected = _expected_for_seed(seed)
     except Exception:
-        return _zero_report("trusted snapshot could not be evaluated")
+        report = _zero_report("trusted snapshot could not be evaluated")
+        report["error_code"] = VerifierInfrastructureError.error_code
+        return report
     expected_rows = {row["incident_id"]: row for row in expected["incidents"]}
     expected_count = len(expected_rows)
     try:
@@ -293,5 +301,8 @@ def evaluate(task, answer):
 
 
 def compute_reward(task, answer):
-    """Uniform training entry point: canonical task + final answer -> float."""
-    return float(evaluate(task, answer)["reward"])
+    """Return a task reward; raise if trusted scoring infrastructure failed."""
+    report = evaluate(task, answer)
+    if report.get("error_code") == VerifierInfrastructureError.error_code:
+        raise VerifierInfrastructureError("trusted snapshot could not be evaluated")
+    return float(report["reward"])

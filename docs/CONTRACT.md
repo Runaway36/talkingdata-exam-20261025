@@ -73,6 +73,8 @@ priority 最多 top_k 项，重复或不在提交明细中的 ID 为协议错误
 
 业务配置常量放 config.py。未知任务/非法输入返回错误报告和 0 分，不崩溃。评分报告只供可信控制器使用，不增加逐事件诊断工具；参考答案只在可信评分侧使用。
 
+最终运行加固：可信快照计算故障的 `evaluate` 报告额外包含 `error_code=TRUSTED_SNAPSHOT_UNAVAILABLE`；`compute_reward` 对这种故障抛出 `VerifierInfrastructureError`，由训练方记录并排除，不返回误导性的训练0分。正常答案和非法输入的原有评分报告不变。
+
 ## 版本与训练范围
 
 seed 目前改变观测数值，事件服务关系、维护等结构仍固定。该分布不保证反复训练后仍需查询全部业务来源，也未覆盖跨结构泛化。v2 的 [模型小样本](../artifacts/model-pilot-v2/README.md) 与 [静态设计审阅](../artifacts/design-review/independent-review.md) 保留原样；其分数不能视为 v3 模型结果。

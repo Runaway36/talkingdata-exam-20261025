@@ -254,6 +254,8 @@ def main():
                     if action.get("action") == "final" and set(action) == {"action", "answer"}:
                         answer_json = raw_answer_json(content)
                         evaluation = evaluate(env.task, answer_json)
+                        if evaluation.get("error_code") == "TRUSTED_SNAPSHOT_UNAVAILABLE":
+                            raise RuntimeError("Verifier infrastructure failed; rollout excluded")
                         (args.output / "final_answer.json").write_text(answer_json, encoding="utf-8")
                         save(args.output / "evaluation.json", evaluation)
                         result.update(status="completed" if evaluation["valid"] else "invalid_final_answer",

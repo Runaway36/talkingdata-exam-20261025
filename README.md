@@ -10,6 +10,8 @@
 
 当前任务版本为 **v3**：保留 v2 的业务数据和正确答案口径，调整题面提示及奖励定义。每个完整正确的事件分析、每个有正确分析支撑的处置位置各计一个得分单位。
 
+模型评测结束后，最终交付另修复了桶长配置联动和评分器基础设施异常处理。101个默认实例的全部业务表、题面、答案及正常评分与修复前相同，29份已保存最终答案重新评分也全部一致；这不是重新运行模型。新源码指纹与历史冻结指纹分开记录，见[最终加固与兼容性证据](docs/FINAL_HARDENING.md)。
+
 业务数据是合成的固定快照，不连接真实监控平台或企微。容器启动自动生成 SQLite 并运行正确、错误及空答案样例，无需凭据、外部服务、下载数据或手工建库。
 
 ## 已执行的模型评测
@@ -40,7 +42,7 @@ python -m examples.harness_integration
 
 Windows 上已安装多个版本时，可将 `python` 换成 `py -3.13`，或使用自己虚拟环境中的解释器。
 
-已实际完成本地 **51/51 测试**，Docker 构建、默认启动、51项测试和外部脚本只读挂载均通过；完整命令与原始日志见[验收记录](docs/VALIDATION.md)。
+最终交付已实际完成本地 **60/60 测试**，Docker 构建、默认启动、60项测试和外部脚本只读挂载均通过；完整命令与原始日志见[验收记录](docs/VALIDATION.md)。
 
 Docker：
 
@@ -168,7 +170,7 @@ def run_training_rollout(model_tool_loop, seed=42):
     with AlertEnvironment(seed=seed) as env:
         final_answer = model_tool_loop(env.task, API_SCHEMAS, env.call)
         report = evaluate(env.task, final_answer)
-        if "trusted snapshot could not be evaluated" in report["errors"]:
+        if report.get("error_code") == "TRUSTED_SNAPSHOT_UNAVAILABLE":
             raise RuntimeError("Verifier infrastructure failed; exclude this rollout")
         return {
             "reward": report["reward"],
@@ -178,7 +180,7 @@ def run_training_rollout(model_tool_loop, seed=42):
 
 `model_tool_loop` 由训练方实现；本项目交付环境与终局评分接口，不包含优化器或已经执行的 RL 训练。运行异常由外层控制器单列，不能冒充模型业务错答；原始 JSON 答案应直接交评分器，避免先转 float 丢失小数精度。
 
-当前异常接口的限制：`compute_reward` 仅返回数值，可信快照建库或评分自身失败时也返回0。训练接入应像上例使用 `evaluate` 检查对应错误，将这类运行排除并记录；不能把该0分当成Agent答错。本次验收未遇到此类评分故障。
+可信快照建库或评分自身失败时，`evaluate` 返回专用 `error_code=TRUSTED_SNAPSHOT_UNAVAILABLE`，`compute_reward` 则抛出 `VerifierInfrastructureError`；不会把此类故障作为训练0分返回。直接使用 `evaluate` 的控制器应像上例检查错误码、排除并记录。非法任务或错误答案仍正常返回0；故障路径已通过注入异常测试验证。
 
 另提供可运行的 JSONL 业务工具进程：
 
@@ -240,10 +242,10 @@ python experiments/run_repeated_evaluation.py --backend deepseek --output artifa
 python experiments/run_repeated_evaluation.py --backend qwen --output artifacts/my-qwen-run --local-python /path/to/python --model-path /path/to/Qwen2.5-1.5B-Instruct
 ```
 
-以上各运行3个固定实例、每个4次独立作答。任意真实模型复跑不保证产生相同答案；业务快照与评分确定性、模型输出随机性须区分。已有原始轨迹可由 `python artifacts/model-eval-final/independent-audit-check.py` 离线核对，无需再次调用模型。
+以上各运行3个固定实例、每个4次独立作答。任意真实模型复跑不保证产生相同答案；业务快照与评分确定性、模型输出随机性须区分。已有原始轨迹的历史冻结版本核查见[独立审计](artifacts/model-eval-final/independent-audit-final.md)，最终兼容修复的差分核查见[加固记录](docs/FINAL_HARDENING.md)。
 
 - 种子变化用于同一固定业务结构下的数值变化；未实现关系、维护和告警结构随机化，不能据此证明跨结构泛化。
-- 配置常量便于定位规则，但数据生成器仍固定日期、六个五分钟桶。窗口或桶长的变更须同步修改生成器并重新验收，不能只改 `BUCKET_MINUTES` 就视为新任务已正确配置。
+- 桶长与窗口由配置驱动生成；修改业务结构仍需重新验收。默认配置保留已评测的五分钟桶数据，其他配置的可运行性不等于已经测过模型能力。
 - 合成数据已内置，SQLite 写入发生在初始化阶段；没有模拟真实告警采集延迟、丢包或最终一致性。
 - v2 的 [真实模型小样本记录](artifacts/model-pilot-v2/README.md) 与 [独立上下文设计审阅](artifacts/design-review/independent-review.md) 原样保留。v3 已完成上列独立模型评测；新旧题面、奖励、温度及预算不相同，不能将分差只归因于任务修改。未开展 RL 训练。
 - 当前为小数据快照、单次分析任务；没有建设实时流平台、通知发送链路或线上权限系统。

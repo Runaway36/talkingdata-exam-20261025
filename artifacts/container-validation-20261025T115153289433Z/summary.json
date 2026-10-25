@@ -1,0 +1,102 @@
+{
+  "image": "talkingdata-alert-rlvr:exam-v3",
+  "steps": [
+    {
+      "name": "build",
+      "command": [
+        "docker",
+        "build",
+        "--progress=plain",
+        "-t",
+        "talkingdata-alert-rlvr:exam-v3",
+        "."
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "default",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "1",
+        "--memory",
+        "256m",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=16m",
+        "talkingdata-alert-rlvr:exam-v3"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "tests",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "1",
+        "--memory",
+        "256m",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=16m",
+        "talkingdata-alert-rlvr:exam-v3",
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "mounted-controller",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "none",
+        "--cpus",
+        "1",
+        "--memory",
+        "256m",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=16m",
+        "--mount",
+        "type=bind,source=C:\\Users\\runaway\\Desktop\\实习\\07-笔试交付\\talkingdata-exam-20261025\\examples,target=/workspace,readonly",
+        "talkingdata-alert-rlvr:exam-v3",
+        "python",
+        "/workspace/mounted_controller.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "success": true,
+  "default_rewards": {
+    "correct": 1.0,
+    "wrong_count_and_priority": 0.4,
+    "empty": 0.0
+  },
+  "test_count": 60,
+  "mounted_controller": {
+    "mounted_controller": "passed",
+    "snapshot_id": "alert-impact-v3-seed-42",
+    "reward": 1.0,
+    "priority": [
+      "INC-PAY",
+      "INC-DB"
+    ]
+  },
+  "snapshot_id": "alert-impact-v3-seed-17"
+}
