@@ -168,6 +168,8 @@ def run_training_rollout(model_tool_loop, seed=42):
     with AlertEnvironment(seed=seed) as env:
         final_answer = model_tool_loop(env.task, API_SCHEMAS, env.call)
         report = evaluate(env.task, final_answer)
+        if "trusted snapshot could not be evaluated" in report["errors"]:
+            raise RuntimeError("Verifier infrastructure failed; exclude this rollout")
         return {
             "reward": report["reward"],
             "success": report["valid"] and report["reward"] == 1.0,
@@ -175,6 +177,8 @@ def run_training_rollout(model_tool_loop, seed=42):
 ```
 
 `model_tool_loop` 由训练方实现；本项目交付环境与终局评分接口，不包含优化器或已经执行的 RL 训练。运行异常由外层控制器单列，不能冒充模型业务错答；原始 JSON 答案应直接交评分器，避免先转 float 丢失小数精度。
+
+当前异常接口的限制：`compute_reward` 仅返回数值，可信快照建库或评分自身失败时也返回0。训练接入应像上例使用 `evaluate` 检查对应错误，将这类运行排除并记录；不能把该0分当成Agent答错。本次验收未遇到此类评分故障。
 
 另提供可运行的 JSONL 业务工具进程：
 
@@ -239,6 +243,7 @@ python experiments/run_repeated_evaluation.py --backend qwen --output artifacts/
 以上各运行3个固定实例、每个4次独立作答。任意真实模型复跑不保证产生相同答案；业务快照与评分确定性、模型输出随机性须区分。已有原始轨迹可由 `python artifacts/model-eval-final/independent-audit-check.py` 离线核对，无需再次调用模型。
 
 - 种子变化用于同一固定业务结构下的数值变化；未实现关系、维护和告警结构随机化，不能据此证明跨结构泛化。
+- 配置常量便于定位规则，但数据生成器仍固定日期、六个五分钟桶。窗口或桶长的变更须同步修改生成器并重新验收，不能只改 `BUCKET_MINUTES` 就视为新任务已正确配置。
 - 合成数据已内置，SQLite 写入发生在初始化阶段；没有模拟真实告警采集延迟、丢包或最终一致性。
 - v2 的 [真实模型小样本记录](artifacts/model-pilot-v2/README.md) 与 [独立上下文设计审阅](artifacts/design-review/independent-review.md) 原样保留。v3 已完成上列独立模型评测；新旧题面、奖励、温度及预算不相同，不能将分差只归因于任务修改。未开展 RL 训练。
 - 当前为小数据快照、单次分析任务；没有建设实时流平台、通知发送链路或线上权限系统。
